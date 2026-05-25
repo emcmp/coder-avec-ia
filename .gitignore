@@ -1,0 +1,29 @@
+# Dependencies
+node_modules/
+web/node_modules/
+
+# Production builds
+build/
+web/build/
+
+# Docusaurus generated files
+.docusaurus/
+web/.docusaurus/
+.cache-loader/
+
+# Environment files
+.env
+.env.*
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Generated metadata
+web/static/docsMetadata.json
+
+# OS files
+.DS_Store
+Thumbs.db
