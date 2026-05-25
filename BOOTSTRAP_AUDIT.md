@@ -2,7 +2,7 @@
 
 ## Source
 
-- Gabarit initial: `depinfo-gabarit` du département d'informatique du Cégep Édouard-Montpetit.
+- Gabarit initial consigné dans la section À propos de la trousse.
 
 ## État local
 

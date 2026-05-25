@@ -12,7 +12,7 @@ Ce dépôt est un starter Docusaurus local, préparé pour la publication GitHub
 
 ## Attribution
 
-Projet initialisé à partir du gabarit `depinfo-gabarit` du département d'informatique du Cégep Édouard-Montpetit.
+L'historique technique et l'attribution du gabarit initial sont documentés dans la section À propos de la trousse.
 
 ## Déploiement GitHub
 

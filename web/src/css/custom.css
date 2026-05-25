@@ -6,79 +6,160 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
+  --ifm-color-primary: #115e59;
+  --ifm-color-primary-dark: #0f4f4b;
+  --ifm-color-primary-darker: #0d4340;
+  --ifm-color-primary-darkest: #09302d;
+  --ifm-color-primary-light: #187770;
+  --ifm-color-primary-lighter: #228981;
+  --ifm-color-primary-lightest: #3bb7ad;
   --ifm-code-font-size: 95%;
   --ifm-menu-link-padding-horizontal: 1.5em;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
-  --examen-bg: #ffebec;
-  --examen-font-color: #003100;
-  --remise-tp-bg: #e6f6e6;
-  --remise-tp-font-color: #003100;
+  --toolkit-hero-bg: linear-gradient(135deg, #0b1f26 0%, #113d43 52%, #d7e8e6 100%);
+  --toolkit-card-bg: rgba(255, 255, 255, 0.85);
+  --toolkit-card-border: rgba(17, 94, 89, 0.18);
+  --toolkit-muted: #53626b;
+  --toolkit-pill-bg: rgba(255, 255, 255, 0.9);
+  --toolkit-pill-border: rgba(255, 255, 255, 0.35);
+  --toolkit-draft-bg: rgba(255, 255, 255, 0.78);
+  --toolkit-draft-border: rgba(17, 94, 89, 0.25);
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme="dark"] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
+  --ifm-color-primary: #4dd4c8;
+  --ifm-color-primary-dark: #38c9bc;
+  --ifm-color-primary-darker: #25b8ac;
+  --ifm-color-primary-darkest: #169287;
+  --ifm-color-primary-light: #63ddd2;
+  --ifm-color-primary-lighter: #7fe4da;
+  --ifm-color-primary-lightest: #9ceae2;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
-  --examen-bg: #4b1113;
-  --examen-font-color: #f4e7ec;
-  --remise-tp-bg: #003100;
-  --remise-tp-font-color: #d3f0e6;
+  --toolkit-card-bg: rgba(8, 16, 20, 0.82);
+  --toolkit-card-border: rgba(125, 231, 223, 0.16);
+  --toolkit-muted: #a8b9bf;
+  --toolkit-pill-bg: rgba(12, 23, 28, 0.85);
+  --toolkit-pill-border: rgba(125, 231, 223, 0.2);
+  --toolkit-draft-bg: rgba(12, 23, 28, 0.88);
+  --toolkit-draft-border: rgba(125, 231, 223, 0.2);
 }
 
-.examen {
-  background-color: var(--examen-bg);
-  color: var(--examen-font-color);
+body {
+  background:
+    radial-gradient(circle at top left, rgba(17, 94, 89, 0.08), transparent 28%),
+    radial-gradient(circle at top right, rgba(244, 181, 90, 0.08), transparent 26%);
 }
 
-.remise-tp1::after {
-  content: "Remise TP1";
-  text-align: center;
-  width: 100%;
-  display: block;
-  background: var(--remise-tp-bg);
-  font-size: 0.75em;
-  color: var(--remise-tp-font-color);
+.toolkitHero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(260px, 1fr);
+  gap: 1.5rem;
+  align-items: stretch;
+  margin: 1rem 0 2.5rem;
+  padding: 1.5rem;
+  border-radius: 1.5rem;
+  background: var(--toolkit-hero-bg);
+  color: #f8fbfb;
+  overflow: hidden;
 }
 
-.remise-tp2::after {
-  content: "Remise TP2";
-  text-align: center;
-  width: 100%;
-  display: block;
-  background: var(--remise-tp-bg);
-  font-size: 0.75em;
-  color: var(--remise-tp-font-color);
+.toolkitHeroCopy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
 }
 
-.remise-tp3::after {
-  content: "Remise TP3";
-  text-align: center;
-  width: 100%;
-  display: block;
-  background: var(--remise-tp-bg);
-  font-size: 0.75em;
-  color: var(--remise-tp-font-color);
+.toolkitEyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.8rem;
+  font-weight: 700;
+  opacity: 0.9;
 }
 
-.remise-tp4::after {
-  content: "Remise TP4";
-  text-align: center;
-  width: 100%;
-  display: block;
-  background: var(--remise-tp-bg);
-  font-size: 0.75em;
-  color: var(--remise-tp-font-color);
+.toolkitLead {
+  font-size: clamp(1.35rem, 2vw, 2rem);
+  line-height: 1.25;
+  margin: 0;
+  max-width: 42rem;
+}
+
+.toolkitActions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.toolkitHeroPanel {
+  display: grid;
+  align-content: start;
+  gap: 0.75rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(10px);
+}
+
+.toolkitPill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.6rem 0.8rem;
+  border-radius: 999px;
+  border: 1px solid var(--toolkit-pill-border);
+  background: var(--toolkit-pill-bg);
+  color: var(--ifm-font-color-base);
+  font-weight: 600;
+}
+
+.toolkitDraft {
+  margin-top: 0.25rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  border: 1px dashed var(--toolkit-draft-border);
+  background: var(--toolkit-draft-bg);
+  color: var(--ifm-font-color-base);
+}
+
+.toolkitSection {
+  margin: 2rem 0;
+}
+
+.toolkitSection h2 {
+  margin-bottom: 1rem;
+}
+
+.toolkitGrid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.toolkitGridDense {
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+.toolkitCard {
+  padding: 1.1rem 1.15rem;
+  border-radius: 1rem;
+  border: 1px solid var(--toolkit-card-border);
+  background: var(--toolkit-card-bg);
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+}
+
+.toolkitCard h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.toolkitCard p {
+  color: var(--toolkit-muted);
+  margin-bottom: 0;
+}
+
+@media (max-width: 996px) {
+  .toolkitHero {
+    grid-template-columns: 1fr;
+  }
 }

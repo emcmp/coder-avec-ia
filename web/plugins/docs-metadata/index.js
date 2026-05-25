@@ -1,4 +1,4 @@
-// Plugin Docusaurus : Génère un fichier docsMetadata.json à partir des frontmatters des fichiers Markdown du dossier docs/01-cours
+// Plugin Docusaurus : Génère un fichier docsMetadata.json à partir des frontmatters des fichiers Markdown du dossier docs
 
 const fs = require("fs");
 const path = require("path");
@@ -30,25 +30,45 @@ function getStaticMetadataPath() {
 }
 
 /**
- * Extrait les métadonnées (frontmatter) de tous les fichiers .md d'un dossier
+ * Extrait les métadonnées (frontmatter) de tous les fichiers .md et .mdx d'un dossier, de manière récursive.
  * @param {Object} params
  * @param {string} params.docsDir - Chemin du dossier contenant les fichiers Markdown
  * @returns {Array<Object>} Tableau d'objets métadonnées
  */
 function getAllDocsMetadata({ docsDir }) {
   const docs = [];
-  const files = fs.readdirSync(docsDir);
-  for (const file of files) {
-    if (!file.endsWith(".md")) continue;
-    const docPath = path.join(docsDir, file);
-    const content = fs.readFileSync(docPath, "utf-8");
-    const frontmatter = extractFrontmatter(content);
-    if (!frontmatter) continue;
-    docs.push({
-      id: file.replace(/\.md$/, ""),
-      ...frontmatter,
-    });
+
+  function walk(currentDir, relativeParts = []) {
+    const entries = fs.readdirSync(currentDir, { withFileTypes: true });
+    for (const entry of entries) {
+      const nextPath = path.join(currentDir, entry.name);
+      const nextParts = [...relativeParts, entry.name];
+      if (entry.isDirectory()) {
+        walk(nextPath, nextParts);
+        continue;
+      }
+
+      if (!entry.isFile() || (!entry.name.endsWith(".md") && !entry.name.endsWith(".mdx"))) {
+        continue;
+      }
+
+      const content = fs.readFileSync(nextPath, "utf-8");
+      const frontmatter = extractFrontmatter(content);
+      if (!frontmatter) continue;
+
+      const extension = path.extname(entry.name);
+      const id = path
+        .join(...relativeParts, entry.name)
+        .replace(new RegExp(`\\${extension}$`), "");
+
+      docs.push({
+        id: id.split(path.sep).join("/"),
+        ...frontmatter,
+      });
+    }
   }
+
+  walk(docsDir);
   return docs;
 }
 
@@ -61,6 +81,10 @@ function getAllDocsMetadata({ docsDir }) {
 function extractAllDocEntries(items) {
   let entries = [];
   for (const item of items) {
+    if (typeof item === "string") {
+      entries.push({ id: item });
+      continue;
+    }
     if (item.type === "doc" && item.id) {
       // Inclure tous les champs de l'item (shallow copy)
       entries.push({ ...item });
@@ -111,10 +135,10 @@ module.exports = function pluginDocsMetadata(context, options) {
   return {
     name: "docusaurus-plugin-docs-metadata",
     /**
-     * Chargement des métadonnées à partir des fichiers Markdown
+     * Chargement des métadonnées à partir des fichiers Markdown et MDX
      */
     async loadContent() {
-      const docsDir = path.resolve(__dirname, "../../docs/01-cours");
+      const docsDir = path.resolve(__dirname, "../../docs");
       return getAllDocsMetadata({ docsDir });
     },
     /**

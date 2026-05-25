@@ -65,21 +65,27 @@ const config = {
       navbar: {
         title: siteConfig.nom,
         logo: {
-          alt: "Logo CEM",
+          alt: "Coder avec l’IA",
           src: "img/logo.svg",
         },
         items: [
           {
             type: "doc",
-            docId: "cours/rencontre1.1",
+            docId: "accueil",
             position: "left",
-            label: "Cours",
+            label: "Accueil",
           },
           {
             type: "docSidebar",
             position: "left",
-            sidebarId: "tp",
-            label: "Travaux Pratiques",
+            sidebarId: "docs",
+            label: "Trousse",
+          },
+          {
+            type: "doc",
+            docId: "a-propos/index",
+            position: "right",
+            label: "À propos",
           },
         ],
       },
