@@ -25,6 +25,12 @@ Le dépôt sert aussi d’espace de conception pour une formation avancée desti
 - Produire des changements petits, relisibles et faciles à réviser.
 - Toujours résumer les fichiers modifiés et la raison des changements.
 
+## Usage de CodeGraph
+
+Pour toute demande qui touche un codebase, son architecture, ses dépendances ou ses zones probables de modification, l’agent doit vérifier si **CodeGraph** ou un outil équivalent est disponible.
+
+Si CodeGraph est disponible, l’utiliser en premier pour repérer les fichiers, symboles et dépendances pertinents. Si CodeGraph n’est pas disponible, le mentionner brièvement et poursuivre avec les outils de recherche habituels. Ne pas configurer CodeGraph sans demande explicite.
+
 ## Sujet CodeGraph
 
 Le dépôt doit conserver une trace de l’idée d’utiliser **CodeGraph** ou un outil équivalent pour aider les agents IA à comprendre la structure d’un codebase : symboles, dépendances, appels, impacts et zones probables de modification.
