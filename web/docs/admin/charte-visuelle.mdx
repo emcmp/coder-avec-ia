@@ -1,0 +1,104 @@
+---
+title: Charte visuelle
+slug: /admin/charte-visuelle
+---
+
+# Charte visuelle
+
+> Source : `project/conventions/charte-visuelle.md`  
+> Version : 0.1  
+> Statut : convention de travail initiale
+
+Cette charte définit le style visuel des pages du site **Coder avec l’IA**.
+
+Elle ne définit pas encore le style pédagogique des exercices, démonstrations ou activités. Ce point sera traité dans une charte séparée.
+
+## Objectifs
+
+- Donner une apparence cohérente aux pages.
+- Rendre les documents faciles à lire et à réviser.
+- Éviter que chaque page invente son propre format.
+- Préparer la transformation progressive des notes de conception en pages Docusaurus.
+
+## Structure générale d’une page
+
+Chaque page devrait contenir :
+
+1. un titre clair;
+2. une courte intention;
+3. des sections courtes;
+4. des exemples concrets lorsque pertinent;
+5. des encadrés pour les avertissements, conseils ou informations importantes;
+6. des blocs de code lisibles et contextualisés.
+
+## Titres
+
+Utiliser une hiérarchie simple :
+
+```text
+# Titre de la page
+## Grande section
+### Sous-section
+```
+
+Éviter de dépasser `###` sauf pour les documents longs.
+
+## Numérotation
+
+La numérotation visible doit rester sobre.
+
+Utiliser la numérotation lorsque l’ordre est important. Utiliser les listes à puces lorsque l’ordre n’est pas important.
+
+Les identifiants pédagogiques comme `[THE-CON-001]` sont réservés aux blocs pédagogiques, pas aux titres ordinaires.
+
+## Encadrés
+
+Utiliser les admonitions Docusaurus pour les informations importantes.
+
+:::info
+Information utile, sans urgence particulière.
+:::
+
+:::tip
+Conseil pratique ou raccourci utile.
+:::
+
+:::warning
+Point de vigilance ou risque de confusion.
+:::
+
+:::danger
+Erreur grave, risque de sécurité ou action à éviter.
+:::
+
+## Code
+
+Les blocs de code doivent toujours être précédés d’une phrase qui explique leur rôle.
+
+```bash
+npm run build
+```
+
+Éviter les gros blocs de code non commentés.
+
+## Tableaux
+
+Utiliser les tableaux pour comparer, classifier ou résumer.
+
+Un tableau doit rester court. Si un tableau devient long, le remplacer par des sections.
+
+## Ton visuel
+
+Le style doit être sobre, clair, technique sans être lourd, orienté action, et adapté à des étudiants et enseignants en informatique.
+
+## À éviter
+
+- Les pages très longues sans sections.
+- Les listes de liens sans contexte.
+- Les titres décoratifs difficiles à maintenir.
+- Les noms de produits dans les identifiants pédagogiques.
+- Les blocs de code sans explication.
+
+## Page de référence
+
+Voir : [Page exemple de style](/admin/page-exemple-style).
