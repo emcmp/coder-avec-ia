@@ -1,6 +1,6 @@
 # [MIC-EVA-001] Vérifier une réponse IA plausible
 
-> Version : 0.2  
+> Version : 0.3  
 > Dernière modification : 2026-06-12  
 > Statut : pilote  
 > Domaine : EVA  
@@ -11,6 +11,12 @@
 ## Intention
 
 Apprendre à valider une réponse IA qui semble convaincante avant de l’accepter, de la remettre ou de l’intégrer dans un projet.
+
+## Compétences liées
+
+- [CMP-EVA-001] Valider une réponse ou une production IA.
+- [CMP-CTX-001] Fournir un contexte utile à un assistant IA.
+- [CMP-MAP-001] Identifier où intervenir dans un codebase existant.
 
 ## What’s in it for me?
 
