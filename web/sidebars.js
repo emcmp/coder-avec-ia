@@ -9,26 +9,33 @@ const sidebars = {
       items: [
         {
           type: "category",
-          label: "Chartes",
+          label: "Parcours",
           collapsed: false,
           items: [
-            "admin/charte-visuelle",
-            "admin/page-exemple-style",
-            "admin/exemple-provider",
-            "admin/charte-redactionnelle",
-            "admin/charte-pedagogique",
-            "admin/gabarits-pedagogiques",
+            "admin/cours-ia-avance",
+            "admin/modules-et-dependances",
+            "admin/modules-pilotes",
           ],
         },
         {
           type: "category",
-          label: "Conception",
-          collapsed: false,
+          label: "Conventions",
+          collapsed: true,
+          items: [
+            "admin/charte-pedagogique",
+            "admin/gabarits-pedagogiques",
+            "admin/charte-redactionnelle",
+            "admin/charte-visuelle",
+          ],
+        },
+        {
+          type: "category",
+          label: "Bibliothèque",
+          collapsed: true,
           items: [
             "admin/nomenclature-blocs-pedagogiques",
             "admin/catalogue-blocs-pedagogiques",
             "admin/catalogue-documents-projet",
-            "admin/modules-et-dependances",
             "admin/glossaire",
           ],
         },
@@ -39,15 +46,6 @@ const sidebars = {
           items: [
             "admin/adr-0001-structure-du-repo",
             "admin/adr-0002-identifiants-stables",
-          ],
-        },
-        {
-          type: "category",
-          label: "Parcours",
-          collapsed: true,
-          items: [
-            "admin/cours-ia-avance",
-            "admin/modules-pilotes",
           ],
         },
       ],
