@@ -3,6 +3,8 @@ title: Page exemple de style
 slug: /admin/page-exemple-style
 ---
 
+import Link from '@docusaurus/Link';
+
 # Page exemple de style
 
 Cette page sert de référence visuelle pour les futures pages du site.
@@ -16,8 +18,8 @@ Elle ne présente pas encore un vrai contenu de cours. Elle montre plutôt comme
       Une base claire pour apprendre, avec des accents visuels techniques pour les moments importants.
     </p>
     <div className="coursActions">
-      <a className="button button--primary" href="/admin/charte-visuelle">Voir la charte</a>
-      <a className="button button--secondary" href="/admin">Retour Admin</a>
+      <Link className="button button--primary" to="/admin/charte-visuelle">Voir la charte</Link>
+      <Link className="button button--secondary" to="/admin">Retour Admin</Link>
     </div>
   </div>
   <div className="coursHeroPanel">
@@ -43,24 +45,24 @@ Cette page est un gabarit visuel. Elle sert à valider la forme avant de dévelo
 Utiliser la matrice icône-item pour présenter plusieurs éléments de même nature avec plus de rythme qu’une simple liste.
 
 <div className="coursIconMatrix">
-  <a className="coursIconItem" href="/admin/competences">
+  <Link className="coursIconItem" to="/admin/competences">
     <span className="coursIconItemIcon">🎯</span>
     <span className="coursIconItemTitle">Compétences</span>
     <span className="coursIconItemText">Ce que la personne doit être capable de faire.</span>
     <span className="coursIconItemMeta">[DOC-CAT-004]</span>
-  </a>
-  <a className="coursIconItem" href="/admin/modules-et-dependances">
+  </Link>
+  <Link className="coursIconItem" to="/admin/modules-et-dependances">
     <span className="coursIconItemIcon">🧩</span>
     <span className="coursIconItemTitle">Modules</span>
     <span className="coursIconItemText">Micro-modules, prérequis et dépendances.</span>
     <span className="coursIconItemMeta">[DOC-CAT-003]</span>
-  </a>
-  <a className="coursIconItem" href="/admin/modules-pilotes">
+  </Link>
+  <Link className="coursIconItem" to="/admin/modules-pilotes">
     <span className="coursIconItemIcon">🧪</span>
     <span className="coursIconItemTitle">Pilotes</span>
     <span className="coursIconItemText">Premiers modules complets pour tester le format.</span>
     <span className="coursIconItemMeta">[DOC-PAR-003]</span>
-  </a>
+  </Link>
 </div>
 
 ## 3. Cartes de synthèse
