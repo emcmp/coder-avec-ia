@@ -6,7 +6,8 @@ slug: /admin/nomenclature-blocs-pedagogiques
 # Nomenclature et bibliothèque du projet
 
 > Source : `project/conventions/nomenclature-blocs-pedagogiques.md`  
-> Version : 0.3  
+> Version : 0.4  
+> Dernière modification : 2026-06-11  
 > Statut : convention de travail initiale
 
 Cette convention définit comment identifier les éléments importants du projet **Coder avec l’IA**.
@@ -16,7 +17,7 @@ Elle couvre deux grandes familles :
 1. les **contenus pédagogiques** : domaines, thèmes, notions, micro-modules, paliers, blocs, ressources;
 2. les **documents de projet** : chartes, décisions, catalogues, glossaires, parcours, specs, prompts, archives.
 
-L’objectif est de traiter le projet comme une bibliothèque : chaque élément important doit pouvoir être classé, identifié, retrouvé et maintenu sans dépendre uniquement de son emplacement dans l’arborescence.
+L’objectif est de traiter le projet comme une bibliothèque : chaque élément important doit pouvoir être classé, identifié, retrouvé, versionné et maintenu sans dépendre uniquement de son emplacement dans l’arborescence.
 
 ## Vue d’ensemble de la bibliothèque
 
@@ -43,11 +44,7 @@ Bibliothèque du projet
       → Configurations
 ```
 
-Cette vue sert à distinguer ce qui est enseigné de ce qui sert à concevoir, gérer et maintenir le projet.
-
 ## Hiérarchie de connaissance
-
-La structure de connaissance décrit les contenus pédagogiques stables.
 
 ```text
 Domaine
@@ -59,25 +56,7 @@ Domaine
             → Ressource
 ```
 
-Exemple :
-
-```text
-MAP — Cartographie et compréhension de codebase
-  → Comprendre un projet existant
-    → Repérer où modifier une fonctionnalité
-      → Cartographie de codebase
-        → Cartographie I
-          → Démo : retrouver le bon fichier
-          → Exercice : expliquer où modifier le code
-        → Cartographie II
-          → Démo : lire les dépendances
-        → Cartographie III
-          → Défi : comparer deux outils
-```
-
 ## Structure de diffusion
-
-La structure de diffusion décrit comment les contenus sont assemblés pour un parcours, une séance ou un atelier.
 
 ```text
 Parcours
@@ -89,62 +68,74 @@ Parcours
 
 Une séance ne possède pas les contenus : elle les référence.
 
-Un même micro-module peut donc être déplacé d’une séance à une autre sans changer d’identifiant.
+## Métadonnées minimales obligatoires
 
-## Entités pédagogiques
+Tout élément important de la bibliothèque doit exposer au minimum :
 
-| Entité | Rôle |
-|---|---|
-| Domaine | Grand territoire conceptuel stable, par exemple contexte, cartographie, agents, évaluation. |
-| Thème | Regroupement de notions à l’intérieur d’un domaine. |
-| Notion | Concept précis à comprendre ou utiliser. |
-| Micro-module | Unité pédagogique de 20 à 30 minutes autour d’une notion principale. |
-| Palier | Niveau progressif d’un micro-module : I, II ou III. |
-| Bloc pédagogique | Élément concret : théorie, démo, exercice, quiz, cas, checklist. |
-| Ressource | Support réutilisable : visuel, prompt, code, tableau, image, référence. |
+```text
+id
+version
+last_modified
+status
+title
+```
 
-## Entités de diffusion
+Ces champs s’appliquent aux documents de projet, aux micro-modules, aux paliers, aux blocs pédagogiques et aux ressources.
 
-| Entité | Rôle |
-|---|---|
-| Parcours | Organisation générale proposée pour suivre le contenu. |
-| Module | Regroupement de micro-modules dans une logique de progression. |
-| Séance | Assemblage temporel adapté à une durée réelle : 1 h, 2 h, 3 h, etc. |
-| Segment | Partie courte d’une séance qui référence un micro-module, un palier ou un bloc. |
+Le format de date recommandé est :
 
-## Documents de projet
+```text
+AAAA-MM-JJ
+```
 
-| Entité | Rôle |
-|---|---|
-| Charte | Convention de travail : visuelle, rédactionnelle, pédagogique, nomenclature. |
-| Décision | ADR ou décision structurante. |
-| Catalogue | Registre d’éléments : blocs, documents, modules, ressources. |
-| Glossaire | Définitions stabilisées. |
-| Parcours | Plan ou structure de formation. |
-| Spécification | Document de cadrage ou d’exigences. |
-| Backlog | Liste de travail à faire ou à prioriser. |
-| Prompt | Gabarit ou instruction réutilisable. |
-| Archive | Contenu conservé pour référence historique. |
-| Configuration | Instructions ou fichiers utiles aux agents et outils. |
+Exemple :
 
-## Principe directeur
+```text
+2026-06-11
+```
 
-Un identifiant décrit la nature et le sujet stable d’un élément. Il ne décrit pas son emplacement temporaire.
+## Version
 
-Un identifiant ne doit donc pas contenir :
+La version sert à savoir si un élément a évolué depuis sa dernière consultation.
 
-- un numéro de séance;
-- un numéro de module lié à une progression temporaire;
-- un nom de produit;
-- un nom de plateforme;
-- un nom d’outil qui pourrait devenir désuet;
-- un chemin de fichier complet.
+Format recommandé :
 
-Les noms de produits, d’outils, de plateformes ou les chemins peuvent être indiqués dans les métadonnées ou dans le contenu, mais pas dans l’identifiant stable.
+```text
+0.1
+0.2
+1.0
+1.1
+```
 
-## Famille A — Identifiants pédagogiques
+Règle simple :
 
-Les identifiants pédagogiques servent à référencer les éléments de contenu destinés à l’apprentissage.
+- `0.x` pour les brouillons ou conventions en construction;
+- `1.0` pour une première version stable;
+- incrément mineur lorsqu’on améliore le contenu sans changer son intention;
+- incrément majeur lorsqu’on change le sens, la structure ou l’usage de l’élément.
+
+## Dernière modification
+
+La date de dernière modification sert à repérer rapidement si un élément est récent, désuet ou à réviser.
+
+Elle doit être mise à jour lorsqu’un changement significatif est apporté au contenu.
+
+Un correctif mineur de coquille ne force pas nécessairement un changement de version, mais peut justifier une mise à jour de la date si le document est publié.
+
+## Statut
+
+Statuts recommandés :
+
+```text
+draft       = brouillon actif
+active      = utilisé comme référence de travail
+stable      = validé pour usage courant
+review      = en révision
+deprecated  = remplacé ou conservé pour historique
+archived    = archivé, non maintenu activement
+```
+
+## Identifiants pédagogiques
 
 Format général :
 
@@ -176,36 +167,7 @@ MIC = Micro-module pédagogique de 20 à 30 minutes
 PAL = Palier progressif I, II ou III
 ```
 
-Blocs pédagogiques :
-
-```text
-THE = Théorie
-DEM = Démonstration
-EX  = Exercice
-LAB = Laboratoire ou atelier
-QZ  = Quiz ou question formative
-CAS = Cas d’usage
-CHK = Checklist
-EVA = Élément d’évaluation
-```
-
-Ressources pédagogiques :
-
-```text
-VIS = Aide visuelle ou diagramme
-VID = Vidéo
-IMG = Image
-TAB = Tableau
-REF = Référence externe
-PRM = Prompt réutilisable
-COD = Exemple de code
-DAT = Jeu de données
-GLO = Entrée de glossaire
-```
-
-## Famille B — Identifiants des documents de projet
-
-Les documents de projet utilisent une famille séparée.
+## Identifiants des documents de projet
 
 Format général :
 
@@ -240,6 +202,44 @@ CFG = Configuration ou instruction d’agent
 IDX = Index ou page de navigation
 ```
 
+## Exemple de métadonnées pour un document
+
+```yaml
+---
+id: DOC-CHR-003
+type: charte
+title: Charte pédagogique
+version: 0.5
+last_modified: 2026-06-11
+status: active
+source: project/conventions/charte-pedagogique.md
+published: web/docs/admin/charte-pedagogique.mdx
+related:
+  - DOC-CHR-001
+  - DOC-CHR-002
+---
+```
+
+## Exemple de métadonnées pour un micro-module
+
+```yaml
+---
+id: MIC-MAP-001
+type: micro-module
+domain: MAP
+title: Cartographie de codebase
+version: 0.1
+last_modified: 2026-06-11
+status: draft
+levels:
+  - PAL-MAP-001
+  - PAL-MAP-002
+  - PAL-MAP-003
+related:
+  - NOT-MAP-001
+---
+```
+
 ## Catalogue associé
 
 Le registre pratique des documents est publié ici : [Catalogue des documents de projet](/admin/catalogue-documents-projet).
@@ -255,4 +255,4 @@ Le registre pratique des documents est publié ici : [Catalogue des documents de
 7. Un identifiant supprimé ne doit pas être réutilisé pour autre chose.
 8. Un bloc ou document remplacé doit être marqué `deprecated` plutôt que renommé silencieusement.
 9. Un document publié dans `web/` peut avoir un titre adapté à la lecture, mais il doit rester lié à son identifiant stable.
-10. Le catalogue des documents sert de registre de bibliothèque.
+10. Tout élément important doit avoir une version et une date de dernière modification.
