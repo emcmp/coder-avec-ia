@@ -1,5 +1,10 @@
 # AGENTS.md
 
+> Identifiant : `[DOC-CFG-001]`  
+> Version : 0.1  
+> Dernière modification : 2026-06-11  
+> Statut : actif
+
 ## Rôle du dépôt
 
 Ce dépôt contient la trousse ouverte **Coder avec l’IA**, destinée à soutenir l’enseignement, l’apprentissage, la programmation et l’évaluation avec l’IA générative en informatique.
