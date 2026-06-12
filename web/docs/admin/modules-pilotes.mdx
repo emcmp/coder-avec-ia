@@ -3,25 +3,50 @@ title: Modules pilotes
 slug: /admin/modules-pilotes
 ---
 
+import Link from '@docusaurus/Link';
+
 # Modules pilotes
 
 > Source : `project/current/cours-ia-avance/modules/`  
 > Identifiant : `[DOC-PAR-003]`  
-> Version : 0.2  
+> Version : 0.3  
 > Dernière modification : 2026-06-12  
 > Statut : index de travail
 
 Cette page présente les trois premiers micro-modules pilotes du parcours **Coder avec l’IA**.
 
-Ils servent à valider les gabarits pédagogiques avant de produire l’ensemble du cours.
+Ils servent à valider les gabarits pédagogiques avant de produire l’ensemble du cours. Les trois pilotes sont maintenant aussi publiés comme pages de cours.
+
+## Pages publiées
+
+<div className="coursIconMatrix coursIconMatrixFeatured">
+  <Link className="coursIconItem" to="/cours/contexte-utile">
+    <span className="coursIconItemIcon">🧩</span>
+    <span className="coursIconItemTitle">Donner un contexte utile</span>
+    <span className="coursIconItemText">Page publique du module contexte.</span>
+    <span className="coursIconItemMeta">[MIC-CTX-001]</span>
+  </Link>
+  <Link className="coursIconItem" to="/cours/cartographier-codebase">
+    <span className="coursIconItemIcon">🗺️</span>
+    <span className="coursIconItemTitle">Cartographier un codebase</span>
+    <span className="coursIconItemText">Page publique du module cartographie.</span>
+    <span className="coursIconItemMeta">[MIC-MAP-001]</span>
+  </Link>
+  <Link className="coursIconItem" to="/cours/verifier-reponse-ia">
+    <span className="coursIconItemIcon">✅</span>
+    <span className="coursIconItemTitle">Vérifier une réponse IA</span>
+    <span className="coursIconItemText">Page publique du module validation.</span>
+    <span className="coursIconItemMeta">[MIC-EVA-001]</span>
+  </Link>
+</div>
 
 ## Modules pilotes
 
 | ID | Module | Domaine | Statut | Compétences principales |
 |---|---|---|---|---|
-| `[MIC-CTX-001]` | Donner un contexte utile à l’IA | CTX | pilote | `[CMP-CTX-001]`, `[CMP-EVA-001]`, `[CMP-RET-001]` |
-| `[MIC-MAP-001]` | Cartographier un codebase | MAP | pilote | `[CMP-MAP-001]`, `[CMP-EVA-001]` |
-| `[MIC-EVA-001]` | Vérifier une réponse IA plausible | EVA | pilote | `[CMP-EVA-001]`, `[CMP-CTX-001]`, `[CMP-MAP-001]` |
+| `[MIC-CTX-001]` | Donner un contexte utile à l’IA | CTX | pilote publié | `[CMP-CTX-001]`, `[CMP-EVA-001]`, `[CMP-RET-001]` |
+| `[MIC-MAP-001]` | Cartographier un codebase | MAP | pilote publié | `[CMP-MAP-001]`, `[CMP-EVA-001]` |
+| `[MIC-EVA-001]` | Vérifier une réponse IA plausible | EVA | pilote publié | `[CMP-EVA-001]`, `[CMP-CTX-001]`, `[CMP-MAP-001]` |
 
 ## Ce qu’on valide avec ces modules
 
