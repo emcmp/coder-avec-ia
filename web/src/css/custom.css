@@ -16,14 +16,34 @@
   --ifm-code-font-size: 95%;
   --ifm-menu-link-padding-horizontal: 1.5em;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
-  --toolkit-hero-bg: linear-gradient(135deg, #0b1f26 0%, #113d43 52%, #d7e8e6 100%);
-  --toolkit-card-bg: rgba(255, 255, 255, 0.85);
-  --toolkit-card-border: rgba(17, 94, 89, 0.18);
-  --toolkit-muted: #53626b;
-  --toolkit-pill-bg: rgba(255, 255, 255, 0.9);
-  --toolkit-pill-border: rgba(255, 255, 255, 0.35);
-  --toolkit-draft-bg: rgba(255, 255, 255, 0.78);
-  --toolkit-draft-border: rgba(17, 94, 89, 0.25);
+
+  --cours-blue-900: #0b1f26;
+  --cours-blue-800: #113d43;
+  --cours-blue-700: #17576a;
+  --cours-teal-500: #2bb3a3;
+  --cours-teal-300: #7de7df;
+  --cours-gold-400: #f4b55a;
+  --cours-cream-100: #f8fbfb;
+
+  --cours-hero-bg: linear-gradient(135deg, #0b1f26 0%, #113d43 52%, #d7e8e6 100%);
+  --cours-card-bg: rgba(255, 255, 255, 0.86);
+  --cours-card-border: rgba(17, 94, 89, 0.18);
+  --cours-muted: #53626b;
+  --cours-pill-bg: rgba(255, 255, 255, 0.9);
+  --cours-pill-border: rgba(255, 255, 255, 0.35);
+  --cours-note-bg: rgba(255, 255, 255, 0.78);
+  --cours-note-border: rgba(17, 94, 89, 0.25);
+  --cours-shadow-soft: 0 18px 40px rgba(15, 23, 42, 0.08);
+
+  /* Alias conservés pour les anciennes pages. */
+  --toolkit-hero-bg: var(--cours-hero-bg);
+  --toolkit-card-bg: var(--cours-card-bg);
+  --toolkit-card-border: var(--cours-card-border);
+  --toolkit-muted: var(--cours-muted);
+  --toolkit-pill-bg: var(--cours-pill-bg);
+  --toolkit-pill-border: var(--cours-pill-border);
+  --toolkit-draft-bg: var(--cours-note-bg);
+  --toolkit-draft-border: var(--cours-note-border);
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -36,13 +56,14 @@
   --ifm-color-primary-lighter: #7fe4da;
   --ifm-color-primary-lightest: #9ceae2;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
-  --toolkit-card-bg: rgba(8, 16, 20, 0.82);
-  --toolkit-card-border: rgba(125, 231, 223, 0.16);
-  --toolkit-muted: #a8b9bf;
-  --toolkit-pill-bg: rgba(12, 23, 28, 0.85);
-  --toolkit-pill-border: rgba(125, 231, 223, 0.2);
-  --toolkit-draft-bg: rgba(12, 23, 28, 0.88);
-  --toolkit-draft-border: rgba(125, 231, 223, 0.2);
+
+  --cours-card-bg: rgba(8, 16, 20, 0.82);
+  --cours-card-border: rgba(125, 231, 223, 0.16);
+  --cours-muted: #a8b9bf;
+  --cours-pill-bg: rgba(12, 23, 28, 0.85);
+  --cours-pill-border: rgba(125, 231, 223, 0.2);
+  --cours-note-bg: rgba(12, 23, 28, 0.88);
+  --cours-note-border: rgba(125, 231, 223, 0.2);
 }
 
 body {
@@ -51,6 +72,7 @@ body {
     radial-gradient(circle at top right, rgba(244, 181, 90, 0.08), transparent 26%);
 }
 
+.coursHero,
 .toolkitHero {
   display: grid;
   grid-template-columns: minmax(0, 1.6fr) minmax(260px, 1fr);
@@ -59,11 +81,12 @@ body {
   margin: 1rem 0 2.5rem;
   padding: 1.5rem;
   border-radius: 1.5rem;
-  background: var(--toolkit-hero-bg);
-  color: #f8fbfb;
+  background: var(--cours-hero-bg);
+  color: var(--cours-cream-100);
   overflow: hidden;
 }
 
+.coursHeroCopy,
 .toolkitHeroCopy {
   display: flex;
   flex-direction: column;
@@ -71,6 +94,7 @@ body {
   gap: 1rem;
 }
 
+.coursEyebrow,
 .toolkitEyebrow {
   text-transform: uppercase;
   letter-spacing: 0.12em;
@@ -79,6 +103,7 @@ body {
   opacity: 0.9;
 }
 
+.coursLead,
 .toolkitLead {
   font-size: clamp(1.35rem, 2vw, 2rem);
   line-height: 1.25;
@@ -86,12 +111,14 @@ body {
   max-width: 42rem;
 }
 
+.coursActions,
 .toolkitActions {
   display: flex;
   gap: 0.75rem;
   flex-wrap: wrap;
 }
 
+.coursHeroPanel,
 .toolkitHeroPanel {
   display: grid;
   align-content: start;
@@ -102,63 +129,140 @@ body {
   backdrop-filter: blur(10px);
 }
 
+.coursPill,
 .toolkitPill {
   display: inline-flex;
   align-items: center;
   padding: 0.6rem 0.8rem;
   border-radius: 999px;
-  border: 1px solid var(--toolkit-pill-border);
-  background: var(--toolkit-pill-bg);
+  border: 1px solid var(--cours-pill-border);
+  background: var(--cours-pill-bg);
   color: var(--ifm-font-color-base);
   font-weight: 600;
 }
 
+.coursNote,
 .toolkitDraft {
   margin-top: 0.25rem;
   padding: 1rem;
   border-radius: 1rem;
-  border: 1px dashed var(--toolkit-draft-border);
-  background: var(--toolkit-draft-bg);
+  border: 1px dashed var(--cours-note-border);
+  background: var(--cours-note-bg);
   color: var(--ifm-font-color-base);
 }
 
+.coursSection,
 .toolkitSection {
   margin: 2rem 0;
 }
 
+.coursSection h2,
 .toolkitSection h2 {
   margin-bottom: 1rem;
 }
 
+.coursGrid,
 .toolkitGrid {
   display: grid;
   gap: 1rem;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
 
+.coursGridDense,
 .toolkitGridDense {
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
 }
 
+.coursCard,
 .toolkitCard {
   padding: 1.1rem 1.15rem;
   border-radius: 1rem;
-  border: 1px solid var(--toolkit-card-border);
-  background: var(--toolkit-card-bg);
-  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+  border: 1px solid var(--cours-card-border);
+  background: var(--cours-card-bg);
+  box-shadow: var(--cours-shadow-soft);
 }
 
+.coursCard h3,
 .toolkitCard h3 {
   margin-top: 0;
   margin-bottom: 0.5rem;
 }
 
+.coursCard p,
 .toolkitCard p {
-  color: var(--toolkit-muted);
+  color: var(--cours-muted);
   margin-bottom: 0;
 }
 
+.coursTokenGrid {
+  display: grid;
+  gap: 0.8rem;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  margin: 1rem 0;
+}
+
+.coursToken {
+  min-height: 5rem;
+  border-radius: 1rem;
+  padding: 0.9rem;
+  border: 1px solid var(--cours-card-border);
+  box-shadow: var(--cours-shadow-soft);
+}
+
+.coursToken strong {
+  display: block;
+  margin-bottom: 0.35rem;
+}
+
+.coursTokenHero {
+  background: var(--cours-hero-bg);
+  color: var(--cours-cream-100);
+}
+
+.coursTokenCard {
+  background: var(--cours-card-bg);
+}
+
+.coursTokenAccent {
+  background: linear-gradient(135deg, rgba(43, 179, 163, 0.18), rgba(244, 181, 90, 0.18));
+}
+
+.coursTerminal {
+  margin: 1rem 0;
+  padding: 1rem;
+  border-radius: 1rem;
+  border-left: 4px solid var(--cours-teal-300);
+  background: var(--cours-blue-900);
+  color: var(--cours-cream-100);
+  box-shadow: var(--cours-shadow-soft);
+}
+
+.coursTerminal code {
+  color: var(--cours-cream-100);
+}
+
+.coursDoDont {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  margin: 1rem 0;
+}
+
+.coursDo,
+.coursDont {
+  border-radius: 1rem;
+  padding: 1rem;
+  border: 1px solid var(--cours-card-border);
+  background: var(--cours-card-bg);
+}
+
+.coursDo h3,
+.coursDont h3 {
+  margin-top: 0;
+}
+
 @media (max-width: 996px) {
+  .coursHero,
   .toolkitHero {
     grid-template-columns: 1fr;
   }
