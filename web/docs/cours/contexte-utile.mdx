@@ -1,0 +1,147 @@
+---
+title: Donner un contexte utile à l’IA
+slug: /cours/contexte-utile
+---
+
+import Link from '@docusaurus/Link';
+
+# [MIC-CTX-001] Donner un contexte utile à l’IA
+
+> Durée cible : 20 à 30 min  
+> Outil principal : GitHub Copilot  
+> Statut : module pilote publié
+
+## Intention
+
+Apprendre à fournir à l’IA un contexte suffisant, ciblé et utile sans l’inonder d’informations inutiles.
+
+## Compétences visées
+
+- `[CMP-CTX-001]` Fournir un contexte utile à un assistant IA.
+- `[CMP-EVA-001]` Valider une réponse ou une production IA.
+- `[CMP-RET-001]` Appuyer une réponse IA sur des sources pertinentes.
+
+## Pourquoi c’est utile?
+
+Un meilleur contexte produit des réponses plus précises, plus vérifiables et plus faciles à réutiliser.
+
+Le but n’est pas d’écrire un prompt plus long. Le but est de donner à l’IA les bons repères.
+
+## Friction de départ
+
+Mauvaise manière volontaire :
+
+```text
+Corrige mon code, ça ne marche pas.
+```
+
+Ce prompt force l’IA à deviner :
+
+- quel comportement est attendu;
+- quel fichier regarder;
+- quelle erreur apparaît;
+- ce qui a déjà été essayé;
+- ce qui compte comme une bonne solution.
+
+:::warning
+Quand l’IA manque de contexte, elle ne s’arrête pas toujours. Elle peut produire une réponse plausible, mais fragile.
+:::
+
+## Théorie ciblée
+
+Un bon contexte répond habituellement à cinq questions :
+
+1. Quelle est la tâche exacte?
+2. Quel est le résultat attendu?
+3. Quels fichiers ou extraits sont pertinents?
+4. Quelles contraintes doivent être respectées?
+5. Comment saura-t-on que c’est réussi?
+
+Le contexte doit être assez riche pour orienter l’IA, mais assez court pour rester contrôlable.
+
+## Démonstration courte
+
+Comparer deux demandes dans un même petit projet.
+
+### Demande floue
+
+```text
+Ajoute la validation du formulaire.
+```
+
+### Demande contextualisée
+
+```text
+Dans le formulaire de création d’emploi, ajoute une validation côté serveur pour le champ Salaire.
+
+Contexte :
+- le formulaire existe déjà;
+- le champ Nom est déjà obligatoire;
+- le champ Salaire doit être obligatoire et numérique;
+- on veut un message d’erreur clair en français;
+- ne change pas la structure générale du formulaire.
+
+Critère de réussite :
+- si Salaire est vide, afficher “Le salaire est obligatoire”;
+- si Salaire n’est pas numérique, afficher “Le salaire doit être un nombre”.
+```
+
+À observer :
+
+- la précision de la réponse;
+- les hypothèses faites par l’IA;
+- les fichiers proposés;
+- la facilité de validation.
+
+## Mini-exercice
+
+Transformer ce prompt flou :
+
+```text
+Ajoute la validation du formulaire.
+```
+
+en prompt contextualisé.
+
+Ton prompt amélioré doit inclure :
+
+- la fonctionnalité attendue;
+- le fichier ou composant concerné;
+- les règles de validation;
+- le comportement attendu en cas d’erreur;
+- un critère de réussite.
+
+## Paliers
+
+### Palier I — Noyau essentiel
+
+Comparer un prompt flou et un prompt contextualisé sur une petite tâche.
+
+Résultat attendu : tu peux reformuler une demande pour rendre la réponse plus fiable.
+
+### Palier II — Consolidation
+
+Choisir quelles informations inclure ou exclure pour une tâche donnée.
+
+Résultat attendu : tu sais éviter le contexte surchargé.
+
+### Palier III — Approfondissement
+
+Gérer un contexte multi-fichiers ou une session longue.
+
+Résultat attendu : tu sais expliquer comment le contexte influence la qualité et les limites d’une réponse.
+
+## Retour rapide
+
+À retenir :
+
+- un prompt flou force l’IA à deviner;
+- un bon contexte réduit les hypothèses inutiles;
+- le contexte doit servir la tâche, pas raconter toute l’histoire du projet;
+- les critères de réussite sont aussi importants que la demande.
+
+## Prochaine étape
+
+<Link className="button button--primary" to="/cours/cartographier-codebase">
+  Continuer avec la cartographie de codebase
+</Link>
