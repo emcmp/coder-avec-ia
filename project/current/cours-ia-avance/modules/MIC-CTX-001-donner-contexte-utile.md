@@ -1,6 +1,6 @@
 # [MIC-CTX-001] Donner un contexte utile à l’IA
 
-> Version : 0.2  
+> Version : 0.3  
 > Dernière modification : 2026-06-12  
 > Statut : pilote  
 > Domaine : CTX  
@@ -11,6 +11,12 @@
 ## Intention
 
 Apprendre à fournir à l’IA un contexte suffisant, ciblé et utile sans l’inonder d’informations inutiles.
+
+## Compétences liées
+
+- [CMP-CTX-001] Fournir un contexte utile à un assistant IA.
+- [CMP-EVA-001] Valider une réponse ou une production IA.
+- [CMP-RET-001] Appuyer une réponse IA sur des sources pertinentes.
 
 ## What’s in it for me?
 
