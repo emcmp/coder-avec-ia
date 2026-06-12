@@ -1,5 +1,10 @@
 # Espace projet
 
+> Identifiant : `[DOC-RDM-001]`  
+> Version : 0.1  
+> Dernière modification : 2026-06-11  
+> Statut : actif
+
 Ce dossier contient le travail de conception de la trousse **Coder avec l’IA** et des formations associées.
 
 Le contenu de ce dossier n’est pas nécessairement prêt à publier. Il sert à garder une trace des idées, décisions, plans, specs, prompts et tâches avant leur transformation éventuelle en pages Docusaurus dans `web/docs/`.
