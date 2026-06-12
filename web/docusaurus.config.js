@@ -132,6 +132,11 @@ const config = {
               },
               {
                 type: "doc",
+                docId: "admin/competences",
+                label: "Compétences",
+              },
+              {
+                type: "doc",
                 docId: "admin/catalogue-blocs-pedagogiques",
                 label: "Catalogue des blocs",
               },
