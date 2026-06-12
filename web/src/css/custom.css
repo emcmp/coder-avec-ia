@@ -1,4 +1,4 @@
-/**
+/*
  * Any CSS included here will be global. The classic template
  * bundles Infima by default. Infima is a CSS framework designed to
  * work well for content-centric websites.
@@ -192,6 +192,79 @@ body {
 .toolkitCard p {
   color: var(--cours-muted);
   margin-bottom: 0;
+}
+
+.coursIconMatrix {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  margin: 1.25rem 0 2rem;
+}
+
+.coursIconMatrixCompact {
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+.coursIconMatrixFeatured {
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.coursIconItem {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.35rem 0.8rem;
+  align-items: start;
+  padding: 1rem;
+  border-radius: 1rem;
+  border: 1px solid var(--cours-card-border);
+  background: var(--cours-card-bg);
+  box-shadow: var(--cours-shadow-soft);
+  color: var(--ifm-font-color-base);
+  text-decoration: none;
+  transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.coursIconItem:hover {
+  transform: translateY(-2px);
+  border-color: rgba(43, 179, 163, 0.55);
+  box-shadow: 0 22px 46px rgba(15, 23, 42, 0.12);
+  color: var(--ifm-font-color-base);
+  text-decoration: none;
+}
+
+.coursIconItemIcon {
+  grid-row: span 3;
+  display: inline-grid;
+  place-items: center;
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 0.85rem;
+  background: linear-gradient(135deg, rgba(43, 179, 163, 0.22), rgba(244, 181, 90, 0.22));
+  font-size: 1.45rem;
+  line-height: 1;
+}
+
+.coursIconItemTitle {
+  font-weight: 750;
+  line-height: 1.2;
+}
+
+.coursIconItemText {
+  color: var(--cours-muted);
+  font-size: 0.94rem;
+  line-height: 1.35;
+}
+
+.coursIconItemMeta {
+  display: inline-flex;
+  width: fit-content;
+  margin-top: 0.2rem;
+  padding: 0.18rem 0.45rem;
+  border-radius: 999px;
+  border: 1px solid var(--cours-card-border);
+  color: var(--cours-muted);
+  font-size: 0.78rem;
+  font-weight: 650;
 }
 
 .coursTokenGrid {
