@@ -3,9 +3,20 @@ const sidebars = {
     "accueil",
     {
       type: "category",
+      label: "Cours",
+      link: { type: "doc", id: "cours/index" },
+      collapsed: false,
+      items: [
+        "cours/contexte-utile",
+        "cours/cartographier-codebase",
+        "cours/verifier-reponse-ia",
+      ],
+    },
+    {
+      type: "category",
       label: "Admin",
       link: { type: "doc", id: "admin/index" },
-      collapsed: false,
+      collapsed: true,
       items: [
         {
           type: "category",
