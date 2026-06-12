@@ -1,26 +1,131 @@
 # Charte pédagogique
 
-> Version : 0.1  
-> Statut : à définir
+> Version : 0.2  
+> Statut : convention de travail initiale
 
-Cette charte servira à définir le style de présentation pédagogique du projet **Coder avec l’IA**.
+Cette charte définit les principes pédagogiques du projet **Coder avec l’IA**.
 
-Elle est volontairement minimale pour l’instant. La priorité actuelle est de figer la charte visuelle et la page exemple.
+Elle complète la charte visuelle et la charte rédactionnelle. Elle ne définit pas encore le format précis des séances, exercices, démonstrations ou laboratoires. Ce sera le prochain volet.
 
-## À définir plus tard
+## 1. Public visé
 
-- Format des séances.
-- Format des exercices.
-- Format des démonstrations.
-- Format des laboratoires.
-- Format des blocs théoriques.
-- Format des aides visuelles.
-- Format des quiz ou questions formatives.
-- Niveau de guidage attendu pour les étudiants.
-- Niveau de détail attendu pour les enseignants.
+Le projet s’adresse principalement à :
 
-## Principe de départ
+- des enseignants d’expérience en informatique;
+- des étudiants en Techniques de l’informatique au cégep;
+- des étudiants de deuxième année, de troisième année ou en fin de parcours;
+- des équipes qui connaissent déjà les bases du développement logiciel.
+
+Le contenu n’est pas conçu comme une initiation générale à l’informatique.
+
+On peut présumer que le public connaît déjà plusieurs outils, pratiques et notions de base, par exemple :
+
+- GitHub;
+- Visual Studio Code;
+- les user stories;
+- les notions de projet logiciel;
+- les bases de la programmation;
+- les bases du travail en équipe;
+- les outils courants de développement.
+
+## 2. Positionnement collégial technique
+
+Le projet est pensé pour un contexte de technique au cégep.
+
+On ne cherche pas à produire un cours universitaire abstrait. On ne veut pas « pelleter des nuages ».
+
+Chaque notion doit aider à mieux programmer, mieux comprendre un projet, mieux utiliser un outil, mieux évaluer une solution ou mieux encadrer l’usage de l’IA.
+
+## 3. Principe central : concret et applicable
+
+Tout contenu doit mener rapidement à quelque chose d’applicable.
+
+Une page, une notion ou une activité devrait répondre clairement à la question :
+
+> What’s in it for me?
+
+Autrement dit :
+
+- Pourquoi est-ce utile?
+- Dans quel contexte vais-je m’en servir?
+- Quel problème concret est-ce que ça m’aide à régler?
+- Qu’est-ce que je peux essayer maintenant?
+
+## 4. Une notion doit montrer rapidement son utilité
+
+Lorsqu’on présente une notion, on doit rapidement montrer une application utile.
+
+Exemples :
+
+- Si on parle de contexte, montrer comment un meilleur contexte améliore une réponse de l’IA.
+- Si on parle de design pattern, montrer comment il aide à structurer une discussion avec l’IA.
+- Si on parle de CLI, montrer comment automatiser une vraie tâche de développement.
+- Si on parle de RAG ou de graphe de code, montrer comment retrouver plus vite une information dans un projet.
+- Si on parle d’évaluation, montrer comment détecter une réponse plausible mais fausse.
+
+La théorie peut être présente, mais elle doit soutenir une action concrète.
+
+## 5. Ne pas sur-expliquer les prérequis
+
+Le contenu ne doit pas perdre du temps à réexpliquer ce que le public connaît déjà.
+
+On n’explique pas longuement ce qu’est GitHub, Visual Studio Code, une user story, un commit ou un projet logiciel.
+
+On peut faire un rappel court si nécessaire, mais le cœur du contenu doit porter sur l’usage avancé, réfléchi et efficace de l’IA dans ces contextes.
+
+## 6. Respecter l’expérience du public
+
+Le ton pédagogique doit respecter l’expérience des enseignants et le niveau des étudiants avancés.
+
+Il faut éviter :
+
+- le ton infantilisant;
+- les explications trop élémentaires;
+- les longs détours théoriques;
+- les activités artificielles sans lien clair avec la pratique;
+- les exemples jouets qui ne ressemblent pas à une vraie situation de développement.
+
+Il faut privilégier :
+
+- les cas proches du terrain;
+- les exemples de code ou de projet;
+- les erreurs réalistes;
+- les décisions de conception;
+- les arbitrages concrets;
+- les comparaisons entre une mauvaise et une meilleure pratique.
+
+## 7. Commencer par une friction réelle
+
+Lorsque possible, une séquence pédagogique devrait partir d’un problème reconnaissable :
+
+- un prompt flou;
+- trop de contexte envoyé à l’IA;
+- une réponse plausible mais fausse;
+- une correction qui casse autre chose;
+- une mauvaise compréhension d’un code existant;
+- une demande trop vaste;
+- une solution qui semble impressionnante mais qui n’est pas maintenable.
+
+Le contenu doit ensuite montrer comment améliorer la situation avec une méthode plus fiable.
+
+## 8. Modularité
 
 Le projet doit rester modulaire.
 
 Un bloc pédagogique doit pouvoir être déplacé d’une séance à une autre sans être réécrit complètement.
+
+Les notions, démonstrations, exercices et aides visuelles doivent donc être conçus comme des éléments réutilisables.
+
+## 9. À définir dans le prochain volet
+
+Les éléments suivants seront définis ensuite :
+
+- format des séances;
+- format des exercices;
+- format des démonstrations;
+- format des laboratoires;
+- format des blocs théoriques;
+- format des aides visuelles;
+- format des quiz ou questions formatives;
+- niveau de guidage attendu pour les étudiants;
+- niveau de détail attendu pour les enseignants.
