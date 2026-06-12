@@ -1,5 +1,10 @@
 # Archive — contenu Docusaurus initial
 
+> Identifiant : `[DOC-ARC-001]`  
+> Version : 0.1  
+> Dernière modification : 2026-06-11  
+> Statut : archivé
+
 ## Statut
 
 Archivé logiquement.
