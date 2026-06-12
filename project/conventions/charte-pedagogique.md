@@ -1,11 +1,11 @@
 # Charte pédagogique
 
-> Version : 0.3  
+> Version : 0.4  
 > Statut : convention de travail initiale
 
 Cette charte définit les principes pédagogiques du projet **Coder avec l’IA**.
 
-Elle complète la charte visuelle et la charte rédactionnelle. Elle fixe maintenant les principes généraux et le format modulaire des séances. Les formats détaillés des exercices, démonstrations, laboratoires et évaluations seront définis ensuite.
+Elle complète la charte visuelle et la charte rédactionnelle. Elle fixe maintenant les principes généraux, le format modulaire des séances et la progression en paliers. Les formats détaillés des exercices, démonstrations, laboratoires et évaluations seront définis ensuite.
 
 ## 1. Public visé
 
@@ -150,7 +150,75 @@ La mini-démo est optionnelle. Certains modules peuvent passer directement de la
 
 L’important est que la personne puisse essayer quelque chose rapidement.
 
-## 10. À définir dans le prochain volet
+## 10. Progression en paliers : I, II, III
+
+Une même notion peut être découpée en plusieurs paliers progressifs.
+
+Exemple :
+
+```text
+Cartographie I
+Cartographie II
+Cartographie III
+```
+
+Ce découpage donne de la souplesse lorsque la durée réelle du cours est inconnue ou lorsque la première livraison du cours sert aussi à calibrer le rythme.
+
+### Palier I — noyau essentiel
+
+Le palier I contient ce qu’il faut absolument couvrir pour que la notion soit utile.
+
+Il devrait être faisable en classe dans un micro-module de 20 à 30 minutes.
+
+Objectif : la personne repart avec une application concrète minimale, même si on ne fait jamais les paliers suivants.
+
+### Palier II — consolidation ou extension
+
+Le palier II ajoute de la profondeur ou un cas plus réaliste.
+
+Il peut être fait :
+
+- en classe si le temps le permet;
+- en exercice facultatif;
+- en devoir court;
+- en activité de consolidation.
+
+Objectif : renforcer la notion sans rendre le palier I incomplet.
+
+### Palier III — approfondissement ou défi
+
+Le palier III sert à aller plus loin.
+
+Il peut viser :
+
+- un cas plus complexe;
+- une comparaison d’approches;
+- une limite importante;
+- un défi technique;
+- une réflexion critique.
+
+Objectif : rendre l’information disponible pour les groupes plus rapides, les étudiants motivés ou une version plus longue du cours.
+
+## 11. Règles pour les paliers
+
+Chaque palier doit rester utile par lui-même.
+
+Le palier I ne doit pas être une simple introduction théorique qui dépend du palier II pour devenir utile.
+
+Les paliers II et III doivent être conçus comme des extensions, pas comme des morceaux obligatoires cachés.
+
+Dans un contexte serré :
+
+```text
+On fait le palier I en classe.
+On rend les paliers II et III disponibles comme matériel facultatif ou travail à la maison.
+```
+
+Cette approche permet de conserver l’information sans forcer une progression trop lourde.
+
+Elle permet aussi d’ajuster le cours après une première livraison, quand les durées réelles deviennent plus claires.
+
+## 12. À définir dans le prochain volet
 
 Les éléments suivants seront définis ensuite :
 
