@@ -7,7 +7,7 @@ slug: /admin/modules-pilotes
 
 > Source : `project/current/cours-ia-avance/modules/`  
 > Identifiant : `[DOC-PAR-003]`  
-> Version : 0.1  
+> Version : 0.2  
 > Dernière modification : 2026-06-12  
 > Statut : index de travail
 
@@ -17,11 +17,11 @@ Ils servent à valider les gabarits pédagogiques avant de produire l’ensemble
 
 ## Modules pilotes
 
-| ID | Module | Domaine | Statut | Rôle |
+| ID | Module | Domaine | Statut | Compétences principales |
 |---|---|---|---|---|
-| `[MIC-CTX-001]` | Donner un contexte utile à l’IA | CTX | pilote | Améliorer la qualité des réponses IA |
-| `[MIC-MAP-001]` | Cartographier un codebase | MAP | pilote | Trouver où intervenir dans un projet |
-| `[MIC-EVA-001]` | Vérifier une réponse IA plausible | EVA | pilote | Valider avant d’accepter une réponse |
+| `[MIC-CTX-001]` | Donner un contexte utile à l’IA | CTX | pilote | `[CMP-CTX-001]`, `[CMP-EVA-001]`, `[CMP-RET-001]` |
+| `[MIC-MAP-001]` | Cartographier un codebase | MAP | pilote | `[CMP-MAP-001]`, `[CMP-EVA-001]` |
+| `[MIC-EVA-001]` | Vérifier une réponse IA plausible | EVA | pilote | `[CMP-EVA-001]`, `[CMP-CTX-001]`, `[CMP-MAP-001]` |
 
 ## Ce qu’on valide avec ces modules
 
@@ -31,6 +31,7 @@ Ils servent à valider les gabarits pédagogiques avant de produire l’ensemble
 - La clarté du “What’s in it for me?”.
 - La place de GitHub Copilot comme outil principal.
 - Les équivalences Codex et Claude Code, seulement quand utiles.
+- La liaison explicite entre modules et compétences observables.
 - La possibilité de produire rapidement d’autres modules avec le même gabarit.
 
 ## Résumé des pilotes
@@ -41,17 +42,23 @@ Objectif : apprendre à fournir à l’IA un contexte suffisant, ciblé et utile
 
 Friction de départ : “Corrige mon code, ça ne marche pas.”
 
+Compétence centrale : `[CMP-CTX-001]`.
+
 ### [MIC-MAP-001] Cartographier un codebase
 
 Objectif : comprendre où intervenir dans un projet existant avant de demander à l’IA de modifier du code.
 
 Friction de départ : “Ajoute cette fonctionnalité dans le projet.”
 
+Compétence centrale : `[CMP-MAP-001]`.
+
 ### [MIC-EVA-001] Vérifier une réponse IA plausible
 
 Objectif : valider une réponse IA qui semble convaincante avant de l’accepter, de la remettre ou de l’intégrer.
 
 Friction de départ : “La réponse a l’air bonne, donc je la prends.”
+
+Compétence centrale : `[CMP-EVA-001]`.
 
 ## Sources
 
