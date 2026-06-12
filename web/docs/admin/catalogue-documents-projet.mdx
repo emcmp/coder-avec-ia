@@ -5,6 +5,11 @@ slug: /admin/catalogue-documents-projet
 
 # Catalogue des documents de projet
 
+> Source : `project/catalogue/documents-projet.md`  
+> Identifiant : `[DOC-CAT-002]`  
+> Version : 0.2  
+> Dernière modification : 2026-06-11
+
 Cette page présente le registre des documents importants du projet.
 
 La version complète est conservée dans le fichier source suivant :
@@ -13,7 +18,7 @@ La version complète est conservée dans le fichier source suivant :
 
 ## Objectif
 
-Chaque document important doit pouvoir être classé, identifié et retrouvé facilement.
+Chaque document important doit pouvoir être classé, identifié, retrouvé et maintenu facilement.
 
 Les documents de projet incluent notamment :
 
@@ -27,6 +32,25 @@ Les documents de projet incluent notamment :
 - les prompts;
 - les archives.
 
+## Champs obligatoires
+
+Chaque document important doit avoir :
+
+| Champ | Rôle |
+|---|---|
+| ID | Identifiant stable du document |
+| Version | Niveau d’évolution du document |
+| Dernière modification | Date du dernier changement significatif |
+| Statut | Brouillon, actif, stable, en révision, archivé, etc. |
+| Source | Fichier source de référence |
+| Page Admin | Page publiée, lorsque disponible |
+
+## Exemple
+
+| ID | Document | Version | Dernière modification | Statut |
+|---|---|---:|---|---|
+| `[DOC-CHR-003]` | Charte pédagogique | 0.5 | 2026-06-11 | actif |
+
 ## Règle
 
-Tout nouveau document important doit être ajouté au catalogue source.
+Tout nouveau document important doit être ajouté au catalogue source avec sa version et sa date de dernière modification.
