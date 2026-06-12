@@ -1,0 +1,245 @@
+# Nomenclature des blocs pédagogiques
+
+> Version : 0.1  
+> Statut : adoptée comme convention de travail initiale
+
+Cette convention définit comment identifier les éléments pédagogiques du projet **Coder avec l’IA**.
+
+L’objectif est de pouvoir référencer précisément une notion, un exercice, une aide visuelle, une vidéo ou une ressource sans dépendre de son emplacement dans une séance ou dans un module.
+
+## Principe directeur
+
+Un identifiant décrit la nature et le sujet stable d’un élément. Il ne décrit pas son emplacement dans le cours.
+
+Un identifiant ne doit donc pas contenir :
+
+- un numéro de séance;
+- un numéro de module lié à une progression temporaire;
+- un nom de produit;
+- un nom de plateforme;
+- un nom d’outil qui pourrait devenir désuet.
+
+Les noms de produits, d’outils ou de plateformes peuvent être indiqués dans les métadonnées ou dans le contenu, mais pas dans l’identifiant.
+
+## Deux structures séparées
+
+Le projet distingue deux structures.
+
+### 1. Structure de connaissance
+
+La structure de connaissance est stable.
+
+```text
+Domaine
+  → Thème
+    → Notion
+      → Bloc pédagogique
+        → Ressource
+```
+
+Elle sert à organiser les concepts et les éléments pédagogiques réutilisables.
+
+### 2. Structure de diffusion
+
+La structure de diffusion est flexible.
+
+```text
+Parcours
+  → Module
+    → Séance
+      → Segment
+        → Références vers des blocs existants
+```
+
+Elle sert à planifier l’ordre de présentation. Une séance ne possède pas les blocs : elle les référence.
+
+Un même bloc peut donc être déplacé d’une séance à une autre sans changer d’identifiant.
+
+## Format des identifiants
+
+Format général :
+
+```text
+[TYPE-DOMAINE-NNN]
+```
+
+Exemples :
+
+```text
+[NOT-CON-001]
+[THE-CON-001]
+[EX-CON-002]
+[VIS-MAP-001]
+[VID-RET-001]
+[GLO-SPE-001]
+```
+
+## Types principaux
+
+```text
+FOR = Formation ou parcours complet
+MOD = Module conceptuel
+SEA = Séance livrée ou planifiée
+SEG = Segment de séance
+THM = Thème
+NOT = Notion
+```
+
+## Blocs pédagogiques
+
+```text
+THE = Théorie
+DEM = Démonstration
+EX  = Exercice
+LAB = Laboratoire ou atelier
+QZ  = Quiz ou question formative
+CAS = Cas d’usage
+CHK = Checklist
+EVA = Élément d’évaluation
+```
+
+## Ressources
+
+```text
+VIS = Aide visuelle ou diagramme
+VID = Vidéo
+IMG = Image
+TAB = Tableau
+REF = Référence externe
+PRM = Prompt réutilisable
+COD = Exemple de code
+DAT = Jeu de données
+GLO = Entrée de glossaire
+```
+
+## Domaines conceptuels
+
+Les domaines doivent rester conceptuels. Ils ne doivent pas être liés à un produit.
+
+```text
+IA   = IA générative et concepts généraux
+CTX  = Contexte et context engineering
+INS  = Instructions, règles et skills
+SPE  = Spécification et développement guidé par spec
+RET  = Recherche, retrieval, RAG et bases documentaires
+MAP  = Cartographie, analyse et compréhension de codebase
+CON  = Connexion aux outils, protocoles, API et intégrations
+CLI  = Interfaces en ligne de commande et automatisation locale
+VCS  = Git, GitHub, branches, issues et pull requests
+AGT  = Agents et workflows agentiques
+EVA  = Évaluation, tests, critères et grilles
+OBS  = Observabilité, traces, logs et coûts
+SEC  = Sécurité, permissions et confidentialité
+LOC  = Modèles locaux et infrastructure locale
+PED  = Pédagogie, apprentissage et encadrement
+DOC  = Documentation, Docusaurus et publication
+```
+
+## Exemples de correspondance
+
+Les outils et produits sont associés aux domaines dans les métadonnées, pas dans les identifiants.
+
+```text
+CodeGraph, Graphify, Understand-Anything → MAP
+MCP → CON
+Spec Kit → SPE
+Codex, Copilot, Claude Code → AGT, CLI ou VCS selon le contexte
+Docusaurus → DOC
+```
+
+Exemples recommandés :
+
+```text
+[THE-MAP-001] Comprendre un codebase par cartographie
+[VIS-MAP-001] Schéma fichiers, symboles et dépendances
+[DEM-MAP-001] Repérer où modifier une fonctionnalité
+[THE-CON-001] Pourquoi connecter un agent à des outils
+[EX-CON-001] Identifier si une connexion à un outil est pertinente
+[GLO-CON-001] Définition d’un protocole d’outil
+```
+
+Exemples à éviter :
+
+```text
+[THE-CODEGRAPH-001]
+[EX-MCP-002]
+[S02-MCP-EX-003]
+[MOD-SPEC-KIT-001]
+```
+
+## Métadonnées recommandées
+
+Chaque bloc important devrait contenir un front matter minimal.
+
+```yaml
+---
+id: THE-CON-001
+type: theorie
+domain: CON
+title: Pourquoi connecter un agent à des outils?
+status: draft
+covers:
+  - NOT-CON-001
+related:
+  - VIS-CON-001
+  - EX-CON-001
+tools:
+  - MCP
+---
+```
+
+Les champs `tools`, `platforms` ou `examples` peuvent contenir des noms de produits. Ces noms ne doivent pas être dans `id`.
+
+## Exemple de séance flexible
+
+```md
+---
+id: SEA-AGT-001
+type: seance
+title: Agents connectés et outils externes
+status: draft
+duration: 2h
+---
+
+# [SEA-AGT-001] Agents connectés et outils externes
+
+## Segments prévus
+
+1. [THE-AGT-001] Qu’est-ce qu’un agent?
+2. [THE-CON-001] Pourquoi connecter un agent à des outils?
+3. [VIS-CON-001] Schéma agent, protocole et outil
+4. [DEM-CON-001] Démonstration d’un agent connecté
+5. [EX-CON-001] Identifier si une connexion à un outil est pertinente
+```
+
+Si la séance manque de temps, `[EX-CON-001]` peut être déplacé ailleurs sans changer d’identifiant.
+
+## Règles de stabilité
+
+1. Un identifiant ne contient jamais de nom de produit.
+2. Un identifiant ne contient jamais de numéro de séance.
+3. Un identifiant ne contient jamais de position dans une table des matières.
+4. Un identifiant ne change pas quand un bloc est déplacé.
+5. Les produits, outils et plateformes sont indiqués dans les métadonnées.
+6. Les séances, modules et parcours référencent des blocs; ils ne les possèdent pas.
+7. Un identifiant supprimé ne doit pas être réutilisé pour autre chose.
+8. Un bloc remplacé ou retiré doit être marqué `deprecated` plutôt que renommé silencieusement.
+
+## Usage attendu
+
+Cette nomenclature sert à faciliter :
+
+- la révision du contenu;
+- les commentaires précis;
+- le déplacement flexible de notions entre séances;
+- le travail avec des agents IA;
+- la construction progressive d’un glossaire;
+- la transformation éventuelle vers Docusaurus.
+
+Exemples de commentaires utilisables :
+
+```text
+[EX-CON-005] manque d’explications.
+[VIS-MAP-002] devrait mieux illustrer les dépendances.
+[GLO-SPE-001] doit être harmonisé avec [THE-SPE-001].
+```
