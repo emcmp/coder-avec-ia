@@ -1,9 +1,14 @@
-# Backlog — formation avancée IA
+# Backlog — Parcours Coder avec l’IA
+
+> Identifiant : `[DOC-BKL-001]`  
+> Version : 0.1  
+> Dernière modification : 2026-06-11  
+> Statut : brouillon
 
 ## À faire
 
 - Stabiliser la table des matières.
-- Décider du format de la formation.
+- Décider du format final du parcours.
 - Identifier les démonstrations prioritaires.
 - Prévoir une section CodeGraph.
 - Prévoir une section Spec Kit.
