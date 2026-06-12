@@ -1,18 +1,23 @@
 # Charte visuelle
 
-> Version : 0.1  
+> Version : 0.3  
 > Statut : convention de travail initiale
 
 Cette charte définit le style visuel des pages du site **Coder avec l’IA**.
 
-Elle ne définit pas encore le style pédagogique des exercices, démonstrations ou activités. Ce point sera traité dans une charte séparée.
+Elle fige la direction graphique générale et les motifs visuels réutilisables.
 
-## Objectifs
+## Direction visuelle
 
-- Donner une apparence cohérente aux pages.
-- Rendre les documents faciles à lire et à réviser.
-- Éviter que chaque page invente son propre format.
-- Préparer la transformation progressive des notes de conception en pages Docusaurus.
+Le style retenu est : **Superhero pédagogique**.
+
+Il combine :
+
+- une base claire et lisible pour les textes longs;
+- des accents bleu profond et vert sarcelle inspirés d’un univers technique;
+- des blocs à dégradé pour les introductions et les synthèses importantes;
+- des cartes claires pour structurer les contenus;
+- des éléments visuels sobres pour garder un ton professionnel.
 
 ## Structure générale d’une page
 
@@ -20,75 +25,49 @@ Chaque page devrait contenir :
 
 1. un titre clair;
 2. une courte intention;
-3. des sections courtes;
+3. une ou plusieurs sections courtes;
 4. des exemples concrets lorsque pertinent;
 5. des encadrés pour les avertissements, conseils ou informations importantes;
-6. des blocs de code lisibles et contextualisés.
+6. des blocs de code contextualisés;
+7. une synthèse ou prochaine étape si la page est longue.
 
-## Titres
+## Motifs visuels principaux
 
-Utiliser une hiérarchie simple :
+Utiliser les motifs suivants selon le besoin :
+
+- `coursHero` pour une page importante ou une synthèse;
+- `coursCard` pour une idée courte ou une catégorie;
+- `coursPill` pour un mot-clé ou un statut;
+- `coursTerminal` pour une commande ou une sortie terminal;
+- admonitions Docusaurus pour les informations importantes;
+- tableaux courts pour comparer ou classifier.
+
+## Panneaux provider
+
+Lorsque le contenu doit montrer une équivalence entre plusieurs outils IA, utiliser un panneau par provider.
+
+Ordre recommandé :
 
 ```text
-# Titre de la page
-## Grande section
-### Sous-section
+GitHub Copilot | Codex | Claude Code
 ```
 
-Éviter de dépasser `###` sauf pour les documents longs.
+GitHub Copilot doit être présenté en premier, car il est l’outil de référence du cours.
 
-## Numérotation
+Utiliser ce motif pour comparer une même action pratique, par exemple :
 
-La numérotation visible doit rester sobre.
+- voir le statut;
+- voir l’usage;
+- inspecter la taille du contexte;
+- reprendre une session;
+- relancer une tâche;
+- comprendre où l’outil lit le projet.
 
-Utiliser la numérotation lorsque l’ordre est important :
-
-```text
-1. Observer le problème
-2. Proposer une stratégie
-3. Tester la solution
-4. Réviser le résultat
-```
-
-Utiliser les listes à puces lorsque l’ordre n’est pas important.
-
-Les identifiants pédagogiques comme `[THE-CON-001]` sont réservés aux blocs pédagogiques, pas aux titres ordinaires.
-
-## Encadrés
-
-Utiliser les admonitions Docusaurus pour les informations importantes.
-
-```md
-:::info
-Information utile, sans urgence particulière.
-:::
-
-:::tip
-Conseil pratique ou raccourci utile.
-:::
-
-:::warning
-Point de vigilance ou risque de confusion.
-:::
-
-:::danger
-Erreur grave, risque de sécurité ou action à éviter.
-:::
-```
+Éviter d’utiliser ce motif pour faire une comparaison générale de produits. Le panneau doit répondre à une question concrète.
 
 ## Code
 
 Les blocs de code doivent toujours être précédés d’une phrase qui explique leur rôle.
-
-Utiliser un langage lorsque possible :
-
-```md
-Voici un exemple de commande :
-
-```bash
-npm run build
-```
-```
 
 Éviter les gros blocs de code non commentés.
 
@@ -96,17 +75,7 @@ npm run build
 
 Utiliser les tableaux pour comparer, classifier ou résumer.
 
-Un tableau doit rester court. Si un tableau devient long, le remplacer par des sections.
-
-## Ton visuel
-
-Le style doit être :
-
-- sobre;
-- clair;
-- technique sans être lourd;
-- orienté action;
-- adapté à des étudiants et enseignants en informatique.
+Un tableau doit rester court. Si un tableau devient long, le remplacer par des sections ou des cartes.
 
 ## À éviter
 
@@ -115,6 +84,9 @@ Le style doit être :
 - Les titres décoratifs difficiles à maintenir.
 - Les noms de produits dans les identifiants pédagogiques.
 - Les blocs de code sans explication.
+- Les effets visuels lourds ou animés sans valeur pédagogique.
+- Les couleurs trop agressives pour une lecture prolongée.
+- Les panneaux provider utilisés sans vraie équivalence utile.
 
 ## Page de référence
 
