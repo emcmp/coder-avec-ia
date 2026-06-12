@@ -7,13 +7,13 @@ slug: /admin/modules-et-dependances
 
 > Source : `project/catalogue/modules-et-dependances.md`  
 > Identifiant : `[DOC-CAT-003]`  
-> Version : 0.1  
-> Dernière modification : 2026-06-11  
+> Version : 0.2  
+> Dernière modification : 2026-06-12  
 > Statut : brouillon structurant
 
 Cette page présente la première carte des micro-modules du parcours **Coder avec l’IA**.
 
-Elle ne constitue pas encore une table des matières finale. Elle sert à voir les dépendances, les priorités et les extensions possibles.
+Elle ne constitue pas encore une table des matières finale. Elle sert à voir les dépendances, les priorités, les pilotes et les extensions possibles.
 
 ## Vue des dépendances principales
 
@@ -31,28 +31,34 @@ MIC-LOC-001 est optionnel et vient après CLI, OBS et SEC
 
 ## Modules essentiels pour une première version courte
 
-| ID | Module | Domaine | Rôle |
-|---|---|---|---|
-| `[MIC-IA-001]` | Se repérer dans les familles d’outils IA | IA | Choisir le bon type d’outil |
-| `[MIC-CTX-001]` | Donner un contexte utile à l’IA | CTX | Améliorer la qualité des réponses |
-| `[MIC-VCS-001]` | Utiliser Copilot dans un dépôt GitHub | VCS | Travailler dans un vrai projet |
-| `[MIC-SPE-001]` | Spécifier avant d’implémenter | SPE | Réduire les dérives de l’IA |
-| `[MIC-MAP-001]` | Cartographier un codebase | MAP | Trouver où intervenir |
-| `[MIC-EVA-001]` | Vérifier une réponse IA plausible | EVA | Valider avant d’accepter |
-| `[MIC-SEC-001]` | Gérer permissions, confidentialité et limites | SEC | Encadrer les risques |
+| ID | Module | Domaine | Statut | Rôle |
+|---|---|---|---|---|
+| `[MIC-IA-001]` | Se repérer dans les familles d’outils IA | IA | brouillon | Choisir le bon type d’outil |
+| `[MIC-CTX-001]` | Donner un contexte utile à l’IA | CTX | pilote | Améliorer la qualité des réponses |
+| `[MIC-VCS-001]` | Utiliser Copilot dans un dépôt GitHub | VCS | brouillon | Travailler dans un vrai projet |
+| `[MIC-SPE-001]` | Spécifier avant d’implémenter | SPE | brouillon | Réduire les dérives de l’IA |
+| `[MIC-MAP-001]` | Cartographier un codebase | MAP | pilote | Trouver où intervenir |
+| `[MIC-EVA-001]` | Vérifier une réponse IA plausible | EVA | pilote | Valider avant d’accepter |
+| `[MIC-SEC-001]` | Gérer permissions, confidentialité et limites | SEC | brouillon | Encadrer les risques |
 
 ## Modules d’extension
 
-| ID | Module | Domaine | Rôle |
-|---|---|---|---|
-| `[MIC-INS-001]` | Utiliser des instructions réutilisables | INS | Stabiliser les consignes |
-| `[MIC-CLI-001]` | Travailler avec un agent CLI | CLI | Comprendre le workflow local |
-| `[MIC-AGT-001]` | Piloter une tâche agentique | AGT | Encadrer une tâche longue |
-| `[MIC-VCS-002]` | Travailler avec branches, issues et pull requests | VCS | Garder un flux révisable |
-| `[MIC-OBS-001]` | Lire traces, usage et contexte | OBS | Diagnostiquer une session |
-| `[MIC-RET-001]` | Retrouver l’information dans des documents | RET | Appuyer les réponses sur les sources |
-| `[MIC-LOC-001]` | Comprendre les modèles locaux | LOC | Évaluer les compromis local/cloud |
-| `[MIC-PED-001]` | Intégrer l’IA dans le travail d’un prof | PED | Transférer vers la pédagogie |
+| ID | Module | Domaine | Statut | Rôle |
+|---|---|---|---|---|
+| `[MIC-INS-001]` | Utiliser des instructions réutilisables | INS | brouillon | Stabiliser les consignes |
+| `[MIC-CLI-001]` | Travailler avec un agent CLI | CLI | brouillon | Comprendre le workflow local |
+| `[MIC-AGT-001]` | Piloter une tâche agentique | AGT | brouillon | Encadrer une tâche longue |
+| `[MIC-VCS-002]` | Travailler avec branches, issues et pull requests | VCS | brouillon | Garder un flux révisable |
+| `[MIC-OBS-001]` | Lire traces, usage et contexte | OBS | brouillon | Diagnostiquer une session |
+| `[MIC-RET-001]` | Retrouver l’information dans des documents | RET | brouillon | Appuyer les réponses sur les sources |
+| `[MIC-LOC-001]` | Comprendre les modèles locaux | LOC | optionnel | Évaluer les compromis local/cloud |
+| `[MIC-PED-001]` | Intégrer l’IA dans le travail d’un prof | PED | brouillon | Transférer vers la pédagogie |
+
+## Modules pilotes
+
+Les trois modules pilotes sont publiés dans : [Modules pilotes](/admin/modules-pilotes).
+
+Ils servent à valider les gabarits pédagogiques avant de produire les autres modules.
 
 ## Règle de lecture
 
