@@ -1,5 +1,4 @@
 ---
-id: admin/adr-0001-structure-du-repo
 title: ADR-0001 — Structure du dépôt
 slug: /admin/adr-0001-structure-du-repo
 ---
@@ -11,17 +10,15 @@ slug: /admin/adr-0001-structure-du-repo
 
 ## Décision
 
-Le dépôt est séparé en deux espaces principaux :
+Le dépôt distingue deux espaces :
 
-- `project/` pour le travail de conception;
-- `web/` pour le site Docusaurus publié.
+- `project/` pour les documents de conception;
+- `web/` pour le site Docusaurus.
 
 ## Raison
 
-Le projet doit pouvoir conserver des plans, décisions, specs, prompts, notes et backlogs sans les publier immédiatement dans le site.
+Les plans, décisions, specs, prompts et notes doivent pouvoir évoluer avant d’être publiés dans le site.
 
-## Conséquences
+## Conséquence
 
-- Le contenu peut être conçu dans `project/` avant publication.
-- Le site `web/` demeure réservé au contenu propre et consultable.
-- Les agents IA savent où travailler par défaut.
+Le contenu est conçu dans `project/`, puis publié dans `web/` seulement lorsqu’il est prêt.
