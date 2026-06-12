@@ -30,6 +30,7 @@ const sidebars = {
             "admin/nomenclature-blocs-pedagogiques",
             "admin/catalogue-blocs-pedagogiques",
             "admin/catalogue-documents-projet",
+            "admin/modules-et-dependances",
             "admin/glossaire",
           ],
         },
