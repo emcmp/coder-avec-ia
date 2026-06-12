@@ -86,10 +86,56 @@ const config = {
             label: "Accueil",
           },
           {
-            type: "docSidebar",
+            label: "Chartes",
             position: "left",
-            sidebarId: "docs",
-            label: "Trousse",
+            items: [
+              {
+                type: "doc",
+                docId: "admin/charte-visuelle",
+                label: "Charte visuelle",
+              },
+              {
+                type: "doc",
+                docId: "admin/page-exemple-style",
+                label: "Page exemple",
+              },
+              {
+                type: "doc",
+                docId: "admin/charte-redactionnelle",
+                label: "Charte rédactionnelle",
+              },
+              {
+                type: "doc",
+                docId: "admin/charte-pedagogique",
+                label: "Charte pédagogique",
+              },
+            ],
+          },
+          {
+            label: "Conception",
+            position: "left",
+            items: [
+              {
+                type: "doc",
+                docId: "admin/nomenclature-blocs-pedagogiques",
+                label: "Nomenclature",
+              },
+              {
+                type: "doc",
+                docId: "admin/catalogue-blocs-pedagogiques",
+                label: "Catalogue des blocs",
+              },
+              {
+                type: "doc",
+                docId: "admin/glossaire",
+                label: "Glossaire",
+              },
+              {
+                type: "doc",
+                docId: "admin/cours-ia-avance",
+                label: "Parcours",
+              },
+            ],
           },
           {
             type: "doc",
