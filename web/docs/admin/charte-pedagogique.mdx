@@ -6,12 +6,12 @@ slug: /admin/charte-pedagogique
 # Charte pédagogique
 
 > Source : `project/conventions/charte-pedagogique.md`  
-> Version : 0.4  
+> Version : 0.5  
 > Statut : convention de travail initiale
 
 Cette charte définit les principes pédagogiques du projet **Coder avec l’IA**.
 
-Elle complète la charte visuelle et la charte rédactionnelle. Elle fixe maintenant les principes généraux, le format modulaire des séances et la progression en paliers. Les formats détaillés des exercices, démonstrations, laboratoires et évaluations seront définis ensuite.
+Elle complète la charte visuelle et la charte rédactionnelle. Elle fixe maintenant les principes généraux, le format modulaire des séances, la progression en paliers et l’usage des outils IA de référence. Les formats détaillés des exercices, démonstrations, laboratoires et évaluations seront définis ensuite.
 
 ## 1. Public visé
 
@@ -141,26 +141,11 @@ Structure recommandée :
 5. **Mini-exercice** — faire appliquer immédiatement la notion.
 6. **Retour rapide** — nommer ce qu’on retient et ce qu’on pourra réutiliser.
 
-Répartition indicative :
-
-| Segment | Durée approximative |
-|---|---:|
-| Friction ou problème | 2 à 5 min |
-| Valeur immédiate | 1 à 3 min |
-| Théorie ciblée | 5 à 8 min |
-| Mini-démo | 0 à 8 min |
-| Mini-exercice | 8 à 12 min |
-| Retour rapide | 2 à 3 min |
-
 La mini-démo est optionnelle. Certains modules peuvent passer directement de la notion au mini-exercice.
-
-L’important est que la personne puisse essayer quelque chose rapidement.
 
 ## 10. Progression en paliers : I, II, III
 
 Une même notion peut être découpée en plusieurs paliers progressifs.
-
-Exemple :
 
 ```text
 Cartographie I
@@ -168,31 +153,7 @@ Cartographie II
 Cartographie III
 ```
 
-Ce découpage donne de la souplesse lorsque la durée réelle du cours est inconnue ou lorsque la première livraison du cours sert aussi à calibrer le rythme.
-
-### Palier I — noyau essentiel
-
-Le palier I contient ce qu’il faut absolument couvrir pour que la notion soit utile.
-
-Il devrait être faisable en classe dans un micro-module de 20 à 30 minutes.
-
-Objectif : la personne repart avec une application concrète minimale, même si on ne fait jamais les paliers suivants.
-
-### Palier II — consolidation ou extension
-
-Le palier II ajoute de la profondeur ou un cas plus réaliste.
-
-Il peut être fait en classe si le temps le permet, en exercice facultatif, en devoir court ou en activité de consolidation.
-
-Objectif : renforcer la notion sans rendre le palier I incomplet.
-
-### Palier III — approfondissement ou défi
-
-Le palier III sert à aller plus loin.
-
-Il peut viser un cas plus complexe, une comparaison d’approches, une limite importante, un défi technique ou une réflexion critique.
-
-Objectif : rendre l’information disponible pour les groupes plus rapides, les étudiants motivés ou une version plus longue du cours.
+Le palier I contient le noyau essentiel, faisable en classe. Les paliers II et III servent d’extensions, d’exercices facultatifs ou de matériel à la maison.
 
 ## 11. Règles pour les paliers
 
@@ -209,11 +170,47 @@ On fait le palier I en classe.
 On rend les paliers II et III disponibles comme matériel facultatif ou travail à la maison.
 ```
 
-Cette approche permet de conserver l’information sans forcer une progression trop lourde.
+## 12. Outil de référence et équivalences
 
-Elle permet aussi d’ajuster le cours après une première livraison, quand les durées réelles deviennent plus claires.
+L’outil de référence du cours est **GitHub Copilot**.
 
-## 12. À définir dans le prochain volet
+Sauf indication contraire, les démonstrations, captures, consignes et exemples pratiques doivent d’abord être pensés pour GitHub Copilot, parce que c’est l’outil principal attendu pour le public visé.
+
+Cependant, certaines notions gagnent à montrer l’équivalence dans d’autres outils, notamment **Codex** et **Claude Code**.
+
+Exemples de notions où une équivalence est utile :
+
+- voir l’état d’une tâche;
+- comprendre la taille du contexte;
+- lire l’usage ou les limites de session;
+- comparer un mode agent avec un mode conversation;
+- comprendre comment un outil lit le dépôt;
+- repérer les différences entre IDE, CLI et agent connecté à GitHub.
+
+La règle est la suivante :
+
+```text
+Copilot d’abord.
+Équivalences seulement lorsque cela aide à comprendre ou transférer la notion.
+```
+
+Les équivalences ne doivent pas transformer chaque page en comparatif exhaustif d’outils.
+
+Pour les pages qui comparent plusieurs outils, utiliser de préférence un panneau visuel ou des onglets par provider :
+
+```text
+GitHub Copilot | Codex | Claude Code
+```
+
+Chaque onglet doit répondre à la même question pratique, par exemple :
+
+- Où voir le statut?
+- Où voir l’usage?
+- Comment inspecter le contexte?
+- Comment relancer une tâche?
+- Comment reprendre une session?
+
+## 13. À définir dans le prochain volet
 
 Les éléments suivants seront définis ensuite :
 
