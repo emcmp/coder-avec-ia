@@ -1,8 +1,11 @@
-# Table des matières — formation avancée IA
+# Table des matières — Parcours Coder avec l’IA
 
-> État : brouillon à réviser.
+> Identifiant : `[DOC-PAR-002]`  
+> Version : 0.1  
+> Dernière modification : 2026-06-11  
+> Statut : brouillon à réviser
 
-Ce fichier conservera la table des matières de la formation avancée sur l’IA pour profs d’informatique.
+Ce fichier conservera la table des matières du parcours modulaire **Coder avec l’IA**.
 
 La table des matières complète sera ajoutée lorsque la structure sera stabilisée.
 
