@@ -86,38 +86,29 @@ const config = {
             label: "Accueil",
           },
           {
-            label: "Chartes",
+            type: "doc",
+            docId: "cours/index",
+            position: "left",
+            label: "Cours",
+          },
+          {
+            label: "Modules",
             position: "left",
             items: [
               {
                 type: "doc",
-                docId: "admin/charte-visuelle",
-                label: "Charte visuelle",
+                docId: "cours/contexte-utile",
+                label: "Contexte utile",
               },
               {
                 type: "doc",
-                docId: "admin/page-exemple-style",
-                label: "Page exemple",
+                docId: "cours/cartographier-codebase",
+                label: "Cartographier un codebase",
               },
               {
                 type: "doc",
-                docId: "admin/exemple-provider",
-                label: "Exemple provider",
-              },
-              {
-                type: "doc",
-                docId: "admin/charte-redactionnelle",
-                label: "Charte rédactionnelle",
-              },
-              {
-                type: "doc",
-                docId: "admin/charte-pedagogique",
-                label: "Charte pédagogique",
-              },
-              {
-                type: "doc",
-                docId: "admin/gabarits-pedagogiques",
-                label: "Gabarits pédagogiques",
+                docId: "cours/verifier-reponse-ia",
+                label: "Vérifier une réponse IA",
               },
             ],
           },
@@ -173,6 +164,42 @@ const config = {
             ],
           },
           {
+            label: "Chartes",
+            position: "right",
+            items: [
+              {
+                type: "doc",
+                docId: "admin/charte-visuelle",
+                label: "Charte visuelle",
+              },
+              {
+                type: "doc",
+                docId: "admin/page-exemple-style",
+                label: "Page exemple",
+              },
+              {
+                type: "doc",
+                docId: "admin/exemple-provider",
+                label: "Exemple provider",
+              },
+              {
+                type: "doc",
+                docId: "admin/charte-redactionnelle",
+                label: "Charte rédactionnelle",
+              },
+              {
+                type: "doc",
+                docId: "admin/charte-pedagogique",
+                label: "Charte pédagogique",
+              },
+              {
+                type: "doc",
+                docId: "admin/gabarits-pedagogiques",
+                label: "Gabarits pédagogiques",
+              },
+            ],
+          },
+          {
             type: "doc",
             docId: "admin/index",
             position: "right",
@@ -197,14 +224,6 @@ const config = {
           siteConfig.nom
         }. CÉGEP Édouard-Montpetit.`,
       },
-      // Décommenter et remplir pour activer l'indexation des pages par le moteur de recherche local
-      // algolia: {
-      //   appId: '',
-      //   apiKey: '',
-      //   indexName: '',
-      //   contextualSearch: true,
-      //   searchPagePath: 'search',
-      // },
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
