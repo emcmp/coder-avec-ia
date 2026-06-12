@@ -137,6 +137,11 @@ const config = {
               },
               {
                 type: "doc",
+                docId: "admin/modules-et-dependances",
+                label: "Modules et dépendances",
+              },
+              {
+                type: "doc",
                 docId: "admin/glossaire",
                 label: "Glossaire",
               },
