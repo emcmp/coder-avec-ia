@@ -1,0 +1,124 @@
+# Charte rédactionnelle
+
+> Version : 0.1  
+> Statut : convention de travail initiale
+
+Cette charte définit le ton, le style d’écriture et l’usage de l’humour dans le projet **Coder avec l’IA**.
+
+Elle complète la charte visuelle. Elle ne définit pas encore le format pédagogique des séances, exercices ou laboratoires.
+
+## Ton officiel
+
+Le ton officiel est : **sérieux, complice et pragmatique**.
+
+Le site parle d’IA sans hype et sans panique. Il reconnaît que l’IA peut aider, mais aussi qu’elle peut produire du bruit, des erreurs et de la dépendance.
+
+L’objectif est d’apprendre à s’en servir avec jugement, sans perdre ses compétences.
+
+## Voix du site
+
+Le site adopte une voix qui dit :
+
+> On apprend ensemble à utiliser l’IA avec jugement.
+
+La voix n’est pas une autorité distante qui impose une vérité officielle. Elle n’est pas non plus une voix marketing qui promet que l’IA va tout régler.
+
+## Public visé
+
+Le style doit convenir à :
+
+- des étudiants en informatique;
+- des enseignants en informatique;
+- des départements qui veulent clarifier leurs pratiques.
+
+Le niveau de langage doit être clair, professionnel et naturel.
+
+## Style d’écriture
+
+Privilégier :
+
+- les phrases courtes;
+- les idées clairement séparées;
+- les exemples concrets;
+- les mises en garde pratiques;
+- les formulations directes;
+- les transitions simples.
+
+Éviter :
+
+- le jargon inutile;
+- les phrases longues et abstraites;
+- le ton moralisateur;
+- le style trop académique;
+- le style trop marketing;
+- le style trop familier.
+
+## Humour
+
+L’humour est permis lorsqu’il aide à comprendre, à dédramatiser ou à mémoriser.
+
+Il doit rester léger, sec et pédagogique.
+
+L’humour ne doit jamais :
+
+- ridiculiser les étudiants;
+- ridiculiser les débutants;
+- remplacer l’explication;
+- devenir cynique;
+- transformer le contenu en série de blagues.
+
+## Exemples de ton recommandé
+
+> Un prompt flou donne souvent une réponse floue. L’IA n’est pas télépathe, même quand elle fait semblant.
+
+> Copier-coller 14 fichiers dans le prompt peut fonctionner. Comme transporter son épicerie dans les bras sans sac : parfois ça passe, mais ce n’est pas une méthode.
+
+> Si l’IA propose de réécrire tout le projet pour corriger une faute de frappe, on respire un peu.
+
+## Formulations à privilégier
+
+Utiliser des formulations comme :
+
+- « On va commencer par faire ça de la mauvaise manière. »
+- « C’est tentant, mais ce n’est pas une bonne idée. »
+- « Ici, le but n’est pas d’avoir une réponse impressionnante. Le but est d’avoir une réponse utile. »
+- « On garde les mains sur le volant. »
+
+## Formulations à éviter
+
+Éviter :
+
+- « L’IA révolutionnera toutes les pratiques pédagogiques. »
+- « Voici la vérité officielle sur l’IA. »
+- « Les étudiants vont tricher de toute façon. »
+- « Cette fonctionnalité est insane. »
+- « Yo, check ben ça. »
+
+## Règles de micro-style
+
+- Utiliser souvent « on » pour les explications générales.
+- Utiliser « tu » seulement dans les consignes directes aux étudiants.
+- Éviter le ton de surveillance ou de soupçon.
+- Nommer les mauvaises pratiques franchement, mais sans mépris.
+- Préférer un exemple concret à un grand principe abstrait.
+- Introduire les risques sans dramatiser.
+
+## Exemple de réécriture
+
+Trop académique :
+
+> L’intégration de l’intelligence artificielle générative dans les pratiques d’apprentissage nécessite une posture réflexive rigoureuse.
+
+Trop familier :
+
+> L’IA, c’est super pratique, mais faut pas juste copier-coller n’importe quoi.
+
+Ton recommandé :
+
+> L’IA peut aider à avancer plus vite. Mais si on remet une réponse qu’on ne comprend pas, on n’a pas vraiment appris. On a surtout déplacé le problème.
+
+## Résumé
+
+Le style doit être clair, direct, respectueux et légèrement complice.
+
+L’humour est un outil de clarté. Pas une décoration.
