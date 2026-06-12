@@ -34,6 +34,7 @@ const sidebars = {
           collapsed: true,
           items: [
             "admin/nomenclature-blocs-pedagogiques",
+            "admin/competences",
             "admin/catalogue-blocs-pedagogiques",
             "admin/catalogue-documents-projet",
             "admin/glossaire",
