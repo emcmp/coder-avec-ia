@@ -17,6 +17,7 @@ const sidebars = {
           items: [
             "admin/charte-visuelle",
             "admin/page-exemple-style",
+            "admin/exemple-provider",
             "admin/charte-redactionnelle",
             "admin/charte-pedagogique",
           ],
