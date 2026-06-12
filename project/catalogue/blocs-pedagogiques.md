@@ -1,8 +1,8 @@
 # Catalogue des blocs pédagogiques
 
 > Identifiant : `[DOC-CAT-001]`  
-> Version : 0.2  
-> Dernière modification : 2026-06-11  
+> Version : 0.3  
+> Dernière modification : 2026-06-12  
 > Statut : index de travail
 
 Ce fichier sert d’index central pour les blocs pédagogiques du projet.
@@ -28,28 +28,20 @@ Le catalogue permet de retrouver rapidement :
 - les prompts;
 - les entrées de glossaire.
 
-## Format recommandé
-
-```markdown
-| ID | Type | Domaine | Titre | Version | Dernière modification | Statut | Source |
-|---|---|---|---|---:|---|---|---|
-| [MIC-MAP-001] | Micro-module | MAP | Cartographier un codebase | 0.1 | 2026-06-11 | brouillon | project/catalogue/modules-et-dependances.md |
-```
-
 ## Micro-modules pressentis
 
 | ID | Type | Domaine | Titre | Version | Dernière modification | Statut | Source |
 |---|---|---|---|---:|---|---|---|
 | [MIC-IA-001] | Micro-module | IA | Se repérer dans les familles d’outils IA | 0.1 | 2026-06-11 | brouillon | `project/catalogue/modules-et-dependances.md` |
-| [MIC-CTX-001] | Micro-module | CTX | Donner un contexte utile à l’IA | 0.1 | 2026-06-11 | brouillon | `project/catalogue/modules-et-dependances.md` |
+| [MIC-CTX-001] | Micro-module | CTX | Donner un contexte utile à l’IA | 0.2 | 2026-06-12 | pilote | `project/current/cours-ia-avance/modules/MIC-CTX-001-donner-contexte-utile.md` |
 | [MIC-INS-001] | Micro-module | INS | Utiliser des instructions réutilisables | 0.1 | 2026-06-11 | brouillon | `project/catalogue/modules-et-dependances.md` |
 | [MIC-VCS-001] | Micro-module | VCS | Utiliser Copilot dans un dépôt GitHub | 0.1 | 2026-06-11 | brouillon | `project/catalogue/modules-et-dependances.md` |
 | [MIC-SPE-001] | Micro-module | SPE | Spécifier avant d’implémenter | 0.1 | 2026-06-11 | brouillon | `project/catalogue/modules-et-dependances.md` |
-| [MIC-MAP-001] | Micro-module | MAP | Cartographier un codebase | 0.1 | 2026-06-11 | brouillon | `project/catalogue/modules-et-dependances.md` |
+| [MIC-MAP-001] | Micro-module | MAP | Cartographier un codebase | 0.2 | 2026-06-12 | pilote | `project/current/cours-ia-avance/modules/MIC-MAP-001-cartographier-codebase.md` |
 | [MIC-CLI-001] | Micro-module | CLI | Travailler avec un agent CLI | 0.1 | 2026-06-11 | brouillon | `project/catalogue/modules-et-dependances.md` |
 | [MIC-AGT-001] | Micro-module | AGT | Piloter une tâche agentique | 0.1 | 2026-06-11 | brouillon | `project/catalogue/modules-et-dependances.md` |
 | [MIC-VCS-002] | Micro-module | VCS | Travailler avec branches, issues et pull requests | 0.1 | 2026-06-11 | brouillon | `project/catalogue/modules-et-dependances.md` |
-| [MIC-EVA-001] | Micro-module | EVA | Vérifier une réponse IA plausible | 0.1 | 2026-06-11 | brouillon | `project/catalogue/modules-et-dependances.md` |
+| [MIC-EVA-001] | Micro-module | EVA | Vérifier une réponse IA plausible | 0.2 | 2026-06-12 | pilote | `project/current/cours-ia-avance/modules/MIC-EVA-001-verifier-reponse-plausible.md` |
 | [MIC-OBS-001] | Micro-module | OBS | Lire traces, usage et contexte | 0.1 | 2026-06-11 | brouillon | `project/catalogue/modules-et-dependances.md` |
 | [MIC-SEC-001] | Micro-module | SEC | Gérer permissions, confidentialité et limites | 0.1 | 2026-06-11 | brouillon | `project/catalogue/modules-et-dependances.md` |
 | [MIC-RET-001] | Micro-module | RET | Retrouver l’information dans des documents | 0.1 | 2026-06-11 | brouillon | `project/catalogue/modules-et-dependances.md` |
