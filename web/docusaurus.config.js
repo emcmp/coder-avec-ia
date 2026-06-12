@@ -127,6 +127,11 @@ const config = {
               },
               {
                 type: "doc",
+                docId: "admin/catalogue-documents-projet",
+                label: "Catalogue des documents",
+              },
+              {
+                type: "doc",
                 docId: "admin/glossaire",
                 label: "Glossaire",
               },
