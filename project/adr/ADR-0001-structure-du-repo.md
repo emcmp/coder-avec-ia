@@ -1,5 +1,10 @@
 # ADR-0001 — Structurer le dépôt avec un espace projet séparé du site
 
+> Identifiant : `[DOC-ADR-001]`  
+> Version : 0.1  
+> Dernière modification : 2026-06-11  
+> Statut : acceptée
+
 ## Statut
 
 Acceptée.
