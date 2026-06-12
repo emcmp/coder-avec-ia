@@ -1,7 +1,7 @@
 # Nomenclature et bibliothèque du projet
 
 > Identifiant : `[DOC-CHR-004]`  
-> Version : 0.5  
+> Version : 0.6  
 > Dernière modification : 2026-06-12  
 > Statut : convention de travail initiale
 
@@ -10,7 +10,7 @@ Cette convention définit comment identifier les éléments importants du projet
 Elle couvre deux grandes familles :
 
 1. les **contenus pédagogiques** : domaines, thèmes, notions, compétences, micro-modules, paliers, blocs, ressources;
-2. les **documents de projet** : chartes, décisions, catalogues, glossaires, parcours, specs, prompts, archives.
+2. les **documents de projet** : brainstorms, chartes, décisions, catalogues, glossaires, parcours, specs, prompts, archives.
 
 L’objectif est de traiter le projet comme une bibliothèque : chaque élément important doit pouvoir être classé, identifié, retrouvé, versionné et maintenu sans dépendre uniquement de son emplacement dans l’arborescence.
 
@@ -28,6 +28,7 @@ Bibliothèque du projet
       → Blocs pédagogiques
       → Ressources
   → Documents de projet
+      → Brainstorms
       → Chartes
       → Décisions
       → Catalogues
@@ -100,6 +101,7 @@ Un même micro-module peut donc être déplacé d’une séance à une autre san
 
 | Entité | Rôle |
 |---|---|
+| Brainstorm | Espace libre pour déposer des idées non classées ou incomplètes. |
 | Charte | Convention de travail : visuelle, rédactionnelle, pédagogique, nomenclature. |
 | Décision | ADR ou décision structurante. |
 | Catalogue | Registre d’éléments : blocs, documents, modules, ressources. |
@@ -268,6 +270,7 @@ Format général :
 Types de documents de projet :
 
 ```text
+BRN = Brainstorm ou espace d’idées libres
 CHR = Charte, convention ou règle de travail
 ADR = Décision structurante
 CAT = Catalogue ou inventaire
@@ -283,6 +286,17 @@ IDX = Index ou page de navigation
 ```
 
 ## Exemples de métadonnées
+
+Brainstorm :
+
+```text
+id: DOC-BRN-001
+type: brainstorm
+title: Brainstorm
+version: 0.1
+last_modified: 2026-06-12
+status: active
+```
 
 Compétence :
 
@@ -313,6 +327,7 @@ status: draft
 
 - [Catalogue des documents de projet](/admin/catalogue-documents-projet)
 - [Compétences visées](/admin/competences)
+- [Brainstorm](/admin/brainstorm)
 
 ## Règles de stabilité
 
@@ -323,9 +338,10 @@ status: draft
 5. Les produits, outils, plateformes et chemins sont indiqués dans les métadonnées.
 6. Les séances, modules et parcours référencent des blocs; ils ne les possèdent pas.
 7. Les compétences sont liées aux modules et aux activités, mais ne sont pas possédées par un module unique.
-8. Un identifiant supprimé ne doit pas être réutilisé pour autre chose.
-9. Un bloc ou document remplacé doit être marqué `deprecated` plutôt que renommé silencieusement.
-10. Un document publié dans `web/` peut avoir un titre adapté à la lecture, mais il doit rester lié à son identifiant stable.
-11. Le catalogue des documents sert de registre de bibliothèque.
-12. Tout élément important doit avoir une version et une date de dernière modification.
-13. Le catalogue doit permettre de repérer rapidement les documents récents, stables, en brouillon ou à réviser.
+8. Le brainstorm peut contenir des idées non classées, mais les contenus stabilisés doivent ensuite être déplacés vers les catalogues appropriés.
+9. Un identifiant supprimé ne doit pas être réutilisé pour autre chose.
+10. Un bloc ou document remplacé doit être marqué `deprecated` plutôt que renommé silencieusement.
+11. Un document publié dans `web/` peut avoir un titre adapté à la lecture, mais il doit rester lié à son identifiant stable.
+12. Le catalogue des documents sert de registre de bibliothèque.
+13. Tout élément important doit avoir une version et une date de dernière modification.
+14. Le catalogue doit permettre de repérer rapidement les documents récents, stables, en brouillon ou à réviser.
