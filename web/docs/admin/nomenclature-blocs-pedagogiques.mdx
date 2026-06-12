@@ -7,18 +7,16 @@ slug: /admin/nomenclature-blocs-pedagogiques
 
 > Source : `project/conventions/nomenclature-blocs-pedagogiques.md`  
 > Identifiant : `[DOC-CHR-004]`  
-> Version : 0.4  
-> Dernière modification : 2026-06-11  
+> Version : 0.5  
+> Dernière modification : 2026-06-12  
 > Statut : convention de travail initiale
 
 Cette convention définit comment identifier les éléments importants du projet **Coder avec l’IA**.
 
 Elle couvre deux grandes familles :
 
-1. les **contenus pédagogiques** : domaines, thèmes, notions, micro-modules, paliers, blocs, ressources;
+1. les **contenus pédagogiques** : domaines, thèmes, notions, compétences, micro-modules, paliers, blocs, ressources;
 2. les **documents de projet** : chartes, décisions, catalogues, glossaires, parcours, specs, prompts, archives.
-
-L’objectif est de traiter le projet comme une bibliothèque : chaque élément important doit pouvoir être classé, identifié, retrouvé, versionné et maintenu sans dépendre uniquement de son emplacement dans l’arborescence.
 
 ## Vue d’ensemble de la bibliothèque
 
@@ -28,6 +26,7 @@ Bibliothèque du projet
       → Domaines
       → Thèmes
       → Notions
+      → Compétences
       → Micro-modules
       → Paliers
       → Blocs pédagogiques
@@ -57,6 +56,14 @@ Domaine
             → Ressource
 ```
 
+Les compétences forment une couche transversale :
+
+```text
+Compétence
+  → liée à un ou plusieurs micro-modules
+  → observée par un ou plusieurs exercices, checklists ou évaluations
+```
+
 ## Structure de diffusion
 
 ```text
@@ -81,33 +88,9 @@ status
 title
 ```
 
-Ces champs s’appliquent aux documents de projet, aux micro-modules, aux paliers, aux blocs pédagogiques et aux ressources.
+Ces champs s’appliquent aux documents de projet, aux compétences, aux micro-modules, aux paliers, aux blocs pédagogiques et aux ressources.
 
 Le format de date recommandé est `AAAA-MM-JJ`.
-
-## Version
-
-La version sert à savoir si un élément a évolué depuis sa dernière consultation.
-
-Règle simple :
-
-- `0.x` pour les brouillons ou conventions en construction;
-- `1.0` pour une première version stable;
-- incrément mineur lorsqu’on améliore le contenu sans changer son intention;
-- incrément majeur lorsqu’on change le sens, la structure ou l’usage de l’élément.
-
-## Statut
-
-Statuts recommandés :
-
-```text
-draft       = brouillon actif
-active      = utilisé comme référence de travail
-stable      = validé pour usage courant
-review      = en révision
-deprecated  = remplacé ou conservé pour historique
-archived    = archivé, non maintenu activement
-```
 
 ## Identifiants pédagogiques
 
@@ -120,6 +103,7 @@ Format général :
 Exemples :
 
 ```text
+[CMP-CTX-001]
 [NOT-CON-001]
 [MIC-MAP-001]
 [PAL-MAP-001]
@@ -137,6 +121,7 @@ SEA = Séance livrée ou planifiée
 SEG = Segment de séance
 THM = Thème
 NOT = Notion
+CMP = Compétence observable
 MIC = Micro-module pédagogique de 20 à 30 minutes
 PAL = Palier progressif I, II ou III
 ```
@@ -166,9 +151,10 @@ CFG = Configuration ou instruction d’agent
 IDX = Index ou page de navigation
 ```
 
-## Catalogue associé
+## Catalogues associés
 
-Le registre pratique des documents est publié ici : [Catalogue des documents de projet](/admin/catalogue-documents-projet).
+- [Catalogue des documents de projet](/admin/catalogue-documents-projet)
+- [Compétences visées](/admin/competences)
 
 ## Règles de stabilité
 
@@ -178,7 +164,7 @@ Le registre pratique des documents est publié ici : [Catalogue des documents de
 4. Un identifiant ne change pas quand un bloc ou un document est déplacé.
 5. Les produits, outils, plateformes et chemins sont indiqués dans les métadonnées.
 6. Les séances, modules et parcours référencent des blocs; ils ne les possèdent pas.
-7. Un identifiant supprimé ne doit pas être réutilisé pour autre chose.
-8. Un bloc ou document remplacé doit être marqué `deprecated` plutôt que renommé silencieusement.
-9. Un document publié dans `web/` peut avoir un titre adapté à la lecture, mais il doit rester lié à son identifiant stable.
+7. Les compétences sont liées aux modules et aux activités, mais ne sont pas possédées par un module unique.
+8. Un identifiant supprimé ne doit pas être réutilisé pour autre chose.
+9. Un bloc ou document remplacé doit être marqué `deprecated` plutôt que renommé silencieusement.
 10. Tout élément important doit avoir une version et une date de dernière modification.
