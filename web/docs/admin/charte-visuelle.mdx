@@ -7,7 +7,7 @@ slug: /admin/charte-visuelle
 
 > Source : `project/conventions/charte-visuelle.md`  
 > Identifiant : `[DOC-CHR-001]`  
-> Version : 0.4  
+> Version : 0.5  
 > Dernière modification : 2026-06-12  
 > Statut : convention de travail initiale
 
@@ -71,18 +71,22 @@ Règle générale :
 3 éléments ou plus de même nature → matrice icône-item plutôt que simple liste à puces.
 ```
 
-Structure recommandée :
+Structure recommandée dans une page MDX :
 
 ```mdx
+import Link from '@docusaurus/Link';
+
 <div className="coursIconMatrix">
-  <a className="coursIconItem" href="/admin/competences">
+  <Link className="coursIconItem" to="/admin/competences">
     <span className="coursIconItemIcon">🎯</span>
     <span className="coursIconItemTitle">Compétences visées</span>
     <span className="coursIconItemText">Ce que la personne doit être capable de faire.</span>
     <span className="coursIconItemMeta">[DOC-CAT-004]</span>
-  </a>
+  </Link>
 </div>
 ```
+
+Utiliser `Link` plutôt que `<a href="/...">` pour respecter automatiquement le `baseUrl` du site GitHub Pages.
 
 Variantes disponibles :
 
@@ -156,8 +160,9 @@ Un tableau doit rester court. Si un tableau devient long, le remplacer par des s
 - Les effets visuels lourds ou animés sans valeur pédagogique.
 - Les couleurs trop agressives pour une lecture prolongée.
 - Les matrices icône-item utilisées pour masquer un contenu trop flou.
+- Les liens internes absolus en `<a href="/...">` dans les pages MDX.
 - Les panneaux provider utilisés sans vraie équivalence utile.
 
 ## 10. Page de référence
 
-Voir : [Page exemple de style](/admin/page-exemple-style).
+Voir : [Page exemple de style](./page-exemple-style).
