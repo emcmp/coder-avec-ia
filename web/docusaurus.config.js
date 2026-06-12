@@ -155,6 +155,11 @@ const config = {
                 docId: "admin/cours-ia-avance",
                 label: "Parcours",
               },
+              {
+                type: "doc",
+                docId: "admin/modules-pilotes",
+                label: "Modules pilotes",
+              },
             ],
           },
           {
