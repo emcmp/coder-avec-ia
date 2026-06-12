@@ -1,6 +1,8 @@
 # Charte rédactionnelle
 
+> Identifiant : `[DOC-CHR-002]`  
 > Version : 0.1  
+> Dernière modification : 2026-06-11  
 > Statut : convention de travail initiale
 
 Cette charte définit le ton, le style d’écriture et l’usage de l’humour dans le projet **Coder avec l’IA**.
