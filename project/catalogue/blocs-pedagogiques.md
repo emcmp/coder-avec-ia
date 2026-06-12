@@ -1,7 +1,7 @@
 # Catalogue des blocs pédagogiques
 
 > Identifiant : `[DOC-CAT-001]`  
-> Version : 0.3  
+> Version : 0.4  
 > Dernière modification : 2026-06-12  
 > Statut : index de travail
 
@@ -18,6 +18,7 @@ project/conventions/nomenclature-blocs-pedagogiques.md
 Le catalogue permet de retrouver rapidement :
 
 - les notions;
+- les compétences;
 - les micro-modules;
 - les paliers;
 - les blocs théoriques;
@@ -33,20 +34,28 @@ Le catalogue permet de retrouver rapidement :
 | ID | Type | Domaine | Titre | Version | Dernière modification | Statut | Source |
 |---|---|---|---|---:|---|---|---|
 | [MIC-IA-001] | Micro-module | IA | Se repérer dans les familles d’outils IA | 0.1 | 2026-06-11 | brouillon | `project/catalogue/modules-et-dependances.md` |
-| [MIC-CTX-001] | Micro-module | CTX | Donner un contexte utile à l’IA | 0.2 | 2026-06-12 | pilote | `project/current/cours-ia-avance/modules/MIC-CTX-001-donner-contexte-utile.md` |
+| [MIC-CTX-001] | Micro-module | CTX | Donner un contexte utile à l’IA | 0.3 | 2026-06-12 | pilote | `project/current/cours-ia-avance/modules/MIC-CTX-001-donner-contexte-utile.md` |
 | [MIC-INS-001] | Micro-module | INS | Utiliser des instructions réutilisables | 0.1 | 2026-06-11 | brouillon | `project/catalogue/modules-et-dependances.md` |
 | [MIC-VCS-001] | Micro-module | VCS | Utiliser Copilot dans un dépôt GitHub | 0.1 | 2026-06-11 | brouillon | `project/catalogue/modules-et-dependances.md` |
 | [MIC-SPE-001] | Micro-module | SPE | Spécifier avant d’implémenter | 0.1 | 2026-06-11 | brouillon | `project/catalogue/modules-et-dependances.md` |
-| [MIC-MAP-001] | Micro-module | MAP | Cartographier un codebase | 0.2 | 2026-06-12 | pilote | `project/current/cours-ia-avance/modules/MIC-MAP-001-cartographier-codebase.md` |
+| [MIC-MAP-001] | Micro-module | MAP | Cartographier un codebase | 0.3 | 2026-06-12 | pilote | `project/current/cours-ia-avance/modules/MIC-MAP-001-cartographier-codebase.md` |
 | [MIC-CLI-001] | Micro-module | CLI | Travailler avec un agent CLI | 0.1 | 2026-06-11 | brouillon | `project/catalogue/modules-et-dependances.md` |
 | [MIC-AGT-001] | Micro-module | AGT | Piloter une tâche agentique | 0.1 | 2026-06-11 | brouillon | `project/catalogue/modules-et-dependances.md` |
 | [MIC-VCS-002] | Micro-module | VCS | Travailler avec branches, issues et pull requests | 0.1 | 2026-06-11 | brouillon | `project/catalogue/modules-et-dependances.md` |
-| [MIC-EVA-001] | Micro-module | EVA | Vérifier une réponse IA plausible | 0.2 | 2026-06-12 | pilote | `project/current/cours-ia-avance/modules/MIC-EVA-001-verifier-reponse-plausible.md` |
+| [MIC-EVA-001] | Micro-module | EVA | Vérifier une réponse IA plausible | 0.3 | 2026-06-12 | pilote | `project/current/cours-ia-avance/modules/MIC-EVA-001-verifier-reponse-plausible.md` |
 | [MIC-OBS-001] | Micro-module | OBS | Lire traces, usage et contexte | 0.1 | 2026-06-11 | brouillon | `project/catalogue/modules-et-dependances.md` |
 | [MIC-SEC-001] | Micro-module | SEC | Gérer permissions, confidentialité et limites | 0.1 | 2026-06-11 | brouillon | `project/catalogue/modules-et-dependances.md` |
 | [MIC-RET-001] | Micro-module | RET | Retrouver l’information dans des documents | 0.1 | 2026-06-11 | brouillon | `project/catalogue/modules-et-dependances.md` |
 | [MIC-LOC-001] | Micro-module | LOC | Comprendre les modèles locaux | 0.1 | 2026-06-11 | optionnel | `project/catalogue/modules-et-dependances.md` |
 | [MIC-PED-001] | Micro-module | PED | Intégrer l’IA dans le travail d’un prof | 0.1 | 2026-06-11 | brouillon | `project/catalogue/modules-et-dependances.md` |
+
+## Compétences
+
+Le catalogue détaillé des compétences est dans :
+
+```text
+project/catalogue/competences.md
+```
 
 ## Blocs initiaux à créer
 
