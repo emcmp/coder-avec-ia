@@ -7,13 +7,13 @@ slug: /admin/modules-et-dependances
 
 > Source : `project/catalogue/modules-et-dependances.md`  
 > Identifiant : `[DOC-CAT-003]`  
-> Version : 0.2  
+> Version : 0.3  
 > Dernière modification : 2026-06-12  
 > Statut : brouillon structurant
 
 Cette page présente la première carte des micro-modules du parcours **Coder avec l’IA**.
 
-Elle ne constitue pas encore une table des matières finale. Elle sert à voir les dépendances, les priorités, les pilotes et les extensions possibles.
+Elle ne constitue pas encore une table des matières finale. Elle sert à voir les dépendances, les priorités, les modules publiés et les extensions possibles.
 
 ## Vue des dépendances principales
 
@@ -34,11 +34,11 @@ MIC-LOC-001 est optionnel et vient après CLI, OBS et SEC
 | ID | Module | Domaine | Statut | Rôle |
 |---|---|---|---|---|
 | `[MIC-IA-001]` | Se repérer dans les familles d’outils IA | IA | brouillon | Choisir le bon type d’outil |
-| `[MIC-CTX-001]` | Donner un contexte utile à l’IA | CTX | pilote | Améliorer la qualité des réponses |
+| `[MIC-CTX-001]` | Donner un contexte utile à l’IA | CTX | publié | Améliorer la qualité des réponses |
 | `[MIC-VCS-001]` | Utiliser Copilot dans un dépôt GitHub | VCS | brouillon | Travailler dans un vrai projet |
 | `[MIC-SPE-001]` | Spécifier avant d’implémenter | SPE | brouillon | Réduire les dérives de l’IA |
-| `[MIC-MAP-001]` | Cartographier un codebase | MAP | pilote | Trouver où intervenir |
-| `[MIC-EVA-001]` | Vérifier une réponse IA plausible | EVA | pilote | Valider avant d’accepter |
+| `[MIC-MAP-001]` | Cartographier un codebase | MAP | publié | Trouver où intervenir |
+| `[MIC-EVA-001]` | Vérifier une réponse IA plausible | EVA | publié | Valider avant d’accepter |
 | `[MIC-SEC-001]` | Gérer permissions, confidentialité et limites | SEC | brouillon | Encadrer les risques |
 
 ## Modules d’extension
@@ -54,18 +54,23 @@ MIC-LOC-001 est optionnel et vient après CLI, OBS et SEC
 | `[MIC-LOC-001]` | Comprendre les modèles locaux | LOC | optionnel | Évaluer les compromis local/cloud |
 | `[MIC-PED-001]` | Intégrer l’IA dans le travail d’un prof | PED | brouillon | Transférer vers la pédagogie |
 
+## Modules publiés
+
+Les trois premiers modules sont publiés dans la section [Cours](/cours) :
+
+- [MIC-CTX-001](/cours/contexte-utile) — Donner un contexte utile à l’IA.
+- [MIC-MAP-001](/cours/cartographier-codebase) — Cartographier un codebase.
+- [MIC-EVA-001](/cours/verifier-reponse-ia) — Vérifier une réponse IA plausible.
+
 ## Modules pilotes
 
-Les trois modules pilotes sont publiés dans : [Modules pilotes](./modules-pilotes).
-
-Ils servent à valider les gabarits pédagogiques avant de produire les autres modules.
+Le suivi de conception des pilotes est conservé dans : [Modules pilotes](./modules-pilotes).
 
 ## Règle de lecture
 
 Chaque module devrait pouvoir être traité en micro-module de 20 à 30 minutes, avec un palier I utile en classe et des paliers II / III comme extensions.
 
 La version complète des dépendances est dans le fichier source `project/catalogue/modules-et-dependances.md`.
-
 
 ## Eric
 
