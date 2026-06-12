@@ -1,5 +1,6 @@
 # Nomenclature et bibliothèque du projet
 
+> Identifiant : `[DOC-CHR-004]`  
 > Version : 0.4  
 > Dernière modification : 2026-06-11  
 > Statut : convention de travail initiale
@@ -38,11 +39,7 @@ Bibliothèque du projet
       → Configurations
 ```
 
-Cette vue sert à distinguer ce qui est enseigné de ce qui sert à concevoir, gérer et maintenir le projet.
-
 ## Hiérarchie de connaissance
-
-La structure de connaissance décrit les contenus pédagogiques stables.
 
 ```text
 Domaine
@@ -62,17 +59,11 @@ MAP — Cartographie et compréhension de codebase
     → Repérer où modifier une fonctionnalité
       → Cartographie de codebase
         → Cartographie I
-          → Démo : retrouver le bon fichier
-          → Exercice : expliquer où modifier le code
         → Cartographie II
-          → Démo : lire les dépendances
         → Cartographie III
-          → Défi : comparer deux outils
 ```
 
 ## Structure de diffusion
-
-La structure de diffusion décrit comment les contenus sont assemblés pour un parcours, une séance ou un atelier.
 
 ```text
 Parcours
@@ -136,17 +127,7 @@ title
 
 Ces champs s’appliquent aux documents de projet, aux micro-modules, aux paliers, aux blocs pédagogiques et aux ressources.
 
-Le format de date recommandé est :
-
-```text
-AAAA-MM-JJ
-```
-
-Exemple :
-
-```text
-2026-06-11
-```
+Le format de date recommandé est : `AAAA-MM-JJ`.
 
 ## Version
 
@@ -174,8 +155,6 @@ La date de dernière modification sert à repérer rapidement si un élément es
 
 Elle doit être mise à jour lorsqu’un changement significatif est apporté au contenu.
 
-Un correctif mineur de coquille ne force pas nécessairement un changement de version, mais peut justifier une mise à jour de la date si le document est publié.
-
 ## Statut
 
 Statuts recommandés :
@@ -193,7 +172,7 @@ archived    = archivé, non maintenu activement
 
 Un identifiant décrit la nature et le sujet stable d’un élément. Il ne décrit pas son emplacement temporaire.
 
-Un identifiant ne doit donc pas contenir :
+Un identifiant ne doit pas contenir :
 
 - un numéro de séance;
 - un numéro de module lié à une progression temporaire;
@@ -205,8 +184,6 @@ Un identifiant ne doit donc pas contenir :
 Les noms de produits, d’outils, de plateformes ou les chemins peuvent être indiqués dans les métadonnées ou dans le contenu, mais pas dans l’identifiant stable.
 
 ## Famille A — Identifiants pédagogiques
-
-Les identifiants pédagogiques servent à référencer les éléments de contenu destinés à l’apprentissage.
 
 Format général :
 
@@ -267,8 +244,6 @@ GLO = Entrée de glossaire
 
 ## Domaines conceptuels
 
-Les domaines doivent rester conceptuels. Ils ne doivent pas être liés à un produit.
-
 ```text
 IA   = IA générative et concepts généraux
 CTX  = Contexte et context engineering
@@ -290,22 +265,10 @@ DOC  = Documentation, Docusaurus et publication
 
 ## Famille B — Identifiants des documents de projet
 
-Les documents de projet utilisent une famille séparée.
-
 Format général :
 
 ```text
 [DOC-TYPE-NNN]
-```
-
-Exemples :
-
-```text
-[DOC-CHR-001]
-[DOC-ADR-002]
-[DOC-CAT-001]
-[DOC-GLO-001]
-[DOC-PAR-001]
 ```
 
 Types de documents de projet :
@@ -325,28 +288,22 @@ CFG = Configuration ou instruction d’agent
 IDX = Index ou page de navigation
 ```
 
-## Exemple de métadonnées pour un document
+## Exemples de métadonnées
 
-```yaml
----
+Document de projet :
+
+```text
 id: DOC-CHR-003
 type: charte
 title: Charte pédagogique
 version: 0.5
 last_modified: 2026-06-11
 status: active
-source: project/conventions/charte-pedagogique.md
-published: web/docs/admin/charte-pedagogique.mdx
-related:
-  - DOC-CHR-001
-  - DOC-CHR-002
----
 ```
 
-## Exemple de métadonnées pour un micro-module
+Micro-module :
 
-```yaml
----
+```text
 id: MIC-MAP-001
 type: micro-module
 domain: MAP
@@ -354,13 +311,6 @@ title: Cartographie de codebase
 version: 0.1
 last_modified: 2026-06-11
 status: draft
-levels:
-  - PAL-MAP-001
-  - PAL-MAP-002
-  - PAL-MAP-003
-related:
-  - NOT-MAP-001
----
 ```
 
 ## Catalogue associé
