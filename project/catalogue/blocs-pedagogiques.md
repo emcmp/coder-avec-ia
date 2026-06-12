@@ -1,11 +1,11 @@
 # Catalogue des blocs pédagogiques
 
 > Identifiant : `[DOC-CAT-001]`  
-> Version : 0.1  
+> Version : 0.2  
 > Dernière modification : 2026-06-11  
 > Statut : index de travail
 
-Ce fichier servira d’index central pour les blocs pédagogiques du projet.
+Ce fichier sert d’index central pour les blocs pédagogiques du projet.
 
 Les identifiants doivent respecter la convention définie dans :
 
@@ -18,6 +18,8 @@ project/conventions/nomenclature-blocs-pedagogiques.md
 Le catalogue permet de retrouver rapidement :
 
 - les notions;
+- les micro-modules;
+- les paliers;
 - les blocs théoriques;
 - les exercices;
 - les démonstrations;
@@ -31,10 +33,30 @@ Le catalogue permet de retrouver rapidement :
 ```markdown
 | ID | Type | Domaine | Titre | Version | Dernière modification | Statut | Source |
 |---|---|---|---|---:|---|---|---|
-| [THE-CON-001] | Théorie | CON | Pourquoi connecter un agent à des outils? | 0.1 | 2026-06-11 | draft | À créer |
+| [MIC-MAP-001] | Micro-module | MAP | Cartographier un codebase | 0.1 | 2026-06-11 | brouillon | project/catalogue/modules-et-dependances.md |
 ```
 
-## Catalogue initial
+## Micro-modules pressentis
+
+| ID | Type | Domaine | Titre | Version | Dernière modification | Statut | Source |
+|---|---|---|---|---:|---|---|---|
+| [MIC-IA-001] | Micro-module | IA | Se repérer dans les familles d’outils IA | 0.1 | 2026-06-11 | brouillon | `project/catalogue/modules-et-dependances.md` |
+| [MIC-CTX-001] | Micro-module | CTX | Donner un contexte utile à l’IA | 0.1 | 2026-06-11 | brouillon | `project/catalogue/modules-et-dependances.md` |
+| [MIC-INS-001] | Micro-module | INS | Utiliser des instructions réutilisables | 0.1 | 2026-06-11 | brouillon | `project/catalogue/modules-et-dependances.md` |
+| [MIC-VCS-001] | Micro-module | VCS | Utiliser Copilot dans un dépôt GitHub | 0.1 | 2026-06-11 | brouillon | `project/catalogue/modules-et-dependances.md` |
+| [MIC-SPE-001] | Micro-module | SPE | Spécifier avant d’implémenter | 0.1 | 2026-06-11 | brouillon | `project/catalogue/modules-et-dependances.md` |
+| [MIC-MAP-001] | Micro-module | MAP | Cartographier un codebase | 0.1 | 2026-06-11 | brouillon | `project/catalogue/modules-et-dependances.md` |
+| [MIC-CLI-001] | Micro-module | CLI | Travailler avec un agent CLI | 0.1 | 2026-06-11 | brouillon | `project/catalogue/modules-et-dependances.md` |
+| [MIC-AGT-001] | Micro-module | AGT | Piloter une tâche agentique | 0.1 | 2026-06-11 | brouillon | `project/catalogue/modules-et-dependances.md` |
+| [MIC-VCS-002] | Micro-module | VCS | Travailler avec branches, issues et pull requests | 0.1 | 2026-06-11 | brouillon | `project/catalogue/modules-et-dependances.md` |
+| [MIC-EVA-001] | Micro-module | EVA | Vérifier une réponse IA plausible | 0.1 | 2026-06-11 | brouillon | `project/catalogue/modules-et-dependances.md` |
+| [MIC-OBS-001] | Micro-module | OBS | Lire traces, usage et contexte | 0.1 | 2026-06-11 | brouillon | `project/catalogue/modules-et-dependances.md` |
+| [MIC-SEC-001] | Micro-module | SEC | Gérer permissions, confidentialité et limites | 0.1 | 2026-06-11 | brouillon | `project/catalogue/modules-et-dependances.md` |
+| [MIC-RET-001] | Micro-module | RET | Retrouver l’information dans des documents | 0.1 | 2026-06-11 | brouillon | `project/catalogue/modules-et-dependances.md` |
+| [MIC-LOC-001] | Micro-module | LOC | Comprendre les modèles locaux | 0.1 | 2026-06-11 | optionnel | `project/catalogue/modules-et-dependances.md` |
+| [MIC-PED-001] | Micro-module | PED | Intégrer l’IA dans le travail d’un prof | 0.1 | 2026-06-11 | brouillon | `project/catalogue/modules-et-dependances.md` |
+
+## Blocs initiaux à créer
 
 | ID | Type | Domaine | Titre | Version | Dernière modification | Statut | Source |
 |---|---|---|---|---:|---|---|---|
@@ -48,4 +70,4 @@ Le catalogue permet de retrouver rapidement :
 
 ## Notes
 
-Ce catalogue est volontairement incomplet. Il doit être enrichi lorsque la table des matières et les blocs réels seront stabilisés.
+Ce catalogue est volontairement incomplet. Il doit être enrichi lorsque les blocs réels seront stabilisés.
