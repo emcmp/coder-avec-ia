@@ -4,17 +4,50 @@
 const sidebars = {
   docs: [
     "accueil",
-    "admin/index",
-    "admin/charte-visuelle",
-    "admin/page-exemple-style",
-    "admin/charte-redactionnelle",
-    "admin/charte-pedagogique",
-    "admin/nomenclature-blocs-pedagogiques",
-    "admin/catalogue-blocs-pedagogiques",
-    "admin/glossaire",
-    "admin/adr-0001-structure-du-repo",
-    "admin/adr-0002-identifiants-stables",
-    "admin/cours-ia-avance",
+    {
+      type: "category",
+      label: "Admin",
+      link: { type: "doc", id: "admin/index" },
+      collapsed: false,
+      items: [
+        {
+          type: "category",
+          label: "Chartes",
+          collapsed: false,
+          items: [
+            "admin/charte-visuelle",
+            "admin/page-exemple-style",
+            "admin/charte-redactionnelle",
+            "admin/charte-pedagogique",
+          ],
+        },
+        {
+          type: "category",
+          label: "Conception",
+          collapsed: false,
+          items: [
+            "admin/nomenclature-blocs-pedagogiques",
+            "admin/catalogue-blocs-pedagogiques",
+            "admin/glossaire",
+          ],
+        },
+        {
+          type: "category",
+          label: "Décisions",
+          collapsed: true,
+          items: [
+            "admin/adr-0001-structure-du-repo",
+            "admin/adr-0002-identifiants-stables",
+          ],
+        },
+        {
+          type: "category",
+          label: "Parcours",
+          collapsed: true,
+          items: ["admin/cours-ia-avance"],
+        },
+      ],
+    },
   ],
 };
 
