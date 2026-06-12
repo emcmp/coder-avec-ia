@@ -1,16 +1,125 @@
 # Nomenclature et bibliothèque du projet
 
-> Version : 0.2  
+> Version : 0.3  
 > Statut : convention de travail initiale
 
 Cette convention définit comment identifier les éléments importants du projet **Coder avec l’IA**.
 
-Elle couvre maintenant deux familles :
+Elle couvre deux grandes familles :
 
-1. les **éléments pédagogiques** : notions, exercices, démonstrations, aides visuelles, ressources;
+1. les **contenus pédagogiques** : domaines, thèmes, notions, micro-modules, paliers, blocs, ressources;
 2. les **documents de projet** : chartes, décisions, catalogues, glossaires, parcours, specs, prompts, archives.
 
 L’objectif est de traiter le projet comme une bibliothèque : chaque élément important doit pouvoir être classé, identifié, retrouvé et maintenu sans dépendre uniquement de son emplacement dans l’arborescence.
+
+## Vue d’ensemble de la bibliothèque
+
+```text
+Bibliothèque du projet
+  → Contenus pédagogiques
+      → Domaines
+      → Thèmes
+      → Notions
+      → Micro-modules
+      → Paliers
+      → Blocs pédagogiques
+      → Ressources
+  → Documents de projet
+      → Chartes
+      → Décisions
+      → Catalogues
+      → Glossaire
+      → Parcours
+      → Spécifications
+      → Backlog
+      → Prompts
+      → Archives
+      → Configurations
+```
+
+Cette vue sert à distinguer ce qui est enseigné de ce qui sert à concevoir, gérer et maintenir le projet.
+
+## Hiérarchie de connaissance
+
+La structure de connaissance décrit les contenus pédagogiques stables.
+
+```text
+Domaine
+  → Thème
+    → Notion
+      → Micro-module
+        → Palier I / II / III
+          → Bloc pédagogique
+            → Ressource
+```
+
+Exemple :
+
+```text
+MAP — Cartographie et compréhension de codebase
+  → Comprendre un projet existant
+    → Repérer où modifier une fonctionnalité
+      → Cartographie de codebase
+        → Cartographie I
+          → Démo : retrouver le bon fichier
+          → Exercice : expliquer où modifier le code
+        → Cartographie II
+          → Démo : lire les dépendances
+        → Cartographie III
+          → Défi : comparer deux outils
+```
+
+## Structure de diffusion
+
+La structure de diffusion décrit comment les contenus sont assemblés pour un parcours, une séance ou un atelier.
+
+```text
+Parcours
+  → Module
+    → Séance
+      → Segment
+        → Références vers des micro-modules, paliers ou blocs existants
+```
+
+Une séance ne possède pas les contenus : elle les référence.
+
+Un même micro-module peut donc être déplacé d’une séance à une autre sans changer d’identifiant.
+
+## Entités pédagogiques
+
+| Entité | Rôle |
+|---|---|
+| Domaine | Grand territoire conceptuel stable, par exemple contexte, cartographie, agents, évaluation. |
+| Thème | Regroupement de notions à l’intérieur d’un domaine. |
+| Notion | Concept précis à comprendre ou utiliser. |
+| Micro-module | Unité pédagogique de 20 à 30 minutes autour d’une notion principale. |
+| Palier | Niveau progressif d’un micro-module : I, II ou III. |
+| Bloc pédagogique | Élément concret : théorie, démo, exercice, quiz, cas, checklist. |
+| Ressource | Support réutilisable : visuel, prompt, code, tableau, image, référence. |
+
+## Entités de diffusion
+
+| Entité | Rôle |
+|---|---|
+| Parcours | Organisation générale proposée pour suivre le contenu. |
+| Module | Regroupement de micro-modules dans une logique de progression. |
+| Séance | Assemblage temporel adapté à une durée réelle : 1 h, 2 h, 3 h, etc. |
+| Segment | Partie courte d’une séance qui référence un micro-module, un palier ou un bloc. |
+
+## Documents de projet
+
+| Entité | Rôle |
+|---|---|
+| Charte | Convention de travail : visuelle, rédactionnelle, pédagogique, nomenclature. |
+| Décision | ADR ou décision structurante. |
+| Catalogue | Registre d’éléments : blocs, documents, modules, ressources. |
+| Glossaire | Définitions stabilisées. |
+| Parcours | Plan ou structure de formation. |
+| Spécification | Document de cadrage ou d’exigences. |
+| Backlog | Liste de travail à faire ou à prioriser. |
+| Prompt | Gabarit ou instruction réutilisable. |
+| Archive | Contenu conservé pour référence historique. |
+| Configuration | Instructions ou fichiers utiles aux agents et outils. |
 
 ## Principe directeur
 
@@ -27,40 +136,6 @@ Un identifiant ne doit donc pas contenir :
 
 Les noms de produits, d’outils, de plateformes ou les chemins peuvent être indiqués dans les métadonnées ou dans le contenu, mais pas dans l’identifiant stable.
 
-## Deux structures séparées
-
-Le projet distingue deux structures.
-
-### 1. Structure de connaissance
-
-La structure de connaissance est stable.
-
-```text
-Domaine
-  → Thème
-    → Notion
-      → Bloc pédagogique
-        → Ressource
-```
-
-Elle sert à organiser les concepts et les éléments pédagogiques réutilisables.
-
-### 2. Structure de diffusion
-
-La structure de diffusion est flexible.
-
-```text
-Parcours
-  → Module
-    → Séance
-      → Segment
-        → Références vers des blocs existants
-```
-
-Elle sert à planifier l’ordre de présentation. Une séance ne possède pas les blocs : elle les référence.
-
-Un même bloc peut donc être déplacé d’une séance à une autre sans changer d’identifiant.
-
 ## Famille A — Identifiants pédagogiques
 
 Les identifiants pédagogiques servent à référencer les éléments de contenu destinés à l’apprentissage.
@@ -75,14 +150,14 @@ Exemples :
 
 ```text
 [NOT-CON-001]
+[MIC-MAP-001]
+[PAL-MAP-001]
 [THE-CON-001]
 [EX-CON-002]
 [VIS-MAP-001]
-[VID-RET-001]
-[GLO-SPE-001]
 ```
 
-### Types principaux
+Types pédagogiques principaux :
 
 ```text
 FOR = Formation ou parcours complet
@@ -91,9 +166,11 @@ SEA = Séance livrée ou planifiée
 SEG = Segment de séance
 THM = Thème
 NOT = Notion
+MIC = Micro-module pédagogique de 20 à 30 minutes
+PAL = Palier progressif I, II ou III
 ```
 
-### Blocs pédagogiques
+Blocs pédagogiques :
 
 ```text
 THE = Théorie
@@ -106,7 +183,7 @@ CHK = Checklist
 EVA = Élément d’évaluation
 ```
 
-### Ressources pédagogiques
+Ressources pédagogiques :
 
 ```text
 VIS = Aide visuelle ou diagramme
@@ -120,7 +197,7 @@ DAT = Jeu de données
 GLO = Entrée de glossaire
 ```
 
-### Domaines conceptuels
+## Domaines conceptuels
 
 Les domaines doivent rester conceptuels. Ils ne doivent pas être liés à un produit.
 
@@ -153,8 +230,6 @@ Format général :
 [DOC-TYPE-NNN]
 ```
 
-Dans ce format, `DOC` signifie « document de projet ». Il ne faut pas le confondre avec le domaine pédagogique `DOC` qui signifie documentation, Docusaurus et publication.
-
 Exemples :
 
 ```text
@@ -165,7 +240,7 @@ Exemples :
 [DOC-PAR-001]
 ```
 
-### Types de documents de projet
+Types de documents de projet :
 
 ```text
 CHR = Charte, convention ou règle de travail
@@ -182,7 +257,7 @@ CFG = Configuration ou instruction d’agent
 IDX = Index ou page de navigation
 ```
 
-### Documents actuels à identifier
+## Documents actuels à identifier
 
 ```text
 [DOC-CHR-001] Charte visuelle
@@ -203,104 +278,9 @@ IDX = Index ou page de navigation
 [DOC-CFG-001] Instructions générales pour agents
 ```
 
-## Métadonnées recommandées pour un bloc pédagogique
+## Catalogue associé
 
-Chaque bloc pédagogique important devrait contenir un front matter minimal.
-
-```yaml
----
-id: THE-CON-001
-type: theorie
-domain: CON
-title: Pourquoi connecter un agent à des outils?
-status: draft
-covers:
-  - NOT-CON-001
-related:
-  - VIS-CON-001
-  - EX-CON-001
-tools:
-  - MCP
----
-```
-
-Les champs `tools`, `platforms` ou `examples` peuvent contenir des noms de produits. Ces noms ne doivent pas être dans `id`.
-
-## Métadonnées recommandées pour un document de projet
-
-Chaque document de projet important devrait aussi pouvoir être identifié.
-
-```yaml
----
-id: DOC-CHR-003
-type: charte
-title: Charte pédagogique
-status: draft
-source: project/conventions/charte-pedagogique.md
-published: web/docs/admin/charte-pedagogique.mdx
-related:
-  - DOC-CHR-001
-  - DOC-CHR-002
----
-```
-
-Les pages Docusaurus publiées dans `web/docs/admin/` peuvent éviter le champ `id` dans le front matter si cela crée un risque de conflit avec Docusaurus. Dans ce cas, l’identifiant stable doit rester dans le document source ou dans le catalogue des documents.
-
-## Exemple de séance flexible
-
-```md
----
-id: SEA-AGT-001
-type: seance
-title: Agents connectés et outils externes
-status: draft
-duration: 2h
----
-
-# [SEA-AGT-001] Agents connectés et outils externes
-
-## Segments prévus
-
-1. [THE-AGT-001] Qu’est-ce qu’un agent?
-2. [THE-CON-001] Pourquoi connecter un agent à des outils?
-3. [VIS-CON-001] Schéma agent, protocole et outil
-4. [DEM-CON-001] Démonstration d’un agent connecté
-5. [EX-CON-001] Identifier si une connexion à un outil est pertinente
-```
-
-Si la séance manque de temps, `[EX-CON-001]` peut être déplacé ailleurs sans changer d’identifiant.
-
-## Exemples de correspondance
-
-Les outils et produits sont associés aux domaines dans les métadonnées, pas dans les identifiants.
-
-```text
-CodeGraph, Graphify, Understand-Anything → MAP
-MCP → CON
-Spec Kit → SPE
-Codex, Copilot, Claude Code → AGT, CLI ou VCS selon le contexte
-Docusaurus → DOC
-```
-
-Exemples pédagogiques recommandés :
-
-```text
-[THE-MAP-001] Comprendre un codebase par cartographie
-[VIS-MAP-001] Schéma fichiers, symboles et dépendances
-[DEM-MAP-001] Repérer où modifier une fonctionnalité
-[THE-CON-001] Pourquoi connecter un agent à des outils
-[EX-CON-001] Identifier si une connexion à un outil est pertinente
-[GLO-CON-001] Définition d’un protocole d’outil
-```
-
-Exemples à éviter :
-
-```text
-[THE-CODEGRAPH-001]
-[EX-MCP-002]
-[S02-MCP-EX-003]
-[MOD-SPEC-KIT-001]
-```
+Le registre pratique des documents est publié ici : [Catalogue des documents de projet](/admin/catalogue-documents-projet).
 
 ## Règles de stabilité
 
@@ -314,26 +294,3 @@ Exemples à éviter :
 8. Un bloc ou document remplacé doit être marqué `deprecated` plutôt que renommé silencieusement.
 9. Un document publié dans `web/` peut avoir un titre adapté à la lecture, mais il doit rester lié à son identifiant stable.
 10. Le catalogue des documents sert de registre de bibliothèque.
-
-## Usage attendu
-
-Cette nomenclature sert à faciliter :
-
-- la révision du contenu;
-- les commentaires précis;
-- le déplacement flexible de notions entre séances;
-- le travail avec des agents IA;
-- la construction progressive d’un glossaire;
-- la transformation éventuelle vers Docusaurus;
-- le suivi des documents de conception;
-- la maintenance d’une bibliothèque cohérente.
-
-Exemples de commentaires utilisables :
-
-```text
-[EX-CON-005] manque d’explications.
-[VIS-MAP-002] devrait mieux illustrer les dépendances.
-[GLO-SPE-001] doit être harmonisé avec [THE-SPE-001].
-[DOC-CHR-003] doit être synchronisé avec la page Admin publiée.
-[DOC-ADR-002] devrait être cité dans la nomenclature.
-```
