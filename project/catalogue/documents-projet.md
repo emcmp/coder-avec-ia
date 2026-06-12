@@ -1,7 +1,7 @@
 # Catalogue des documents de projet
 
 > Identifiant : `[DOC-CAT-002]`  
-> Version : 0.2  
+> Version : 0.3  
 > Dernière modification : 2026-06-11  
 > Statut : registre initial
 
@@ -37,9 +37,10 @@ Chaque document important doit avoir :
 | ID | Document | Version | Dernière modification | Source | Page Admin | Statut |
 |---|---|---:|---|---|---|---|
 | `[DOC-CAT-001]` | Catalogue des blocs pédagogiques | 0.1 | 2026-06-11 | `project/catalogue/blocs-pedagogiques.md` | `/admin/catalogue-blocs-pedagogiques` | actif |
-| `[DOC-CAT-002]` | Catalogue des documents de projet | 0.2 | 2026-06-11 | `project/catalogue/documents-projet.md` | `/admin/catalogue-documents-projet` | actif |
+| `[DOC-CAT-002]` | Catalogue des documents de projet | 0.3 | 2026-06-11 | `project/catalogue/documents-projet.md` | `/admin/catalogue-documents-projet` | actif |
 | `[DOC-GLO-001]` | Glossaire | 0.1 | 2026-06-11 | `project/glossaire/README.md` | `/admin/glossaire` | actif |
 | `[DOC-PAR-001]` | Parcours Coder avec l’IA | 0.1 | 2026-06-11 | `project/current/cours-ia-avance/` | `/admin/cours-ia-avance` | actif |
+| `[DOC-PAR-002]` | Table des matières du parcours | 0.1 | 2026-06-11 | `project/current/cours-ia-avance/01-table-des-matieres.md` | À publier au besoin | brouillon |
 
 ## Décisions
 
@@ -64,6 +65,7 @@ Chaque document important doit avoir :
 | `[DOC-CFG-001]` | Instructions générales pour agents | 0.1 | 2026-06-11 | `AGENTS.md` | À publier au besoin | actif |
 | `[DOC-CFG-002]` | Instructions Claude | 0.1 | 2026-06-11 | `CLAUDE.md` | À publier au besoin | actif |
 | `[DOC-CFG-003]` | Instructions Codex | 0.1 | 2026-06-11 | `CODEX.md` | À publier au besoin | actif |
+| `[DOC-CFG-004]` | Instructions Copilot VS Code | 0.1 | 2026-06-11 | `.vscode/copilot-instructions.md` | À publier au besoin | actif |
 
 ## Archives
 
