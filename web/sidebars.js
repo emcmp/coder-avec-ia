@@ -7,6 +7,7 @@ const sidebars = {
     "admin/index",
     "admin/charte-visuelle",
     "admin/page-exemple-style",
+    "admin/charte-redactionnelle",
     "admin/charte-pedagogique",
     "admin/nomenclature-blocs-pedagogiques",
     "admin/catalogue-blocs-pedagogiques",
