@@ -7,7 +7,28 @@ slug: /admin/page-exemple-style
 
 Cette page sert de référence visuelle pour les futures pages du site.
 
-Elle ne présente pas encore un vrai contenu de cours. Elle montre plutôt comment structurer une page, écrire les titres, utiliser les encadrés et présenter du code.
+Elle ne présente pas encore un vrai contenu de cours. Elle montre plutôt comment structurer une page, écrire les titres, utiliser les encadrés, présenter du code et utiliser les blocs visuels.
+
+<div className="coursHero">
+  <div className="coursHeroCopy">
+    <div className="coursEyebrow">Style Superhero pédagogique</div>
+    <p className="coursLead">
+      Une base claire pour apprendre, avec des accents visuels techniques pour les moments importants.
+    </p>
+    <div className="coursActions">
+      <a className="button button--primary" href="/admin/charte-visuelle">Voir la charte</a>
+      <a className="button button--secondary" href="/admin">Retour Admin</a>
+    </div>
+  </div>
+  <div className="coursHeroPanel">
+    <div className="coursPill">Lisible</div>
+    <div className="coursPill">Technique</div>
+    <div className="coursPill">Modulaire</div>
+    <div className="coursNote">
+      Le hero sert à ouvrir une page importante ou à présenter une synthèse. Il ne doit pas être utilisé partout.
+    </div>
+  </div>
+</div>
 
 ## 1. Intention de la page
 
@@ -17,21 +38,45 @@ Commencer par une courte intention aide le lecteur à comprendre pourquoi la pag
 Cette page est un gabarit visuel. Elle sert à valider la forme avant de développer le contenu pédagogique.
 :::
 
-## 2. Section courte avec explication
+## 2. Cartes de synthèse
 
-Une section devrait rester courte et traiter une seule idée principale.
+Les cartes servent à présenter des idées courtes et comparables.
 
-Lorsque plusieurs idées apparaissent dans une même section, il vaut mieux créer des sous-sections.
+<div className="coursGrid">
+  <article className="coursCard">
+    <h3>Titre court</h3>
+    <p>Une carte doit présenter une seule idée, en quelques lignes.</p>
+  </article>
+  <article className="coursCard">
+    <h3>Usage recommandé</h3>
+    <p>Utiliser les cartes pour des choix, statuts, niveaux, ressources ou catégories.</p>
+  </article>
+  <article className="coursCard">
+    <h3>À éviter</h3>
+    <p>Ne pas transformer une carte en long paragraphe de théorie.</p>
+  </article>
+</div>
 
-### Exemple de sous-section
+## 3. Palette et textures
 
-Une sous-section sert à préciser un point sans créer une nouvelle page.
+La palette combine un fond clair avec des accents bleu profond, sarcelle et or doux.
 
-:::tip
-Une bonne page est facile à balayer rapidement avant d’être lue en détail.
-:::
+<div className="coursTokenGrid">
+  <div className="coursToken coursTokenHero">
+    <strong>Hero</strong>
+    Dégradé bleu profond pour ouvrir une page importante.
+  </div>
+  <div className="coursToken coursTokenCard">
+    <strong>Carte</strong>
+    Fond clair semi-transparent pour les contenus courts.
+  </div>
+  <div className="coursToken coursTokenAccent">
+    <strong>Accent</strong>
+    Dégradé doux pour attirer l’attention sans surcharger.
+  </div>
+</div>
 
-## 3. Numérotation
+## 4. Numérotation
 
 Utiliser une liste numérotée lorsque l’ordre compte :
 
@@ -47,7 +92,7 @@ Utiliser une liste à puces lorsque l’ordre ne compte pas :
 - lisibilité;
 - réutilisabilité.
 
-## 4. Encadrés
+## 5. Encadrés
 
 :::info
 Utiliser `info` pour une précision utile.
@@ -65,7 +110,7 @@ Utiliser `warning` pour une confusion fréquente ou une limite importante.
 Utiliser `danger` pour une erreur à éviter absolument.
 :::
 
-## 5. Bloc de code
+## 6. Bloc de code
 
 Toujours présenter le contexte avant un bloc de code.
 
@@ -76,6 +121,12 @@ cd web
 npm run build
 ```
 
+Pour mettre en évidence une commande courte ou une sortie importante, utiliser un terminal visuel.
+
+<div className="coursTerminal">
+  <code>npm run build</code>
+</div>
+
 Exemple de structure de fichier :
 
 ```text
@@ -84,21 +135,44 @@ web/docs/admin/
   page-exemple-style.mdx
 ```
 
-## 6. Tableau court
+## 7. Tableau court
 
 | Élément | Usage recommandé |
 |---|---|
 | Titre | Annoncer clairement le sujet |
+| Hero | Présenter une page ou une synthèse importante |
+| Carte | Regrouper une idée courte |
 | Encadré | Mettre en évidence une information |
 | Code | Montrer une commande ou un exemple |
 | Tableau | Comparer ou résumer |
 
-## 7. Point de vigilance
+## 8. À faire / à éviter
+
+<div className="coursDoDont">
+  <div className="coursDo">
+    <h3>À faire</h3>
+    <ul>
+      <li>Utiliser des sections courtes.</li>
+      <li>Expliquer les blocs de code.</li>
+      <li>Réserver les effets visuels aux moments utiles.</li>
+    </ul>
+  </div>
+  <div className="coursDont">
+    <h3>À éviter</h3>
+    <ul>
+      <li>Multiplier les héros dans une même page.</li>
+      <li>Créer de longues cartes difficiles à lire.</li>
+      <li>Ajouter des couleurs sans fonction pédagogique.</li>
+    </ul>
+  </div>
+</div>
+
+## 9. Point de vigilance
 
 :::warning
 Ne pas utiliser cette page comme modèle pédagogique final. Elle sert seulement à figer le style visuel.
 :::
 
-## 8. Prochaine convention à définir
+## 10. Prochaine convention à définir
 
 La prochaine étape sera de définir le style pédagogique : théorie, démonstration, exercice, laboratoire, quiz, aide visuelle et évaluation.
