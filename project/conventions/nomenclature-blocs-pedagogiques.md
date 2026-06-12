@@ -1,6 +1,7 @@
 # Nomenclature et bibliothèque du projet
 
-> Version : 0.3  
+> Version : 0.4  
+> Dernière modification : 2026-06-11  
 > Statut : convention de travail initiale
 
 Cette convention définit comment identifier les éléments importants du projet **Coder avec l’IA**.
@@ -10,7 +11,7 @@ Elle couvre deux grandes familles :
 1. les **contenus pédagogiques** : domaines, thèmes, notions, micro-modules, paliers, blocs, ressources;
 2. les **documents de projet** : chartes, décisions, catalogues, glossaires, parcours, specs, prompts, archives.
 
-L’objectif est de traiter le projet comme une bibliothèque : chaque élément important doit pouvoir être classé, identifié, retrouvé et maintenu sans dépendre uniquement de son emplacement dans l’arborescence.
+L’objectif est de traiter le projet comme une bibliothèque : chaque élément important doit pouvoir être classé, identifié, retrouvé, versionné et maintenu sans dépendre uniquement de son emplacement dans l’arborescence.
 
 ## Vue d’ensemble de la bibliothèque
 
@@ -120,6 +121,73 @@ Un même micro-module peut donc être déplacé d’une séance à une autre san
 | Prompt | Gabarit ou instruction réutilisable. |
 | Archive | Contenu conservé pour référence historique. |
 | Configuration | Instructions ou fichiers utiles aux agents et outils. |
+
+## Métadonnées minimales obligatoires
+
+Tout élément important de la bibliothèque doit exposer au minimum :
+
+```text
+id
+version
+last_modified
+status
+title
+```
+
+Ces champs s’appliquent aux documents de projet, aux micro-modules, aux paliers, aux blocs pédagogiques et aux ressources.
+
+Le format de date recommandé est :
+
+```text
+AAAA-MM-JJ
+```
+
+Exemple :
+
+```text
+2026-06-11
+```
+
+## Version
+
+La version sert à savoir si un élément a évolué depuis sa dernière consultation.
+
+Format recommandé :
+
+```text
+0.1
+0.2
+1.0
+1.1
+```
+
+Règle simple :
+
+- `0.x` pour les brouillons ou conventions en construction;
+- `1.0` pour une première version stable;
+- incrément mineur lorsqu’on améliore le contenu sans changer son intention;
+- incrément majeur lorsqu’on change le sens, la structure ou l’usage de l’élément.
+
+## Dernière modification
+
+La date de dernière modification sert à repérer rapidement si un élément est récent, désuet ou à réviser.
+
+Elle doit être mise à jour lorsqu’un changement significatif est apporté au contenu.
+
+Un correctif mineur de coquille ne force pas nécessairement un changement de version, mais peut justifier une mise à jour de la date si le document est publié.
+
+## Statut
+
+Statuts recommandés :
+
+```text
+draft       = brouillon actif
+active      = utilisé comme référence de travail
+stable      = validé pour usage courant
+review      = en révision
+deprecated  = remplacé ou conservé pour historique
+archived    = archivé, non maintenu activement
+```
 
 ## Principe directeur
 
@@ -257,25 +325,42 @@ CFG = Configuration ou instruction d’agent
 IDX = Index ou page de navigation
 ```
 
-## Documents actuels à identifier
+## Exemple de métadonnées pour un document
 
-```text
-[DOC-CHR-001] Charte visuelle
-[DOC-CHR-002] Charte rédactionnelle
-[DOC-CHR-003] Charte pédagogique
-[DOC-CHR-004] Nomenclature et bibliothèque du projet
-[DOC-ADR-001] ADR-0001 — Structure du dépôt
-[DOC-ADR-002] ADR-0002 — Identifiants stables et parcours flexible
-[DOC-CAT-001] Catalogue des blocs pédagogiques
-[DOC-CAT-002] Catalogue des documents de projet
-[DOC-GLO-001] Glossaire
-[DOC-PAR-001] Parcours Coder avec l’IA
-[DOC-SPC-001] Spécification du parcours
-[DOC-BKL-001] Backlog du parcours
-[DOC-PRM-001] Prompt de rédaction de page Docusaurus
-[DOC-ARC-001] Archive du site Docusaurus initial
-[DOC-RDM-001] README du projet
-[DOC-CFG-001] Instructions générales pour agents
+```yaml
+---
+id: DOC-CHR-003
+type: charte
+title: Charte pédagogique
+version: 0.5
+last_modified: 2026-06-11
+status: active
+source: project/conventions/charte-pedagogique.md
+published: web/docs/admin/charte-pedagogique.mdx
+related:
+  - DOC-CHR-001
+  - DOC-CHR-002
+---
+```
+
+## Exemple de métadonnées pour un micro-module
+
+```yaml
+---
+id: MIC-MAP-001
+type: micro-module
+domain: MAP
+title: Cartographie de codebase
+version: 0.1
+last_modified: 2026-06-11
+status: draft
+levels:
+  - PAL-MAP-001
+  - PAL-MAP-002
+  - PAL-MAP-003
+related:
+  - NOT-MAP-001
+---
 ```
 
 ## Catalogue associé
@@ -294,3 +379,5 @@ Le registre pratique des documents est publié ici : [Catalogue des documents de
 8. Un bloc ou document remplacé doit être marqué `deprecated` plutôt que renommé silencieusement.
 9. Un document publié dans `web/` peut avoir un titre adapté à la lecture, mais il doit rester lié à son identifiant stable.
 10. Le catalogue des documents sert de registre de bibliothèque.
+11. Tout élément important doit avoir une version et une date de dernière modification.
+12. Le catalogue doit permettre de repérer rapidement les documents récents, stables, en brouillon ou à réviser.
