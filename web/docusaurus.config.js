@@ -101,6 +101,11 @@ const config = {
               },
               {
                 type: "doc",
+                docId: "admin/exemple-provider",
+                label: "Exemple provider",
+              },
+              {
+                type: "doc",
                 docId: "admin/charte-redactionnelle",
                 label: "Charte rédactionnelle",
               },
