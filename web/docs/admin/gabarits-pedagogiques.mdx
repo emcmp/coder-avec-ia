@@ -1,0 +1,118 @@
+---
+title: Gabarits pédagogiques
+slug: /admin/gabarits-pedagogiques
+---
+
+# Gabarits pédagogiques
+
+> Source : `project/conventions/gabarits-pedagogiques.md`  
+> Identifiant : `[DOC-CHR-005]`  
+> Version : 0.1  
+> Dernière modification : 2026-06-12  
+> Statut : convention de travail initiale
+
+Cette page présente les gabarits réutilisables pour produire les contenus pédagogiques du parcours **Coder avec l’IA**.
+
+Un gabarit n’est pas un formulaire administratif. C’est une structure légère pour éviter de réinventer la forme à chaque contenu.
+
+## Gabarits définis
+
+| Gabarit | Rôle |
+|---|---|
+| Micro-module | Unité pédagogique de 20 à 30 minutes autour d’une notion principale |
+| Palier | Niveau I, II ou III d’un micro-module |
+| Démonstration | Courte séquence qui montre une pratique en action |
+| Exercice | Activité rapide avec résultat observable |
+| Bloc théorique | Explication ciblée attachée à une action |
+| Panneau provider | Équivalence courte entre Copilot, Codex et Claude Code |
+| Fiche outil | Présentation utile d’un outil sans devenir une publicité |
+| Checklist | Vérification rapide d’un résultat ou d’une production IA |
+
+## Structure d’un micro-module
+
+```text
+[MIC-DOMAINE-NNN] Titre
+
+Intention
+What’s in it for me?
+Friction de départ
+Théorie ciblée
+Démonstration courte
+Mini-exercice
+Retour rapide
+Paliers I / II / III
+Prérequis
+Débloque
+Ressources liées
+```
+
+## Structure d’un palier
+
+```text
+[PAL-DOMAINE-NNN] Titre
+
+Micro-module parent
+Niveau : I / II / III
+Rôle du palier
+Résultat attendu
+Activité proposée
+Critère de réussite
+Matériel nécessaire
+```
+
+## Structure d’une démonstration
+
+```text
+[DEM-DOMAINE-NNN] Titre
+
+Objectif de la démonstration
+Situation de départ
+Étapes
+Ce qu’il faut observer
+Variante provider si utile
+```
+
+## Structure d’un exercice
+
+```text
+[EX-DOMAINE-NNN] Titre
+
+Consigne
+Contexte fourni
+Résultat attendu
+Critères de réussite
+Retour en groupe
+```
+
+## Panneau provider
+
+Le panneau provider sert à répondre à une même question pratique dans plusieurs outils.
+
+```text
+Question : Où voir le statut / l’usage / le contexte / la tâche?
+
+GitHub Copilot : référence principale
+Codex : équivalence si utile
+Claude Code : équivalence si utile
+```
+
+:::warning
+Le panneau provider ne doit pas devenir un comparatif complet de produits. Il doit aider à transférer une notion.
+:::
+
+## Règles de maintenance
+
+- Chaque contenu produit à partir d’un gabarit doit avoir un identifiant stable.
+- Chaque contenu doit avoir une version, une date de dernière modification et un statut.
+- Le palier I doit être utile même si les paliers II et III ne sont jamais faits.
+- Les exemples doivent partir de GitHub Copilot sauf indication contraire.
+- Les équivalences Codex et Claude Code doivent rester courtes et utiles.
+- Un gabarit peut évoluer, mais il ne doit pas devenir trop lourd à utiliser.
+
+## Source complète
+
+La version complète, avec les modèles Markdown copiables, se trouve dans :
+
+```text
+project/conventions/gabarits-pedagogiques.md
+```
