@@ -1,6 +1,8 @@
 # Charte visuelle
 
+> Identifiant : `[DOC-CHR-001]`  
 > Version : 0.3  
+> Dernière modification : 2026-06-11  
 > Statut : convention de travail initiale
 
 Cette charte définit le style visuel des pages du site **Coder avec l’IA**.
