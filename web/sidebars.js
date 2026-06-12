@@ -12,6 +12,7 @@ const sidebars = {
           label: "Parcours",
           collapsed: false,
           items: [
+            "admin/brainstorm",
             "admin/cours-ia-avance",
             "admin/modules-et-dependances",
             "admin/modules-pilotes",
