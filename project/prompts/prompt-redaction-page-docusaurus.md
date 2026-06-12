@@ -1,6 +1,9 @@
 # Prompt — rédaction d’une page Docusaurus
 
-> État : à compléter.
+> Identifiant : `[DOC-PRM-001]`  
+> Version : 0.1  
+> Dernière modification : 2026-06-11  
+> Statut : à compléter
 
 Objectif : conserver ici un prompt réutilisable pour transformer un plan ou une spec en page Docusaurus publiable.
 
