@@ -6,7 +6,7 @@ const path = require("path");
 /**
  * Extrait le frontmatter d'un contenu Markdown
  * @param {string} content
- * @returns {Object} frontmatter
+ * @returns {Object}
  */
 function extractFrontmatter(content) {
   const match = content.match(/^---([\s\S]*?)---/);
@@ -86,7 +86,6 @@ function extractAllDocEntries(items) {
       continue;
     }
     if (item.type === "doc" && item.id) {
-      // Inclure tous les champs de l'item (shallow copy)
       entries.push({ ...item });
     } else if (item.type === "category" && Array.isArray(item.items)) {
       entries = entries.concat(extractAllDocEntries(item.items));
@@ -106,7 +105,10 @@ function extractAllDocEntries(items) {
 }
 
 /**
- * Génère le fichier sidebarDocs.js à partir de sidebars.js
+ * Génère le fichier sidebarDocs.js à partir de sidebars.js.
+ *
+ * Le dossier cible peut ne pas exister dans une version simplifiée du site.
+ * On le crée donc explicitement pour éviter que le build Docusaurus échoue.
  */
 function generateSidebarDocs() {
   const sidebarPath = path.resolve(__dirname, "../../sidebars.js");
@@ -114,8 +116,11 @@ function generateSidebarDocs() {
     __dirname,
     "../../src/components/MainDocsGrid/sidebarDocs.js"
   );
+  const outputDir = path.dirname(outputPath);
+
+  fs.mkdirSync(outputDir, { recursive: true });
+
   const sidebars = require(sidebarPath);
-  // Ne prendre que la section 'docs'
   let allEntries = [];
   if (Array.isArray(sidebars.docs)) {
     allEntries = extractAllDocEntries(sidebars.docs);
@@ -134,22 +139,16 @@ function generateSidebarDocs() {
 module.exports = function pluginDocsMetadata(context, options) {
   return {
     name: "docusaurus-plugin-docs-metadata",
-    /**
-     * Chargement des métadonnées à partir des fichiers Markdown et MDX
-     */
     async loadContent() {
       const docsDir = path.resolve(__dirname, "../../docs");
       return getAllDocsMetadata({ docsDir });
     },
-    /**
-     * Génère le fichier docsMetadata.json dans static/ pour qu'il soit déployé
-     */
     async contentLoaded({ content }) {
       fs.writeFileSync(
         getStaticMetadataPath(),
         JSON.stringify(content, null, 2)
       );
-      generateSidebarDocs(); // Génère sidebarDocs.js à chaque build
+      generateSidebarDocs();
     },
   };
 };
