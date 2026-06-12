@@ -1,15 +1,15 @@
 # Nomenclature et bibliothèque du projet
 
 > Identifiant : `[DOC-CHR-004]`  
-> Version : 0.4  
-> Dernière modification : 2026-06-11  
+> Version : 0.5  
+> Dernière modification : 2026-06-12  
 > Statut : convention de travail initiale
 
 Cette convention définit comment identifier les éléments importants du projet **Coder avec l’IA**.
 
 Elle couvre deux grandes familles :
 
-1. les **contenus pédagogiques** : domaines, thèmes, notions, micro-modules, paliers, blocs, ressources;
+1. les **contenus pédagogiques** : domaines, thèmes, notions, compétences, micro-modules, paliers, blocs, ressources;
 2. les **documents de projet** : chartes, décisions, catalogues, glossaires, parcours, specs, prompts, archives.
 
 L’objectif est de traiter le projet comme une bibliothèque : chaque élément important doit pouvoir être classé, identifié, retrouvé, versionné et maintenu sans dépendre uniquement de son emplacement dans l’arborescence.
@@ -22,6 +22,7 @@ Bibliothèque du projet
       → Domaines
       → Thèmes
       → Notions
+      → Compétences
       → Micro-modules
       → Paliers
       → Blocs pédagogiques
@@ -51,16 +52,12 @@ Domaine
             → Ressource
 ```
 
-Exemple :
+Les compétences ne sont pas strictement dans cette hiérarchie. Elles forment une couche transversale :
 
 ```text
-MAP — Cartographie et compréhension de codebase
-  → Comprendre un projet existant
-    → Repérer où modifier une fonctionnalité
-      → Cartographie de codebase
-        → Cartographie I
-        → Cartographie II
-        → Cartographie III
+Compétence
+  → liée à un ou plusieurs micro-modules
+  → observée par un ou plusieurs exercices, checklists ou évaluations
 ```
 
 ## Structure de diffusion
@@ -84,6 +81,7 @@ Un même micro-module peut donc être déplacé d’une séance à une autre san
 | Domaine | Grand territoire conceptuel stable, par exemple contexte, cartographie, agents, évaluation. |
 | Thème | Regroupement de notions à l’intérieur d’un domaine. |
 | Notion | Concept précis à comprendre ou utiliser. |
+| Compétence | Ce que la personne doit être capable de faire de façon observable. |
 | Micro-module | Unité pédagogique de 20 à 30 minutes autour d’une notion principale. |
 | Palier | Niveau progressif d’un micro-module : I, II ou III. |
 | Bloc pédagogique | Élément concret : théorie, démo, exercice, quiz, cas, checklist. |
@@ -125,7 +123,7 @@ status
 title
 ```
 
-Ces champs s’appliquent aux documents de projet, aux micro-modules, aux paliers, aux blocs pédagogiques et aux ressources.
+Ces champs s’appliquent aux documents de projet, aux compétences, aux micro-modules, aux paliers, aux blocs pédagogiques et aux ressources.
 
 Le format de date recommandé est : `AAAA-MM-JJ`.
 
@@ -149,12 +147,6 @@ Règle simple :
 - incrément mineur lorsqu’on améliore le contenu sans changer son intention;
 - incrément majeur lorsqu’on change le sens, la structure ou l’usage de l’élément.
 
-## Dernière modification
-
-La date de dernière modification sert à repérer rapidement si un élément est récent, désuet ou à réviser.
-
-Elle doit être mise à jour lorsqu’un changement significatif est apporté au contenu.
-
 ## Statut
 
 Statuts recommandés :
@@ -172,7 +164,7 @@ archived    = archivé, non maintenu activement
 
 Un identifiant décrit la nature et le sujet stable d’un élément. Il ne décrit pas son emplacement temporaire.
 
-Un identifiant ne doit pas contenir :
+Un identifiant ne doit donc pas contenir :
 
 - un numéro de séance;
 - un numéro de module lié à une progression temporaire;
@@ -194,6 +186,7 @@ Format général :
 Exemples :
 
 ```text
+[CMP-CTX-001]
 [NOT-CON-001]
 [MIC-MAP-001]
 [PAL-MAP-001]
@@ -211,6 +204,7 @@ SEA = Séance livrée ou planifiée
 SEG = Segment de séance
 THM = Thème
 NOT = Notion
+CMP = Compétence observable
 MIC = Micro-module pédagogique de 20 à 30 minutes
 PAL = Palier progressif I, II ou III
 ```
@@ -290,15 +284,17 @@ IDX = Index ou page de navigation
 
 ## Exemples de métadonnées
 
-Document de projet :
+Compétence :
 
 ```text
-id: DOC-CHR-003
-type: charte
-title: Charte pédagogique
-version: 0.5
-last_modified: 2026-06-11
-status: active
+id: CMP-CTX-001
+type: competence
+domain: CTX
+title: Fournir un contexte utile à un assistant IA
+version: 0.1
+last_modified: 2026-06-12
+status: draft
+related_modules: MIC-CTX-001, MIC-SPE-001, MIC-EVA-001
 ```
 
 Micro-module :
@@ -313,9 +309,10 @@ last_modified: 2026-06-11
 status: draft
 ```
 
-## Catalogue associé
+## Catalogues associés
 
-Le registre pratique des documents est publié ici : [Catalogue des documents de projet](/admin/catalogue-documents-projet).
+- [Catalogue des documents de projet](/admin/catalogue-documents-projet)
+- [Compétences visées](/admin/competences)
 
 ## Règles de stabilité
 
@@ -325,9 +322,10 @@ Le registre pratique des documents est publié ici : [Catalogue des documents de
 4. Un identifiant ne change pas quand un bloc ou un document est déplacé.
 5. Les produits, outils, plateformes et chemins sont indiqués dans les métadonnées.
 6. Les séances, modules et parcours référencent des blocs; ils ne les possèdent pas.
-7. Un identifiant supprimé ne doit pas être réutilisé pour autre chose.
-8. Un bloc ou document remplacé doit être marqué `deprecated` plutôt que renommé silencieusement.
-9. Un document publié dans `web/` peut avoir un titre adapté à la lecture, mais il doit rester lié à son identifiant stable.
-10. Le catalogue des documents sert de registre de bibliothèque.
-11. Tout élément important doit avoir une version et une date de dernière modification.
-12. Le catalogue doit permettre de repérer rapidement les documents récents, stables, en brouillon ou à réviser.
+7. Les compétences sont liées aux modules et aux activités, mais ne sont pas possédées par un module unique.
+8. Un identifiant supprimé ne doit pas être réutilisé pour autre chose.
+9. Un bloc ou document remplacé doit être marqué `deprecated` plutôt que renommé silencieusement.
+10. Un document publié dans `web/` peut avoir un titre adapté à la lecture, mais il doit rester lié à son identifiant stable.
+11. Le catalogue des documents sert de registre de bibliothèque.
+12. Tout élément important doit avoir une version et une date de dernière modification.
+13. Le catalogue doit permettre de repérer rapidement les documents récents, stables, en brouillon ou à réviser.
