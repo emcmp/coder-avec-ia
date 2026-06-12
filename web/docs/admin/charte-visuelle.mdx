@@ -6,12 +6,12 @@ slug: /admin/charte-visuelle
 # Charte visuelle
 
 > Source : `project/conventions/charte-visuelle.md`  
-> Version : 0.2  
+> Version : 0.3  
 > Statut : convention de travail initiale
 
 Cette charte définit le style visuel des pages du site **Coder avec l’IA**.
 
-Elle fige la direction graphique générale avant de définir, dans une charte séparée, le style pédagogique des séances, exercices, démonstrations et laboratoires.
+Elle fige la direction graphique générale et les motifs visuels réutilisables.
 
 ## 1. Direction visuelle
 
@@ -25,21 +25,7 @@ Il combine :
 - des cartes claires pour structurer les contenus;
 - des éléments visuels sobres pour garder un ton professionnel.
 
-:::info
-Le thème n’est pas Bootswatch directement. Bootswatch sert d’inspiration. Le site reste basé sur Docusaurus et Infima.
-:::
-
-## 2. Principes
-
-Les pages doivent être :
-
-- lisibles sur une longue durée;
-- faciles à balayer rapidement;
-- sobres mais pas plates;
-- techniques sans être intimidantes;
-- cohérentes d’une page à l’autre.
-
-## 3. Structure générale d’une page
+## 2. Structure générale d’une page
 
 Chaque page devrait contenir :
 
@@ -51,7 +37,43 @@ Chaque page devrait contenir :
 6. des blocs de code contextualisés;
 7. une synthèse ou prochaine étape si la page est longue.
 
-## 4. Titres
+## 3. Motifs visuels principaux
+
+Utiliser les motifs suivants selon le besoin :
+
+- `coursHero` pour une page importante ou une synthèse;
+- `coursCard` pour une idée courte ou une catégorie;
+- `coursPill` pour un mot-clé ou un statut;
+- `coursTerminal` pour une commande ou une sortie terminal;
+- admonitions Docusaurus pour les informations importantes;
+- tableaux courts pour comparer ou classifier.
+
+## 4. Panneaux provider
+
+Lorsque le contenu doit montrer une équivalence entre plusieurs outils IA, utiliser un panneau par provider.
+
+Ordre recommandé :
+
+```text
+GitHub Copilot | Codex | Claude Code
+```
+
+GitHub Copilot doit être présenté en premier, car il est l’outil de référence du cours.
+
+Utiliser ce motif pour comparer une même action pratique, par exemple :
+
+- voir le statut;
+- voir l’usage;
+- inspecter la taille du contexte;
+- reprendre une session;
+- relancer une tâche;
+- comprendre où l’outil lit le projet.
+
+:::warning
+Éviter d’utiliser ce motif pour faire une comparaison générale de produits. Le panneau doit répondre à une question concrète.
+:::
+
+## 5. Titres et numérotation
 
 Utiliser une hiérarchie simple :
 
@@ -61,112 +83,11 @@ Utiliser une hiérarchie simple :
 ### Sous-section
 ```
 
-Éviter de dépasser `###` sauf pour les documents très longs.
+Utiliser la numérotation lorsque l’ordre est important. Utiliser les listes à puces lorsque l’ordre n’est pas important.
 
-Les titres doivent être courts et descriptifs.
-
-## 5. Numérotation
-
-Utiliser la numérotation lorsque l’ordre est important :
-
-```text
-1. Observer le problème
-2. Proposer une stratégie
-3. Tester la solution
-4. Réviser le résultat
-```
-
-Utiliser les listes à puces lorsque l’ordre n’est pas important.
-
-Les identifiants pédagogiques comme `[THE-CON-001]` sont réservés aux blocs pédagogiques, pas aux titres ordinaires.
-
-## 6. Hero et blocs à dégradé
-
-Utiliser un bloc hero pour :
-
-- une page d’accueil;
-- une grande section de référence;
-- une page qui présente une convention importante;
-- une synthèse de module.
-
-Classe recommandée :
-
-```md
-<div className="coursHero">
-  <div className="coursHeroCopy">
-    <div className="coursEyebrow">Convention visuelle</div>
-    <p className="coursLead">Message principal.</p>
-  </div>
-  <div className="coursHeroPanel">
-    <div className="coursPill">Lisible</div>
-    <div className="coursPill">Modulaire</div>
-  </div>
-</div>
-```
-
-:::warning
-Ne pas mettre un hero sur chaque petite page. Il doit rester un élément de mise en valeur.
-:::
-
-## 7. Cartes
-
-Utiliser les cartes pour présenter des choix, catégories, niveaux, ressources ou conventions.
-
-Classes recommandées :
-
-```md
-<div className="coursGrid">
-  <article className="coursCard">
-    <h3>Titre</h3>
-    <p>Résumé court.</p>
-  </article>
-</div>
-```
-
-Une carte doit contenir peu de texte. Si le texte devient long, créer une section normale.
-
-## 8. Pills
-
-Les pills servent à afficher :
-
-- des mots-clés;
-- des statuts;
-- des catégories;
-- des éléments courts de synthèse.
-
-Classe recommandée :
-
-```md
-<div className="coursPill">Context engineering</div>
-```
-
-## 9. Encadrés
-
-Utiliser les admonitions Docusaurus pour les informations importantes.
-
-:::info
-Information utile, sans urgence particulière.
-:::
-
-:::tip
-Conseil pratique ou raccourci utile.
-:::
-
-:::warning
-Point de vigilance ou risque de confusion.
-:::
-
-:::danger
-Erreur grave, risque de sécurité ou action à éviter.
-:::
-
-## 10. Blocs de code et terminal
+## 6. Code et terminal
 
 Les blocs de code doivent toujours être précédés d’une phrase qui explique leur rôle.
-
-```bash
-npm run build
-```
 
 Pour une commande ou une sortie de terminal à mettre en évidence, utiliser un bloc visuel `coursTerminal`.
 
@@ -178,28 +99,13 @@ Pour une commande ou une sortie de terminal à mettre en évidence, utiliser un 
 
 Éviter les gros blocs de code non commentés.
 
-## 11. Tableaux
+## 7. Tableaux
 
 Utiliser les tableaux pour comparer, classifier ou résumer.
 
 Un tableau doit rester court. Si un tableau devient long, le remplacer par des sections ou des cartes.
 
-## 12. Palette
-
-La palette actuelle repose sur :
-
-- bleu très sombre pour les blocs hero et terminaux;
-- vert sarcelle pour les accents;
-- or doux pour les contrastes secondaires;
-- fonds clairs et semi-transparents pour les cartes.
-
-Les variables principales sont dans :
-
-```text
-web/src/css/custom.css
-```
-
-## 13. À éviter
+## 8. À éviter
 
 - Les pages très longues sans sections.
 - Les listes de liens sans contexte.
@@ -208,7 +114,8 @@ web/src/css/custom.css
 - Les blocs de code sans explication.
 - Les effets visuels lourds ou animés sans valeur pédagogique.
 - Les couleurs trop agressives pour une lecture prolongée.
+- Les panneaux provider utilisés sans vraie équivalence utile.
 
-## 14. Page de référence
+## 9. Page de référence
 
 Voir : [Page exemple de style](/admin/page-exemple-style).
