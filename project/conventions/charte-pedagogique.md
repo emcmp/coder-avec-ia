@@ -1,11 +1,11 @@
 # Charte pédagogique
 
-> Version : 0.4  
+> Version : 0.5  
 > Statut : convention de travail initiale
 
 Cette charte définit les principes pédagogiques du projet **Coder avec l’IA**.
 
-Elle complète la charte visuelle et la charte rédactionnelle. Elle fixe maintenant les principes généraux, le format modulaire des séances et la progression en paliers. Les formats détaillés des exercices, démonstrations, laboratoires et évaluations seront définis ensuite.
+Elle complète la charte visuelle et la charte rédactionnelle. Elle fixe maintenant les principes généraux, le format modulaire des séances, la progression en paliers et l’usage des outils IA de référence. Les formats détaillés des exercices, démonstrations, laboratoires et évaluations seront définis ensuite.
 
 ## 1. Public visé
 
@@ -218,7 +218,47 @@ Cette approche permet de conserver l’information sans forcer une progression t
 
 Elle permet aussi d’ajuster le cours après une première livraison, quand les durées réelles deviennent plus claires.
 
-## 12. À définir dans le prochain volet
+## 12. Outil de référence et équivalences
+
+L’outil de référence du cours est **GitHub Copilot**.
+
+Sauf indication contraire, les démonstrations, captures, consignes et exemples pratiques doivent d’abord être pensés pour GitHub Copilot, parce que c’est l’outil principal attendu pour le public visé.
+
+Cependant, certaines notions gagnent à montrer l’équivalence dans d’autres outils, notamment **Codex** et **Claude Code**.
+
+Exemples de notions où une équivalence est utile :
+
+- voir l’état d’une tâche;
+- comprendre la taille du contexte;
+- lire l’usage ou les limites de session;
+- comparer un mode agent avec un mode conversation;
+- comprendre comment un outil lit le dépôt;
+- repérer les différences entre IDE, CLI et agent connecté à GitHub.
+
+La règle est la suivante :
+
+```text
+Copilot d’abord.
+Équivalences seulement lorsque cela aide à comprendre ou transférer la notion.
+```
+
+Les équivalences ne doivent pas transformer chaque page en comparatif exhaustif d’outils.
+
+Pour les pages qui comparent plusieurs outils, utiliser de préférence un panneau visuel ou des onglets par provider :
+
+```text
+GitHub Copilot | Codex | Claude Code
+```
+
+Chaque onglet doit répondre à la même question pratique, par exemple :
+
+- Où voir le statut?
+- Où voir l’usage?
+- Comment inspecter le contexte?
+- Comment relancer une tâche?
+- Comment reprendre une session?
+
+## 13. À définir dans le prochain volet
 
 Les éléments suivants seront définis ensuite :
 
