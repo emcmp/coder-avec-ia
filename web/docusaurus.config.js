@@ -114,6 +114,11 @@ const config = {
                 docId: "admin/charte-pedagogique",
                 label: "Charte pédagogique",
               },
+              {
+                type: "doc",
+                docId: "admin/gabarits-pedagogiques",
+                label: "Gabarits pédagogiques",
+              },
             ],
           },
           {
