@@ -38,7 +38,32 @@ Commencer par une courte intention aide le lecteur à comprendre pourquoi la pag
 Cette page est un gabarit visuel. Elle sert à valider la forme avant de développer le contenu pédagogique.
 :::
 
-## 2. Cartes de synthèse
+## 2. Matrice icône-item
+
+Utiliser la matrice icône-item pour présenter plusieurs éléments de même nature avec plus de rythme qu’une simple liste.
+
+<div className="coursIconMatrix">
+  <a className="coursIconItem" href="/admin/competences">
+    <span className="coursIconItemIcon">🎯</span>
+    <span className="coursIconItemTitle">Compétences</span>
+    <span className="coursIconItemText">Ce que la personne doit être capable de faire.</span>
+    <span className="coursIconItemMeta">[DOC-CAT-004]</span>
+  </a>
+  <a className="coursIconItem" href="/admin/modules-et-dependances">
+    <span className="coursIconItemIcon">🧩</span>
+    <span className="coursIconItemTitle">Modules</span>
+    <span className="coursIconItemText">Micro-modules, prérequis et dépendances.</span>
+    <span className="coursIconItemMeta">[DOC-CAT-003]</span>
+  </a>
+  <a className="coursIconItem" href="/admin/modules-pilotes">
+    <span className="coursIconItemIcon">🧪</span>
+    <span className="coursIconItemTitle">Pilotes</span>
+    <span className="coursIconItemText">Premiers modules complets pour tester le format.</span>
+    <span className="coursIconItemMeta">[DOC-PAR-003]</span>
+  </a>
+</div>
+
+## 3. Cartes de synthèse
 
 Les cartes servent à présenter des idées courtes et comparables.
 
@@ -57,7 +82,7 @@ Les cartes servent à présenter des idées courtes et comparables.
   </article>
 </div>
 
-## 3. Palette et textures
+## 4. Palette et textures
 
 La palette combine un fond clair avec des accents bleu profond, sarcelle et or doux.
 
@@ -76,7 +101,7 @@ La palette combine un fond clair avec des accents bleu profond, sarcelle et or d
   </div>
 </div>
 
-## 4. Numérotation
+## 5. Numérotation
 
 Utiliser une liste numérotée lorsque l’ordre compte :
 
@@ -92,7 +117,7 @@ Utiliser une liste à puces lorsque l’ordre ne compte pas :
 - lisibilité;
 - réutilisabilité.
 
-## 5. Encadrés
+## 6. Encadrés
 
 :::info
 Utiliser `info` pour une précision utile.
@@ -110,7 +135,7 @@ Utiliser `warning` pour une confusion fréquente ou une limite importante.
 Utiliser `danger` pour une erreur à éviter absolument.
 :::
 
-## 6. Bloc de code
+## 7. Bloc de code
 
 Toujours présenter le contexte avant un bloc de code.
 
@@ -135,18 +160,19 @@ web/docs/admin/
   page-exemple-style.mdx
 ```
 
-## 7. Tableau court
+## 8. Tableau court
 
 | Élément | Usage recommandé |
 |---|---|
 | Titre | Annoncer clairement le sujet |
 | Hero | Présenter une page ou une synthèse importante |
+| Matrice icône-item | Présenter plusieurs éléments de même nature |
 | Carte | Regrouper une idée courte |
 | Encadré | Mettre en évidence une information |
 | Code | Montrer une commande ou un exemple |
 | Tableau | Comparer ou résumer |
 
-## 8. À faire / à éviter
+## 9. À faire / à éviter
 
 <div className="coursDoDont">
   <div className="coursDo">
@@ -154,6 +180,7 @@ web/docs/admin/
     <ul>
       <li>Utiliser des sections courtes.</li>
       <li>Expliquer les blocs de code.</li>
+      <li>Utiliser une matrice pour 3 éléments comparables ou plus.</li>
       <li>Réserver les effets visuels aux moments utiles.</li>
     </ul>
   </div>
@@ -163,16 +190,17 @@ web/docs/admin/
       <li>Multiplier les héros dans une même page.</li>
       <li>Créer de longues cartes difficiles à lire.</li>
       <li>Ajouter des couleurs sans fonction pédagogique.</li>
+      <li>Remplacer une structure claire par des icônes décoratives.</li>
     </ul>
   </div>
 </div>
 
-## 9. Point de vigilance
+## 10. Point de vigilance
 
 :::warning
 Ne pas utiliser cette page comme modèle pédagogique final. Elle sert seulement à figer le style visuel.
 :::
 
-## 10. Prochaine convention à définir
+## 11. Prochaine convention à définir
 
 La prochaine étape sera de définir le style pédagogique : théorie, démonstration, exercice, laboratoire, quiz, aide visuelle et évaluation.
