@@ -1,6 +1,6 @@
 # [MIC-MAP-001] Cartographier un codebase
 
-> Version : 0.2  
+> Version : 0.3  
 > Dernière modification : 2026-06-12  
 > Statut : pilote  
 > Domaine : MAP  
@@ -11,6 +11,11 @@
 ## Intention
 
 Apprendre à comprendre rapidement où intervenir dans un projet existant avant de demander à l’IA de modifier du code.
+
+## Compétences liées
+
+- [CMP-MAP-001] Identifier où intervenir dans un codebase existant.
+- [CMP-EVA-001] Valider une réponse ou une production IA.
 
 ## What’s in it for me?
 
