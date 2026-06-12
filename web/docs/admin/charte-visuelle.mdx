@@ -6,32 +6,52 @@ slug: /admin/charte-visuelle
 # Charte visuelle
 
 > Source : `project/conventions/charte-visuelle.md`  
-> Version : 0.1  
+> Version : 0.2  
 > Statut : convention de travail initiale
 
 Cette charte définit le style visuel des pages du site **Coder avec l’IA**.
 
-Elle ne définit pas encore le style pédagogique des exercices, démonstrations ou activités. Ce point sera traité dans une charte séparée.
+Elle fige la direction graphique générale avant de définir, dans une charte séparée, le style pédagogique des séances, exercices, démonstrations et laboratoires.
 
-## Objectifs
+## 1. Direction visuelle
 
-- Donner une apparence cohérente aux pages.
-- Rendre les documents faciles à lire et à réviser.
-- Éviter que chaque page invente son propre format.
-- Préparer la transformation progressive des notes de conception en pages Docusaurus.
+Le style retenu est : **Superhero pédagogique**.
 
-## Structure générale d’une page
+Il combine :
+
+- une base claire et lisible pour les textes longs;
+- des accents bleu profond et vert sarcelle inspirés d’un univers technique;
+- des blocs à dégradé pour les introductions et les synthèses importantes;
+- des cartes claires pour structurer les contenus;
+- des éléments visuels sobres pour garder un ton professionnel.
+
+:::info
+Le thème n’est pas Bootswatch directement. Bootswatch sert d’inspiration. Le site reste basé sur Docusaurus et Infima.
+:::
+
+## 2. Principes
+
+Les pages doivent être :
+
+- lisibles sur une longue durée;
+- faciles à balayer rapidement;
+- sobres mais pas plates;
+- techniques sans être intimidantes;
+- cohérentes d’une page à l’autre.
+
+## 3. Structure générale d’une page
 
 Chaque page devrait contenir :
 
 1. un titre clair;
 2. une courte intention;
-3. des sections courtes;
+3. une ou plusieurs sections courtes;
 4. des exemples concrets lorsque pertinent;
 5. des encadrés pour les avertissements, conseils ou informations importantes;
-6. des blocs de code lisibles et contextualisés.
+6. des blocs de code contextualisés;
+7. une synthèse ou prochaine étape si la page est longue.
 
-## Titres
+## 4. Titres
 
 Utiliser une hiérarchie simple :
 
@@ -41,17 +61,86 @@ Utiliser une hiérarchie simple :
 ### Sous-section
 ```
 
-Éviter de dépasser `###` sauf pour les documents longs.
+Éviter de dépasser `###` sauf pour les documents très longs.
 
-## Numérotation
+Les titres doivent être courts et descriptifs.
 
-La numérotation visible doit rester sobre.
+## 5. Numérotation
 
-Utiliser la numérotation lorsque l’ordre est important. Utiliser les listes à puces lorsque l’ordre n’est pas important.
+Utiliser la numérotation lorsque l’ordre est important :
+
+```text
+1. Observer le problème
+2. Proposer une stratégie
+3. Tester la solution
+4. Réviser le résultat
+```
+
+Utiliser les listes à puces lorsque l’ordre n’est pas important.
 
 Les identifiants pédagogiques comme `[THE-CON-001]` sont réservés aux blocs pédagogiques, pas aux titres ordinaires.
 
-## Encadrés
+## 6. Hero et blocs à dégradé
+
+Utiliser un bloc hero pour :
+
+- une page d’accueil;
+- une grande section de référence;
+- une page qui présente une convention importante;
+- une synthèse de module.
+
+Classe recommandée :
+
+```md
+<div className="coursHero">
+  <div className="coursHeroCopy">
+    <div className="coursEyebrow">Convention visuelle</div>
+    <p className="coursLead">Message principal.</p>
+  </div>
+  <div className="coursHeroPanel">
+    <div className="coursPill">Lisible</div>
+    <div className="coursPill">Modulaire</div>
+  </div>
+</div>
+```
+
+:::warning
+Ne pas mettre un hero sur chaque petite page. Il doit rester un élément de mise en valeur.
+:::
+
+## 7. Cartes
+
+Utiliser les cartes pour présenter des choix, catégories, niveaux, ressources ou conventions.
+
+Classes recommandées :
+
+```md
+<div className="coursGrid">
+  <article className="coursCard">
+    <h3>Titre</h3>
+    <p>Résumé court.</p>
+  </article>
+</div>
+```
+
+Une carte doit contenir peu de texte. Si le texte devient long, créer une section normale.
+
+## 8. Pills
+
+Les pills servent à afficher :
+
+- des mots-clés;
+- des statuts;
+- des catégories;
+- des éléments courts de synthèse.
+
+Classe recommandée :
+
+```md
+<div className="coursPill">Context engineering</div>
+```
+
+## 9. Encadrés
 
 Utiliser les admonitions Docusaurus pour les informations importantes.
 
@@ -71,7 +160,7 @@ Point de vigilance ou risque de confusion.
 Erreur grave, risque de sécurité ou action à éviter.
 :::
 
-## Code
+## 10. Blocs de code et terminal
 
 Les blocs de code doivent toujours être précédés d’une phrase qui explique leur rôle.
 
@@ -79,26 +168,47 @@ Les blocs de code doivent toujours être précédés d’une phrase qui explique
 npm run build
 ```
 
+Pour une commande ou une sortie de terminal à mettre en évidence, utiliser un bloc visuel `coursTerminal`.
+
+```md
+<div className="coursTerminal">
+  <code>npm run build</code>
+</div>
+```
+
 Éviter les gros blocs de code non commentés.
 
-## Tableaux
+## 11. Tableaux
 
 Utiliser les tableaux pour comparer, classifier ou résumer.
 
-Un tableau doit rester court. Si un tableau devient long, le remplacer par des sections.
+Un tableau doit rester court. Si un tableau devient long, le remplacer par des sections ou des cartes.
 
-## Ton visuel
+## 12. Palette
 
-Le style doit être sobre, clair, technique sans être lourd, orienté action, et adapté à des étudiants et enseignants en informatique.
+La palette actuelle repose sur :
 
-## À éviter
+- bleu très sombre pour les blocs hero et terminaux;
+- vert sarcelle pour les accents;
+- or doux pour les contrastes secondaires;
+- fonds clairs et semi-transparents pour les cartes.
+
+Les variables principales sont dans :
+
+```text
+web/src/css/custom.css
+```
+
+## 13. À éviter
 
 - Les pages très longues sans sections.
 - Les listes de liens sans contexte.
 - Les titres décoratifs difficiles à maintenir.
 - Les noms de produits dans les identifiants pédagogiques.
 - Les blocs de code sans explication.
+- Les effets visuels lourds ou animés sans valeur pédagogique.
+- Les couleurs trop agressives pour une lecture prolongée.
 
-## Page de référence
+## 14. Page de référence
 
 Voir : [Page exemple de style](/admin/page-exemple-style).
