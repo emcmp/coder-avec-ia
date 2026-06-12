@@ -4,49 +4,60 @@ slug: /
 hide_table_of_contents: true
 ---
 
+import Link from '@docusaurus/Link';
+
 # Coder avec l’IA
 
-> Site en restructuration.
+Apprendre à utiliser l’IA dans un vrai contexte de programmation : mieux formuler les demandes, comprendre un codebase, valider les réponses et garder le contrôle du travail.
 
-Ce dépôt sert maintenant à concevoir une trousse et une formation avancée sur l’utilisation de l’IA en informatique.
+<div className="coursHero">
+  <div className="coursHeroCopy">
+    <div className="coursEyebrow">Parcours modulaire</div>
+    <p className="coursLead">
+      Une formation pratique pour travailler avec l’IA sans lui laisser le volant.
+    </p>
+    <div className="coursActions">
+      <Link className="button button--primary" to="/cours">Commencer les modules</Link>
+      <Link className="button button--secondary" to="/admin">Voir l’espace Admin</Link>
+    </div>
+  </div>
+  <div className="coursHeroPanel">
+    <div className="coursPill">Programmation</div>
+    <div className="coursPill">Contexte</div>
+    <div className="coursPill">Validation</div>
+    <div className="coursNote">
+      Le site est en construction, mais les premiers modules publics sont maintenant disponibles.
+    </div>
+  </div>
+</div>
 
-Le contenu précédent du site Docusaurus ne correspond plus exactement à l’orientation visée. Il est donc retiré de la navigation active pendant que la nouvelle structure est définie dans l’espace projet.
+## Modules publiés
 
-## Accès rapide
+<div className="coursIconMatrix coursIconMatrixFeatured">
+  <Link className="coursIconItem" to="/cours/contexte-utile">
+    <span className="coursIconItemIcon">🧩</span>
+    <span className="coursIconItemTitle">Donner un contexte utile</span>
+    <span className="coursIconItemText">Transformer une demande floue en demande exploitable.</span>
+    <span className="coursIconItemMeta">[MIC-CTX-001]</span>
+  </Link>
+  <Link className="coursIconItem" to="/cours/cartographier-codebase">
+    <span className="coursIconItemIcon">🗺️</span>
+    <span className="coursIconItemTitle">Cartographier un codebase</span>
+    <span className="coursIconItemText">Comprendre où intervenir avant de modifier.</span>
+    <span className="coursIconItemMeta">[MIC-MAP-001]</span>
+  </Link>
+  <Link className="coursIconItem" to="/cours/verifier-reponse-ia">
+    <span className="coursIconItemIcon">✅</span>
+    <span className="coursIconItemTitle">Vérifier une réponse IA</span>
+    <span className="coursIconItemText">Valider une réponse plausible avant de l’accepter.</span>
+    <span className="coursIconItemMeta">[MIC-EVA-001]</span>
+  </Link>
+</div>
 
-- [Section Admin](./admin) — documents de travail, conventions, catalogue, glossaire et décisions.
-- [Nomenclature des blocs pédagogiques](./admin/nomenclature-blocs-pedagogiques)
-- [Catalogue des blocs pédagogiques](./admin/catalogue-blocs-pedagogiques)
-- [Formation avancée IA](./admin/cours-ia-avance)
+## Espace de conception
 
-## Travail en cours
+Les documents de travail restent disponibles dans l’espace Admin : conventions, compétences, catalogues, modules pilotes et brainstorm.
 
-Le travail de conception se trouve dans le dépôt, sous :
-
-```text
-project/
-```
-
-Les prochaines étapes sont :
-
-- stabiliser la table des matières de la formation;
-- préciser le format des rencontres;
-- choisir les démonstrations prioritaires;
-- transformer seulement ensuite les sections prêtes en pages Docusaurus.
-
-## Orientation visée
-
-La nouvelle version devrait couvrir notamment :
-
-- context engineering;
-- skills et instructions réutilisables;
-- Spec Kit;
-- RAG;
-- cartographie et compréhension structurée des bases de code;
-- CLI IA;
-- agents GitHub;
-- connexion aux outils;
-- évaluation;
-- observabilité;
-- sécurité;
-- modèles locaux.
+<Link className="button button--secondary" to="/admin/brainstorm">
+  Ajouter ou consulter des idées dans Brainstorm
+</Link>
