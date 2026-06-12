@@ -6,6 +6,7 @@ slug: /admin/nomenclature-blocs-pedagogiques
 # Nomenclature et bibliothèque du projet
 
 > Source : `project/conventions/nomenclature-blocs-pedagogiques.md`  
+> Identifiant : `[DOC-CHR-004]`  
 > Version : 0.4  
 > Dernière modification : 2026-06-11  
 > Statut : convention de travail initiale
@@ -82,30 +83,11 @@ title
 
 Ces champs s’appliquent aux documents de projet, aux micro-modules, aux paliers, aux blocs pédagogiques et aux ressources.
 
-Le format de date recommandé est :
-
-```text
-AAAA-MM-JJ
-```
-
-Exemple :
-
-```text
-2026-06-11
-```
+Le format de date recommandé est `AAAA-MM-JJ`.
 
 ## Version
 
 La version sert à savoir si un élément a évolué depuis sa dernière consultation.
-
-Format recommandé :
-
-```text
-0.1
-0.2
-1.0
-1.1
-```
 
 Règle simple :
 
@@ -113,14 +95,6 @@ Règle simple :
 - `1.0` pour une première version stable;
 - incrément mineur lorsqu’on améliore le contenu sans changer son intention;
 - incrément majeur lorsqu’on change le sens, la structure ou l’usage de l’élément.
-
-## Dernière modification
-
-La date de dernière modification sert à repérer rapidement si un élément est récent, désuet ou à réviser.
-
-Elle doit être mise à jour lorsqu’un changement significatif est apporté au contenu.
-
-Un correctif mineur de coquille ne force pas nécessairement un changement de version, mais peut justifier une mise à jour de la date si le document est publié.
 
 ## Statut
 
@@ -175,16 +149,6 @@ Format général :
 [DOC-TYPE-NNN]
 ```
 
-Exemples :
-
-```text
-[DOC-CHR-001]
-[DOC-ADR-002]
-[DOC-CAT-001]
-[DOC-GLO-001]
-[DOC-PAR-001]
-```
-
 Types de documents de projet :
 
 ```text
@@ -200,44 +164,6 @@ ARC = Archive
 RDM = README ou document d’accueil
 CFG = Configuration ou instruction d’agent
 IDX = Index ou page de navigation
-```
-
-## Exemple de métadonnées pour un document
-
-```yaml
----
-id: DOC-CHR-003
-type: charte
-title: Charte pédagogique
-version: 0.5
-last_modified: 2026-06-11
-status: active
-source: project/conventions/charte-pedagogique.md
-published: web/docs/admin/charte-pedagogique.mdx
-related:
-  - DOC-CHR-001
-  - DOC-CHR-002
----
-```
-
-## Exemple de métadonnées pour un micro-module
-
-```yaml
----
-id: MIC-MAP-001
-type: micro-module
-domain: MAP
-title: Cartographie de codebase
-version: 0.1
-last_modified: 2026-06-11
-status: draft
-levels:
-  - PAL-MAP-001
-  - PAL-MAP-002
-  - PAL-MAP-003
-related:
-  - NOT-MAP-001
----
 ```
 
 ## Catalogue associé
