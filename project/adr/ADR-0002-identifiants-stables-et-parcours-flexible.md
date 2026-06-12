@@ -1,5 +1,10 @@
 # ADR-0002 — Identifiants stables et parcours flexible
 
+> Identifiant : `[DOC-ADR-002]`  
+> Version : 0.1  
+> Dernière modification : 2026-06-11  
+> Statut : acceptée
+
 ## Statut
 
 Acceptée.
@@ -16,20 +21,9 @@ Si l’identifiant d’un bloc contient son numéro de séance, son module tempo
 
 Les identifiants pédagogiques doivent être conceptuels, stables et indépendants du parcours.
 
-Le format retenu est :
+Le format retenu est : `[TYPE-DOMAINE-NNN]`.
 
-```text
-[TYPE-DOMAINE-NNN]
-```
-
-Exemples :
-
-```text
-[THE-CON-001]
-[EX-CON-001]
-[VIS-MAP-001]
-[GLO-SPE-001]
-```
+Exemples : `[THE-CON-001]`, `[EX-CON-001]`, `[VIS-MAP-001]`, `[GLO-SPE-001]`.
 
 Les identifiants ne doivent pas contenir :
 
