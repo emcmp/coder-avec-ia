@@ -1,6 +1,8 @@
 # Charte pédagogique
 
+> Identifiant : `[DOC-CHR-003]`  
 > Version : 0.5  
+> Dernière modification : 2026-06-11  
 > Statut : convention de travail initiale
 
 Cette charte définit les principes pédagogiques du projet **Coder avec l’IA**.
