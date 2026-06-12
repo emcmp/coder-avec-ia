@@ -1,0 +1,76 @@
+---
+title: Compétences visées
+slug: /admin/competences
+---
+
+# Compétences visées
+
+> Source : `project/catalogue/competences.md`  
+> Identifiant : `[DOC-CAT-004]`  
+> Version : 0.1  
+> Dernière modification : 2026-06-12  
+> Statut : brouillon structurant
+
+Cette page présente les compétences visées par le parcours **Coder avec l’IA** et leur lien avec les micro-modules.
+
+Une compétence décrit ce que la personne doit être capable de faire. Elle est transversale : une même compétence peut être développée par plusieurs modules, et un module peut contribuer à plusieurs compétences.
+
+## Format
+
+Les compétences utilisent le format :
+
+```text
+[CMP-DOMAINE-NNN]
+```
+
+## Compétences prioritaires pour une première version courte
+
+| ID | Compétence | Domaine |
+|---|---|---|
+| `[CMP-IA-001]` | Choisir le bon type d’outil IA pour une tâche | IA |
+| `[CMP-CTX-001]` | Fournir un contexte utile à un assistant IA | CTX |
+| `[CMP-SPE-001]` | Spécifier une tâche avant de l’implémenter avec l’IA | SPE |
+| `[CMP-MAP-001]` | Identifier où intervenir dans un codebase existant | MAP |
+| `[CMP-VCS-001]` | Intégrer l’IA dans un flux Git révisable | VCS |
+| `[CMP-EVA-001]` | Valider une réponse ou une production IA | EVA |
+| `[CMP-SEC-001]` | Encadrer les risques, permissions et données sensibles | SEC |
+
+## Autres compétences répertoriées
+
+| ID | Compétence | Domaine |
+|---|---|---|
+| `[CMP-INS-001]` | Utiliser des instructions réutilisables | INS |
+| `[CMP-CLI-001]` | Piloter une tâche IA en environnement local ou CLI | CLI |
+| `[CMP-AGT-001]` | Encadrer une tâche agentique | AGT |
+| `[CMP-OBS-001]` | Lire les signaux d’état, d’usage et de contexte | OBS |
+| `[CMP-RET-001]` | Appuyer une réponse IA sur des sources pertinentes | RET |
+| `[CMP-LOC-001]` | Évaluer la pertinence d’un modèle local | LOC |
+| `[CMP-PED-001]` | Concevoir une activité pédagogique avec l’IA | PED |
+
+## Matrice modules → compétences
+
+| Module | Compétences principales |
+|---|---|
+| `[MIC-IA-001]` | `[CMP-IA-001]`, `[CMP-SEC-001]` |
+| `[MIC-CTX-001]` | `[CMP-CTX-001]`, `[CMP-EVA-001]`, `[CMP-RET-001]` |
+| `[MIC-INS-001]` | `[CMP-INS-001]`, `[CMP-CTX-001]` |
+| `[MIC-VCS-001]` | `[CMP-VCS-001]`, `[CMP-IA-001]`, `[CMP-SEC-001]` |
+| `[MIC-SPE-001]` | `[CMP-SPE-001]`, `[CMP-CTX-001]`, `[CMP-VCS-001]` |
+| `[MIC-MAP-001]` | `[CMP-MAP-001]`, `[CMP-EVA-001]` |
+| `[MIC-CLI-001]` | `[CMP-CLI-001]`, `[CMP-MAP-001]`, `[CMP-OBS-001]` |
+| `[MIC-AGT-001]` | `[CMP-AGT-001]`, `[CMP-SPE-001]`, `[CMP-SEC-001]` |
+| `[MIC-VCS-002]` | `[CMP-VCS-001]`, `[CMP-AGT-001]`, `[CMP-EVA-001]` |
+| `[MIC-EVA-001]` | `[CMP-EVA-001]`, `[CMP-CTX-001]`, `[CMP-MAP-001]` |
+| `[MIC-OBS-001]` | `[CMP-OBS-001]`, `[CMP-EVA-001]`, `[CMP-AGT-001]` |
+| `[MIC-SEC-001]` | `[CMP-SEC-001]`, `[CMP-AGT-001]`, `[CMP-LOC-001]` |
+| `[MIC-RET-001]` | `[CMP-RET-001]`, `[CMP-CTX-001]`, `[CMP-EVA-001]` |
+| `[MIC-LOC-001]` | `[CMP-LOC-001]`, `[CMP-OBS-001]`, `[CMP-SEC-001]` |
+| `[MIC-PED-001]` | `[CMP-PED-001]`, `[CMP-EVA-001]`, `[CMP-SEC-001]` |
+
+## Source complète
+
+La version complète, avec indicateurs observables, se trouve dans :
+
+```text
+project/catalogue/competences.md
+```
