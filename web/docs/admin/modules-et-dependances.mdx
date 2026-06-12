@@ -1,0 +1,61 @@
+---
+title: Modules et dépendances
+slug: /admin/modules-et-dependances
+---
+
+# Modules et dépendances
+
+> Source : `project/catalogue/modules-et-dependances.md`  
+> Identifiant : `[DOC-CAT-003]`  
+> Version : 0.1  
+> Dernière modification : 2026-06-11  
+> Statut : brouillon structurant
+
+Cette page présente la première carte des micro-modules du parcours **Coder avec l’IA**.
+
+Elle ne constitue pas encore une table des matières finale. Elle sert à voir les dépendances, les priorités et les extensions possibles.
+
+## Vue des dépendances principales
+
+```text
+MIC-IA-001  → MIC-CTX-001 → MIC-INS-001
+            → MIC-VCS-001 → MIC-SPE-001 → MIC-MAP-001
+                                      └→ MIC-AGT-001
+MIC-MAP-001 → MIC-CLI-001 → MIC-AGT-001 → MIC-VCS-002
+MIC-CTX-001 → MIC-RET-001
+MIC-CTX-001 → MIC-EVA-001 → MIC-OBS-001
+MIC-SEC-001 traverse tous les modules avec outils et agents
+MIC-PED-001 s’appuie sur les modules stabilisés
+MIC-LOC-001 est optionnel et vient après CLI, OBS et SEC
+```
+
+## Modules essentiels pour une première version courte
+
+| ID | Module | Domaine | Rôle |
+|---|---|---|---|
+| `[MIC-IA-001]` | Se repérer dans les familles d’outils IA | IA | Choisir le bon type d’outil |
+| `[MIC-CTX-001]` | Donner un contexte utile à l’IA | CTX | Améliorer la qualité des réponses |
+| `[MIC-VCS-001]` | Utiliser Copilot dans un dépôt GitHub | VCS | Travailler dans un vrai projet |
+| `[MIC-SPE-001]` | Spécifier avant d’implémenter | SPE | Réduire les dérives de l’IA |
+| `[MIC-MAP-001]` | Cartographier un codebase | MAP | Trouver où intervenir |
+| `[MIC-EVA-001]` | Vérifier une réponse IA plausible | EVA | Valider avant d’accepter |
+| `[MIC-SEC-001]` | Gérer permissions, confidentialité et limites | SEC | Encadrer les risques |
+
+## Modules d’extension
+
+| ID | Module | Domaine | Rôle |
+|---|---|---|---|
+| `[MIC-INS-001]` | Utiliser des instructions réutilisables | INS | Stabiliser les consignes |
+| `[MIC-CLI-001]` | Travailler avec un agent CLI | CLI | Comprendre le workflow local |
+| `[MIC-AGT-001]` | Piloter une tâche agentique | AGT | Encadrer une tâche longue |
+| `[MIC-VCS-002]` | Travailler avec branches, issues et pull requests | VCS | Garder un flux révisable |
+| `[MIC-OBS-001]` | Lire traces, usage et contexte | OBS | Diagnostiquer une session |
+| `[MIC-RET-001]` | Retrouver l’information dans des documents | RET | Appuyer les réponses sur les sources |
+| `[MIC-LOC-001]` | Comprendre les modèles locaux | LOC | Évaluer les compromis local/cloud |
+| `[MIC-PED-001]` | Intégrer l’IA dans le travail d’un prof | PED | Transférer vers la pédagogie |
+
+## Règle de lecture
+
+Chaque module devrait pouvoir être traité en micro-module de 20 à 30 minutes, avec un palier I utile en classe et des paliers II / III comme extensions.
+
+La version complète des dépendances est dans le fichier source `project/catalogue/modules-et-dependances.md`.
