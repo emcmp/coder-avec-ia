@@ -45,7 +45,10 @@ const sidebars = {
           type: "category",
           label: "Parcours",
           collapsed: true,
-          items: ["admin/cours-ia-avance"],
+          items: [
+            "admin/cours-ia-avance",
+            "admin/modules-pilotes",
+          ],
         },
       ],
     },
