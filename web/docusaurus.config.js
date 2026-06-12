@@ -127,6 +127,11 @@ const config = {
             items: [
               {
                 type: "doc",
+                docId: "admin/brainstorm",
+                label: "Brainstorm",
+              },
+              {
+                type: "doc",
                 docId: "admin/nomenclature-blocs-pedagogiques",
                 label: "Nomenclature",
               },
