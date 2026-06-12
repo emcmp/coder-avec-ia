@@ -1,6 +1,9 @@
 # Spec — Formation avancée IA pour profs d’informatique
 
-> État : brouillon minimal.
+> Identifiant : `[DOC-SPC-001]`  
+> Version : 0.1  
+> Dernière modification : 2026-06-11  
+> Statut : brouillon minimal
 
 ## Objectif
 
