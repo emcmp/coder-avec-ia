@@ -1,10 +1,15 @@
-# Formation avancée — IA pour profs d’informatique
+# Parcours Coder avec l’IA
 
-Ce dossier conserve les traces de conception pour une formation avancée sur l’utilisation de l’IA en informatique.
+> Identifiant : `[DOC-PAR-001]`  
+> Version : 0.1  
+> Dernière modification : 2026-06-11  
+> Statut : espace de travail
+
+Ce dossier conserve les traces de conception pour le parcours modulaire **Coder avec l’IA**.
 
 ## Intention
 
-Construire une formation destinée à des profs d’informatique qui veulent aller au-delà du clavardage avec l’IA et comprendre les workflows techniques avancés : contexte structuré, skills, Spec Kit, RAG, CodeGraph, CLI, agents dans les dépôts, MCP, évaluation, observabilité, sécurité et modèles locaux.
+Construire un parcours destiné à des profs d’informatique et à des étudiants avancés en Techniques de l’informatique qui veulent utiliser l’IA de façon concrète, efficace et critique dans des workflows de développement.
 
 ## État
 
