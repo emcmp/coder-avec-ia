@@ -7,13 +7,11 @@ slug: /admin/charte-visuelle
 
 > Source : `project/conventions/charte-visuelle.md`  
 > Identifiant : `[DOC-CHR-001]`  
-> Version : 0.5  
+> Version : 0.6  
 > Dernière modification : 2026-06-12  
 > Statut : convention de travail initiale
 
 Cette charte définit le style visuel des pages du site **Coder avec l’IA**.
-
-Elle fige la direction graphique générale et les motifs visuels réutilisables.
 
 ## 1. Direction visuelle
 
@@ -26,21 +24,10 @@ Il combine :
 - des blocs à dégradé pour les introductions et les synthèses importantes;
 - des cartes claires pour structurer les contenus;
 - des matrices icône-item pour rendre les pages de synthèse plus vivantes;
+- des boîtes IA inspirées de l’expérience GitHub Copilot dans VS Code;
 - des éléments visuels sobres pour garder un ton professionnel.
 
-## 2. Structure générale d’une page
-
-Chaque page devrait contenir :
-
-1. un titre clair;
-2. une courte intention;
-3. une ou plusieurs sections courtes;
-4. des exemples concrets lorsque pertinent;
-5. des encadrés pour les avertissements, conseils ou informations importantes;
-6. des blocs de code contextualisés;
-7. une synthèse ou prochaine étape si la page est longue.
-
-## 3. Motifs visuels principaux
+## 2. Motifs visuels principaux
 
 Utiliser les motifs suivants selon le besoin :
 
@@ -49,51 +36,44 @@ Utiliser les motifs suivants selon le besoin :
 - `coursIconMatrix` et `coursIconItem` pour une matrice d’éléments réutilisable;
 - `coursPill` pour un mot-clé ou un statut;
 - `coursTerminal` pour une commande ou une sortie terminal;
+- `aiBox`, `aiBoxPrompt`, `aiBoxResponse` et `aiBoxChanges` pour les interactions IA;
 - admonitions Docusaurus pour les informations importantes;
 - tableaux courts pour comparer ou classifier.
 
-## 4. Matrice icône-item
+## 3. Matrice icône-item
 
 Utiliser une matrice icône-item lorsqu’une page présente plusieurs éléments de même nature.
-
-Exemples :
-
-- sections de l’Admin;
-- modules;
-- compétences;
-- catalogues;
-- documents importants;
-- ressources ou outils.
-
-Règle générale :
 
 ```text
 3 éléments ou plus de même nature → matrice icône-item plutôt que simple liste à puces.
 ```
 
-Structure recommandée dans une page MDX :
-
-```mdx
-import Link from '@docusaurus/Link';
-
-<div className="coursIconMatrix">
-  <Link className="coursIconItem" to="/admin/competences">
-    <span className="coursIconItemIcon">🎯</span>
-    <span className="coursIconItemTitle">Compétences visées</span>
-    <span className="coursIconItemText">Ce que la personne doit être capable de faire.</span>
-    <span className="coursIconItemMeta">[DOC-CAT-004]</span>
-  </Link>
-</div>
-```
-
-Utiliser `Link` plutôt que `<a href="/...">` pour respecter automatiquement le `baseUrl` du site GitHub Pages.
-
 Variantes disponibles :
 
 ```text
-coursIconMatrix          = matrice standard
-coursIconMatrixCompact   = matrice plus dense
-coursIconMatrixFeatured  = matrice de mise en valeur
+coursIconMatrix
+coursIconMatrixCompact
+coursIconMatrixFeatured
+```
+
+## 4. Boîtes IA
+
+Tous les prompts, réponses simulées, sorties IA et résumés de modifications doivent être placés dans une boîte IA.
+
+Classes disponibles :
+
+```text
+aiBox          = boîte IA de base
+aiBoxPrompt    = demande envoyée à l’IA
+aiBoxResponse  = réponse ou hypothèse produite par l’IA
+aiBoxChanges   = résumé de modifications ou de fichiers
+aiBoxSmall     = boîte plus étroite
+```
+
+Règle générale :
+
+```text
+prompt ou réponse IA visible → boîte IA plutôt que simple bloc de code
 ```
 
 ## 5. Icônes recommandées par domaine
@@ -136,33 +116,20 @@ Les blocs de code doivent toujours être précédés d’une phrase qui explique
 
 Pour une commande ou une sortie de terminal à mettre en évidence, utiliser un bloc visuel `coursTerminal`.
 
-```md
-<div className="coursTerminal">
-  <code>npm run build</code>
-</div>
-```
-
-Éviter les gros blocs de code non commentés.
-
-## 8. Tableaux
-
-Utiliser les tableaux pour comparer, classifier ou résumer.
-
-Un tableau doit rester court. Si un tableau devient long, le remplacer par des sections ou des cartes.
-
-## 9. À éviter
+## 8. À éviter
 
 - Les pages très longues sans sections.
 - Les listes de liens sans contexte.
 - Les titres décoratifs difficiles à maintenir.
 - Les noms de produits dans les identifiants pédagogiques.
 - Les blocs de code sans explication.
+- Les prompts ou réponses IA présentés comme de simples blocs de code sans contexte.
 - Les effets visuels lourds ou animés sans valeur pédagogique.
 - Les couleurs trop agressives pour une lecture prolongée.
 - Les matrices icône-item utilisées pour masquer un contenu trop flou.
 - Les liens internes absolus en `<a href="/...">` dans les pages MDX.
 - Les panneaux provider utilisés sans vraie équivalence utile.
 
-## 10. Page de référence
+## 9. Page de référence
 
 Voir : [Page exemple de style](./page-exemple-style).
