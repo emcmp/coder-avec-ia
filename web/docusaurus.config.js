@@ -98,17 +98,17 @@ const config = {
               {
                 type: "doc",
                 docId: "cours/contexte-utile",
-                label: "Cours 1 - Contexte utile",
+                label: "Rencontre 1 - Contexte utile",
               },
               {
                 type: "doc",
                 docId: "cours/cartographier-codebase",
-                label: "Cours 2 - Cartographier un codebase",
+                label: "Rencontre 2 - Cartographier un codebase",
               },
               {
                 type: "doc",
                 docId: "cours/verifier-reponse-ia",
-                label: "Cours 3 - Vérifier une réponse IA",
+                label: "Rencontre 3 - Vérifier une réponse IA",
               },
             ],
           },
