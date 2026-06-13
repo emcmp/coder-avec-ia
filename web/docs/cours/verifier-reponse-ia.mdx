@@ -1,11 +1,11 @@
 ---
-title: Vérifier une réponse IA plausible
+title: Cours 3 - Vérifier une réponse IA
 slug: /cours/verifier-reponse-ia
 ---
 
 import Link from '@docusaurus/Link';
 
-# Vérifier une réponse IA plausible
+# Cours 3 - Vérifier une réponse IA
 
 <div className="coursModuleMeta">
   <span>20–30 min</span>
@@ -14,16 +14,22 @@ import Link from '@docusaurus/Link';
 </div>
 
 <p className="coursModuleLead">
-Une réponse IA peut être claire, élégante et fausse. Dans ce module, on apprend à vérifier une réponse avant de l’accepter, de la remettre ou de l’intégrer dans un projet.
+Une réponse IA peut être claire, élégante et fausse. Dans cette rencontre, on apprend à vérifier une réponse avant de l’accepter, de la remettre ou de l’intégrer dans un projet.
 </p>
 
-## Le problème
+## ✅ Plausible ne veut pas dire vérifié
 
 Voici une mauvaise habitude très tentante :
 
-```text
-La réponse a l’air bonne, donc je la prends.
-```
+<div className="aiBox aiBoxPrompt aiBoxSmall">
+  <div className="aiBoxHeader">
+    <span className="aiBoxTitle">Réflexe dangereux</span>
+    <span className="aiBoxMeta">À éviter</span>
+  </div>
+  <div className="aiBoxBody">
+    <pre><code>{`La réponse a l’air bonne, donc je la prends.`}</code></pre>
+  </div>
+</div>
 
 Le problème, c’est que :
 
@@ -37,7 +43,7 @@ Le problème, c’est que :
 Plausible ne veut pas dire vérifié. C’est peut-être la phrase la plus utile du cours.
 :::
 
-## Ce qu’il faut comprendre
+## 🔍 Ce qu’il faut vérifier
 
 Valider une réponse IA, ce n’est pas seulement relire rapidement.
 
@@ -52,19 +58,40 @@ C’est vérifier :
 
 Une bonne validation transforme une impression en décision.
 
-## Exemple guidé
+## 🤖 Exemple de réponse trop convaincante
 
-Donne à Copilot une petite demande de correction ou d’explication.
+Une réponse peut sembler solide même si elle oublie une contrainte.
 
-Ensuite, applique cette checklist :
+<div className="aiBox aiBoxResponse">
+  <div className="aiBoxHeader">
+    <span className="aiBoxTitle">Réponse de l’IA</span>
+    <span className="aiBoxMeta">Plausible, mais à vérifier</span>
+  </div>
+  <div className="aiBoxBody">
+    <p>J’ai ajouté la validation demandée. Le formulaire devrait maintenant empêcher les valeurs invalides et afficher un message d’erreur.</p>
+  </div>
+</div>
 
-- Est-ce que la réponse répond vraiment à la demande?
-- Est-ce qu’elle respecte les contraintes?
-- Est-ce qu’elle mentionne ce qu’elle ne sait pas?
-- Est-ce qu’on peut tester ou vérifier le résultat?
-- Est-ce qu’on peut expliquer la solution dans nos mots?
+Cette réponse est rassurante, mais elle ne prouve pas que :
 
-## À toi de jouer
+- la bonne règle a été appliquée;
+- tous les cas importants sont couverts;
+- le message est au bon endroit;
+- le projet compile encore;
+- le comportement a été testé.
+
+## 🧰 Checklist de validation
+
+Avant d’accepter une réponse, pose-toi ces questions :
+
+- [ ] La réponse répond à la demande réelle.
+- [ ] Les contraintes importantes sont respectées.
+- [ ] Les cas limites évidents sont considérés.
+- [ ] La solution est cohérente avec le projet.
+- [ ] Je peux expliquer la solution dans mes mots.
+- [ ] Je peux vérifier le résultat avec un test, une exécution ou une inspection.
+
+## 🧪 À essayer
 
 Lis une réponse IA volontairement plausible mais incomplète.
 
@@ -76,36 +103,25 @@ Ta tâche :
 - proposer une vérification ou un test;
 - décider : accepter, corriger, rejeter ou demander une autre passe.
 
-## Checklist courte
-
-- [ ] La réponse répond à la demande réelle.
-- [ ] Les contraintes importantes sont respectées.
-- [ ] Les cas limites évidents sont considérés.
-- [ ] La solution est cohérente avec le projet.
-- [ ] Je peux expliquer la solution dans mes mots.
-- [ ] Je peux vérifier le résultat avec un test, une exécution ou une inspection.
-
-## À retenir
+## 🔩 Récapitulatif
 
 - Plausible ne veut pas dire correct.
 - Une réponse IA doit être vérifiée comme une contribution externe.
 - Une checklist courte vaut mieux qu’une confiance vague.
 - La personne garde les mains sur le volant.
 
-## Pour aller plus loin
+## 🚀 Pour aller plus loin
 
 - **Essentiel** : appliquer une checklist de validation à une réponse IA courte.
 - **Consolidation** : écrire un test, une vérification ou une question de clarification.
 - **Défi** : comparer plusieurs réponses IA avec des critères explicites.
 
-## Navigation
-
 <div className="coursActions">
   <Link className="button button--secondary" to="/cours/cartographier-codebase">
-    Retour : cartographier un codebase
+    Retour au cours 2
   </Link>
   <Link className="button button--primary" to="/cours">
-    Retour aux modules de cours
+    Retour aux rencontres
   </Link>
 </div>
 
