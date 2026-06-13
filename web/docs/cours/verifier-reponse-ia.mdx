@@ -5,49 +5,39 @@ slug: /cours/verifier-reponse-ia
 
 import Link from '@docusaurus/Link';
 
-# [MIC-EVA-001] Vérifier une réponse IA plausible
+# Vérifier une réponse IA plausible
 
-> Durée cible : 20 à 30 min  
-> Outil principal : GitHub Copilot  
-> Statut : module pilote publié
+<div className="coursModuleMeta">
+  <span>20–30 min</span>
+  <span>GitHub Copilot</span>
+  <span>Validation</span>
+</div>
 
-## Intention
+<p className="coursModuleLead">
+Une réponse IA peut être claire, élégante et fausse. Dans ce module, on apprend à vérifier une réponse avant de l’accepter, de la remettre ou de l’intégrer dans un projet.
+</p>
 
-Apprendre à valider une réponse IA qui semble convaincante avant de l’accepter, de la remettre ou de l’intégrer dans un projet.
+## Le problème
 
-## Compétences visées
-
-- `[CMP-EVA-001]` Valider une réponse ou une production IA.
-- `[CMP-CTX-001]` Fournir un contexte utile à un assistant IA.
-- `[CMP-MAP-001]` Identifier où intervenir dans un codebase existant.
-
-## Pourquoi c’est utile?
-
-Une réponse IA peut être claire, élégante et fausse.
-
-La validation évite d’apprendre de travers, de casser un projet ou d’accepter une solution qu’on ne comprend pas.
-
-## Friction de départ
-
-Mauvaise manière volontaire :
+Voici une mauvaise habitude très tentante :
 
 ```text
 La réponse a l’air bonne, donc je la prends.
 ```
 
-Problèmes :
+Le problème, c’est que :
 
 - l’IA peut avoir ignoré une contrainte;
 - le code peut fonctionner seulement dans un cas simple;
 - l’explication peut être plausible mais incorrecte;
 - la solution peut contourner le vrai problème;
-- la personne peut être incapable de justifier le résultat.
+- tu peux être incapable de justifier le résultat.
 
 :::danger
 Plausible ne veut pas dire vérifié. C’est peut-être la phrase la plus utile du cours.
 :::
 
-## Théorie ciblée
+## Ce qu’il faut comprendre
 
 Valider une réponse IA, ce n’est pas seulement relire rapidement.
 
@@ -62,11 +52,11 @@ C’est vérifier :
 
 Une bonne validation transforme une impression en décision.
 
-## Démonstration courte
+## Exemple guidé
 
-Donner à Copilot une petite demande de correction ou d’explication.
+Donne à Copilot une petite demande de correction ou d’explication.
 
-Ensuite, appliquer une checklist :
+Ensuite, applique cette checklist :
 
 - Est-ce que la réponse répond vraiment à la demande?
 - Est-ce qu’elle respecte les contraintes?
@@ -74,19 +64,11 @@ Ensuite, appliquer une checklist :
 - Est-ce qu’on peut tester ou vérifier le résultat?
 - Est-ce qu’on peut expliquer la solution dans nos mots?
 
-## Équivalence provider
+## À toi de jouer
 
-| Provider | Ce qu’on valide | Vigilance |
-|---|---|---|
-| GitHub Copilot | Suggestion de code ou explication dans le projet | Vérifier la cohérence avec les fichiers existants |
-| Codex | Plan, diff ou tâche produite par agent | Lire les changements, pas seulement le résumé |
-| Claude Code | Modification locale ou rapport de tâche | Vérifier les fichiers touchés et les tests exécutés |
+Lis une réponse IA volontairement plausible mais incomplète.
 
-## Mini-exercice
-
-Présenter une réponse IA volontairement plausible mais incomplète.
-
-La personne doit :
+Ta tâche :
 
 - identifier ce qui semble correct;
 - identifier au moins deux risques;
@@ -103,34 +85,18 @@ La personne doit :
 - [ ] Je peux expliquer la solution dans mes mots.
 - [ ] Je peux vérifier le résultat avec un test, une exécution ou une inspection.
 
-## Paliers
+## À retenir
 
-### Palier I — Noyau essentiel
+- Plausible ne veut pas dire correct.
+- Une réponse IA doit être vérifiée comme une contribution externe.
+- Une checklist courte vaut mieux qu’une confiance vague.
+- La personne garde les mains sur le volant.
 
-Appliquer une checklist de validation à une réponse IA courte.
+## Pour aller plus loin
 
-Résultat attendu : tu peux décider si tu acceptes, corriges ou rejettes une réponse.
-
-### Palier II — Consolidation
-
-Écrire un test, une vérification ou une question de clarification.
-
-Résultat attendu : tu transformes un doute en action vérifiable.
-
-### Palier III — Approfondissement
-
-Comparer plusieurs réponses IA avec des critères explicites.
-
-Résultat attendu : tu peux justifier pourquoi une réponse est meilleure, plus sûre ou plus maintenable.
-
-## Retour rapide
-
-À retenir :
-
-- plausible ne veut pas dire correct;
-- une réponse IA doit être vérifiée comme une contribution externe;
-- une checklist courte vaut mieux qu’une confiance vague;
-- la personne garde les mains sur le volant.
+- **Essentiel** : appliquer une checklist de validation à une réponse IA courte.
+- **Consolidation** : écrire un test, une vérification ou une question de clarification.
+- **Défi** : comparer plusieurs réponses IA avec des critères explicites.
 
 ## Navigation
 
@@ -142,3 +108,13 @@ Résultat attendu : tu peux justifier pourquoi une réponse est meilleure, plus 
     Retour aux modules de cours
   </Link>
 </div>
+
+<details className="coursPedagoRefs">
+  <summary>Références pédagogiques</summary>
+
+  - Module : `MIC-EVA-001`
+  - Compétences : `CMP-EVA-001`, `CMP-CTX-001`, `CMP-MAP-001`
+  - Source : `project/current/cours-ia-avance/modules/MIC-EVA-001-verifier-reponse-plausible.md`
+  - Statut : module pilote publié
+
+</details>
