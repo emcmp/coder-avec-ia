@@ -5,30 +5,21 @@ slug: /cours/cartographier-codebase
 
 import Link from '@docusaurus/Link';
 
-# [MIC-MAP-001] Cartographier un codebase
+# Cartographier un codebase
 
-> Durée cible : 20 à 30 min  
-> Outil principal : GitHub Copilot  
-> Statut : module pilote publié
+<div className="coursModuleMeta">
+  <span>20–30 min</span>
+  <span>GitHub Copilot</span>
+  <span>Code existant</span>
+</div>
 
-## Intention
+<p className="coursModuleLead">
+Avant de demander à l’IA de modifier un projet, il faut comprendre où intervenir. Dans ce module, on apprend à repérer les fichiers, responsabilités et risques importants sans lire tout le codebase.
+</p>
 
-Apprendre à comprendre rapidement où intervenir dans un projet existant avant de demander à l’IA de modifier du code.
+## Le problème
 
-## Compétences visées
-
-- `[CMP-MAP-001]` Identifier où intervenir dans un codebase existant.
-- `[CMP-EVA-001]` Valider une réponse ou une production IA.
-
-## Pourquoi c’est utile?
-
-La cartographie évite de corriger au mauvais endroit.
-
-Elle permet de mieux guider l’IA, de valider ses propositions et de réduire les changements inutiles.
-
-## Friction de départ
-
-Mauvaise manière volontaire :
+Voici une demande fréquente :
 
 ```text
 Ajoute cette fonctionnalité dans le projet.
@@ -37,12 +28,12 @@ Ajoute cette fonctionnalité dans le projet.
 Sans cartographie, l’IA risque de :
 
 - modifier un fichier secondaire;
-- ignorer une architecture existante;
+- ignorer l’architecture existante;
 - dupliquer une logique déjà présente;
-- proposer une solution qui fonctionne localement mais qui ne respecte pas le projet;
+- proposer une solution qui fonctionne localement, mais qui ne respecte pas le projet;
 - créer un changement difficile à réviser.
 
-## Théorie ciblée
+## Ce qu’il faut comprendre
 
 Cartographier un codebase, ce n’est pas tout lire.
 
@@ -66,9 +57,9 @@ La bonne question est :
 Est-ce que je comprends assez pour faire cette modification sans deviner?
 ```
 
-## Démonstration courte
+## Exemple guidé
 
-Dans un petit projet existant, demander à l’IA :
+Dans un petit projet existant, on peut commencer par demander à l’IA :
 
 ```text
 Avant de modifier le code, aide-moi à identifier les fichiers probablement concernés par cette fonctionnalité.
@@ -82,58 +73,37 @@ Explique brièvement le rôle de chaque fichier et ce qu’il faudrait vérifier
 - les zones d’incertitude;
 - les fichiers à ouvrir avant modification.
 
-## Équivalence provider
+:::tip
+Une cartographie n’est pas une preuve. C’est une hypothèse de travail à vérifier avant de modifier le code.
+:::
 
-| Provider | Ce qu’on montre | Vigilance |
-|---|---|---|
-| GitHub Copilot | Repérer les fichiers dans le dépôt | Ne pas accepter une cartographie sans vérifier |
-| Codex | Demander un plan avant modification | Éviter une tâche trop large dès le départ |
-| Claude Code | Lire les fichiers pertinents avant d’agir | Surveiller les fichiers réellement consultés |
-| CodeGraph ou équivalent | Explorer symboles, dépendances ou appels | Ne pas confondre graphe et compréhension complète |
+## À toi de jouer
 
-## Mini-exercice
-
-On donne une demande de changement :
+On veut faire ce changement :
 
 ```text
 Ajouter un message d’erreur personnalisé quand le formulaire est invalide.
 ```
 
-Avant toute modification, produire :
+Avant toute modification, produis :
 
 - une liste de fichiers probablement concernés;
 - le rôle supposé de chaque fichier;
 - une question à poser à l’IA pour confirmer la zone de modification;
 - un risque si on modifie directement sans cartographier.
 
-## Paliers
+## À retenir
 
-### Palier I — Noyau essentiel
+- Cartographier, ce n’est pas lire tout le projet.
+- L’objectif est de réduire les hypothèses.
+- L’IA peut aider à cartographier, mais il faut vérifier.
+- Une bonne cartographie rend les modifications plus petites et plus révisables.
 
-Retrouver le fichier ou la zone probable à modifier.
+## Pour aller plus loin
 
-Résultat attendu : tu peux expliquer où tu interviendrais et pourquoi.
-
-### Palier II — Consolidation
-
-Lire les dépendances, symboles ou appels liés à la zone ciblée.
-
-Résultat attendu : tu peux nommer ce qui risque d’être affecté.
-
-### Palier III — Approfondissement
-
-Comparer une lecture manuelle avec un outil de cartographie.
-
-Résultat attendu : tu peux expliquer ce que l’outil aide à voir et ce qu’il ne remplace pas.
-
-## Retour rapide
-
-À retenir :
-
-- cartographier, ce n’est pas lire tout le projet;
-- l’objectif est de réduire les hypothèses;
-- l’IA peut aider à cartographier, mais il faut vérifier;
-- une bonne cartographie rend les modifications plus petites et plus révisables.
+- **Essentiel** : retrouver le fichier ou la zone probable à modifier.
+- **Consolidation** : lire les dépendances, symboles ou appels liés à la zone ciblée.
+- **Défi** : comparer une lecture manuelle avec un outil de cartographie.
 
 ## Navigation
 
@@ -145,3 +115,14 @@ Résultat attendu : tu peux expliquer ce que l’outil aide à voir et ce qu’i
     Continuer : vérifier une réponse IA
   </Link>
 </div>
+
+<details className="coursPedagoRefs">
+  <summary>Références pédagogiques</summary>
+
+  - Module : `MIC-MAP-001`
+  - Compétences : `CMP-MAP-001`, `CMP-EVA-001`
+  - Source : `project/current/cours-ia-avance/modules/MIC-MAP-001-cartographier-codebase.md`
+  - Statut : module pilote publié
+  - Équivalences utiles : Codex, Claude Code, CodeGraph ou outil équivalent lorsque disponible
+
+</details>
