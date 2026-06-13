@@ -7,31 +7,34 @@ slug: /admin/gabarits-pedagogiques
 
 > Source : `project/conventions/gabarits-pedagogiques.md`  
 > Identifiant : `[DOC-CHR-005]`  
-> Version : 0.3  
+> Version : 0.4  
 > Dernière modification : 2026-06-12  
 > Statut : convention de travail initiale
 
 Cette page présente les gabarits réutilisables pour produire les contenus pédagogiques du parcours **Coder avec l’IA**.
 
-## Deux formats à distinguer
+## Règle principale
 
-| Format | Rôle |
-|---|---|
-| Micro-module source/Admin | Concevoir, versionner et relier les contenus |
-| Rencontre publique | Guider une activité lisible pour l’étudiant |
+Une page publique doit rester lisible pour l’étudiant.
 
-:::warning
-Une page publique ne doit pas ressembler à une fiche de planification. Les identifiants, statuts et compétences restent disponibles, mais discrets.
-:::
+Les identifiants, statuts et compétences restent disponibles, mais ils ne doivent pas dominer la page.
+
+## Découplage
+
+Le contenu, le parcours et l’outil d’exemple sont trois choses différentes.
+
+- Le contenu garde un titre stable.
+- L’ordre de rencontre appartient à la navigation ou à l’index.
+- Le provider utilisé dans les exemples n’est pas automatiquement le sujet de la notion.
 
 ## Standard des rencontres publiques
 
 Structure recommandée :
 
-- titre `Cours N - Titre de la rencontre`;
+- titre stable;
 - métadonnées discrètes;
 - courte amorce;
-- sections notionnelles avec emoji;
+- sections avec emoji;
 - exemple de prompt ou réponse IA;
 - explication guidée;
 - à essayer;
@@ -51,14 +54,6 @@ aiBoxPrompt
 aiBoxResponse
 aiBoxChanges
 ```
-
-## Règles de maintenance
-
-- Chaque contenu doit garder un identifiant stable.
-- Le palier I doit rester utile seul.
-- Une page publique doit être lisible pour l’étudiant avant d’être utile au suivi administratif.
-- Les références pédagogiques doivent rester disponibles, mais discrètes.
-- Les prompts et réponses IA doivent utiliser les boîtes IA réutilisables.
 
 ## Source complète
 
