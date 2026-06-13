@@ -194,6 +194,60 @@ body {
   margin-bottom: 0;
 }
 
+.coursModuleMeta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin: -0.3rem 0 1.4rem;
+  color: var(--cours-muted);
+  font-size: 0.86rem;
+}
+
+.coursModuleMeta span {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  border: 1px solid var(--cours-card-border);
+  background: var(--cours-pill-bg);
+}
+
+.coursModuleLead {
+  max-width: 48rem;
+  margin: 0 0 2rem;
+  color: var(--cours-muted);
+  font-size: 1.15rem;
+  line-height: 1.55;
+}
+
+.coursStudentPrompt {
+  margin: 1rem 0 1.4rem;
+  padding: 1rem 1.15rem;
+  border-radius: 1rem;
+  border: 1px solid var(--cours-card-border);
+  background: var(--cours-note-bg);
+}
+
+.coursPedagoRefs {
+  margin-top: 2.5rem;
+  padding: 0.9rem 1rem;
+  border-radius: 1rem;
+  border: 1px solid var(--cours-card-border);
+  background: var(--cours-note-bg);
+  color: var(--cours-muted);
+  font-size: 0.9rem;
+}
+
+.coursPedagoRefs summary {
+  cursor: pointer;
+  color: var(--ifm-font-color-base);
+  font-weight: 700;
+}
+
+.coursPedagoRefs code {
+  font-size: 0.82rem;
+}
+
 .coursIconMatrix {
   display: grid;
   gap: 1rem;
