@@ -1,7 +1,7 @@
 # Charte visuelle
 
 > Identifiant : `[DOC-CHR-001]`  
-> Version : 0.5  
+> Version : 0.6  
 > Dernière modification : 2026-06-12  
 > Statut : convention de travail initiale
 
@@ -20,6 +20,7 @@ Il combine :
 - des blocs à dégradé pour les introductions et les synthèses importantes;
 - des cartes claires pour structurer les contenus;
 - des matrices icône-item pour rendre les pages de synthèse plus vivantes;
+- des boîtes IA inspirées de l’expérience GitHub Copilot dans VS Code;
 - des éléments visuels sobres pour garder un ton professionnel.
 
 ## Structure générale d’une page
@@ -27,7 +28,7 @@ Il combine :
 Chaque page devrait contenir :
 
 1. un titre clair;
-2. une courte intention;
+2. une courte intention ou amorce;
 3. une ou plusieurs sections courtes;
 4. des exemples concrets lorsque pertinent;
 5. des encadrés pour les avertissements, conseils ou informations importantes;
@@ -43,6 +44,7 @@ Utiliser les motifs suivants selon le besoin :
 - `coursIconMatrix` et `coursIconItem` pour une matrice d’éléments réutilisable;
 - `coursPill` pour un mot-clé ou un statut;
 - `coursTerminal` pour une commande ou une sortie terminal;
+- `aiBox`, `aiBoxPrompt`, `aiBoxResponse` et `aiBoxChanges` pour les interactions IA;
 - admonitions Docusaurus pour les informations importantes;
 - tableaux courts pour comparer ou classifier.
 
@@ -50,37 +52,11 @@ Utiliser les motifs suivants selon le besoin :
 
 Utiliser une matrice icône-item lorsqu’une page présente plusieurs éléments de même nature.
 
-Exemples :
-
-- sections de l’Admin;
-- modules;
-- compétences;
-- catalogues;
-- documents importants;
-- ressources ou outils.
-
 Règle générale :
 
 ```text
 3 éléments ou plus de même nature → matrice icône-item plutôt que simple liste à puces.
 ```
-
-Structure recommandée dans une page MDX :
-
-```mdx
-import Link from '@docusaurus/Link';
-
-<div className="coursIconMatrix">
-  <Link className="coursIconItem" to="/admin/competences">
-    <span className="coursIconItemIcon">🎯</span>
-    <span className="coursIconItemTitle">Compétences visées</span>
-    <span className="coursIconItemText">Ce que la personne doit être capable de faire.</span>
-    <span className="coursIconItemMeta">[DOC-CAT-004]</span>
-  </Link>
-</div>
-```
-
-Utiliser `Link` plutôt que `<a href="/...">` pour respecter automatiquement le `baseUrl` du site GitHub Pages.
 
 Variantes disponibles :
 
@@ -90,9 +66,29 @@ coursIconMatrixCompact   = matrice plus dense
 coursIconMatrixFeatured  = matrice de mise en valeur
 ```
 
-## Icônes recommandées par domaine
+## Boîtes IA
 
-Utiliser des icônes emoji contrôlées pour garder une identité simple sans dépendance externe.
+Tous les prompts, réponses simulées, sorties IA et résumés de modifications doivent être placés dans une boîte IA.
+
+Classes disponibles :
+
+```text
+aiBox          = boîte IA de base
+aiBoxPrompt    = demande envoyée à l’IA
+aiBoxResponse  = réponse ou hypothèse produite par l’IA
+aiBoxChanges   = résumé de modifications ou de fichiers
+aiBoxSmall     = boîte plus étroite
+```
+
+Règle générale :
+
+```text
+prompt ou réponse IA visible → boîte IA plutôt que simple bloc de code
+```
+
+Objectif : rappeler visuellement l’expérience GitHub Copilot dans VS Code, sans copier l’interface exacte.
+
+## Icônes recommandées par domaine
 
 | Domaine | Icône |
 |---|---|
@@ -124,15 +120,6 @@ GitHub Copilot | Codex | Claude Code
 
 GitHub Copilot doit être présenté en premier, car il est l’outil de référence du cours.
 
-Utiliser ce motif pour comparer une même action pratique, par exemple :
-
-- voir le statut;
-- voir l’usage;
-- inspecter la taille du contexte;
-- reprendre une session;
-- relancer une tâche;
-- comprendre où l’outil lit le projet.
-
 Éviter d’utiliser ce motif pour faire une comparaison générale de produits. Le panneau doit répondre à une question concrète.
 
 ## Code
@@ -154,6 +141,7 @@ Un tableau doit rester court. Si un tableau devient long, le remplacer par des s
 - Les titres décoratifs difficiles à maintenir.
 - Les noms de produits dans les identifiants pédagogiques.
 - Les blocs de code sans explication.
+- Les prompts ou réponses IA présentés comme de simples blocs de code sans contexte.
 - Les effets visuels lourds ou animés sans valeur pédagogique.
 - Les couleurs trop agressives pour une lecture prolongée.
 - Les matrices icône-item utilisées pour masquer un contenu trop flou.
