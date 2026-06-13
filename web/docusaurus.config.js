@@ -92,23 +92,23 @@ const config = {
             label: "Cours",
           },
           {
-            label: "Modules",
+            label: "Rencontres",
             position: "left",
             items: [
               {
                 type: "doc",
                 docId: "cours/contexte-utile",
-                label: "Contexte utile",
+                label: "Cours 1 - Contexte utile",
               },
               {
                 type: "doc",
                 docId: "cours/cartographier-codebase",
-                label: "Cartographier un codebase",
+                label: "Cours 2 - Cartographier un codebase",
               },
               {
                 type: "doc",
                 docId: "cours/verifier-reponse-ia",
-                label: "Vérifier une réponse IA",
+                label: "Cours 3 - Vérifier une réponse IA",
               },
             ],
           },
