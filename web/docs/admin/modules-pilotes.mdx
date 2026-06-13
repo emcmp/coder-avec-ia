@@ -9,81 +9,98 @@ import Link from '@docusaurus/Link';
 
 > Source : `project/current/cours-ia-avance/modules/`  
 > Identifiant : `[DOC-PAR-003]`  
-> Version : 0.3  
+> Version : 0.4  
 > Dernière modification : 2026-06-12  
 > Statut : index de travail
 
 Cette page présente les trois premiers micro-modules pilotes du parcours **Coder avec l’IA**.
 
-Ils servent à valider les gabarits pédagogiques avant de produire l’ensemble du cours. Les trois pilotes sont maintenant aussi publiés comme pages de cours.
+Ils servent à valider les gabarits pédagogiques avant de produire l’ensemble du cours. Les trois pilotes sont aussi publiés comme rencontres de cours.
 
 ## Pages publiées
 
 <div className="coursIconMatrix coursIconMatrixFeatured">
   <Link className="coursIconItem" to="/cours/contexte-utile">
     <span className="coursIconItemIcon">🧩</span>
-    <span className="coursIconItemTitle">Donner un contexte utile</span>
-    <span className="coursIconItemText">Page publique du module contexte.</span>
-    <span className="coursIconItemMeta">[MIC-CTX-001]</span>
+    <span className="coursIconItemTitle">Contexte utile</span>
+    <span className="coursIconItemText">Page publique du contenu stable MIC-CTX-001.</span>
+    <span className="coursIconItemMeta">Rencontre 1</span>
   </Link>
   <Link className="coursIconItem" to="/cours/cartographier-codebase">
     <span className="coursIconItemIcon">🗺️</span>
     <span className="coursIconItemTitle">Cartographier un codebase</span>
-    <span className="coursIconItemText">Page publique du module cartographie.</span>
-    <span className="coursIconItemMeta">[MIC-MAP-001]</span>
+    <span className="coursIconItemText">Page publique du contenu stable MIC-MAP-001.</span>
+    <span className="coursIconItemMeta">Rencontre 2</span>
   </Link>
   <Link className="coursIconItem" to="/cours/verifier-reponse-ia">
     <span className="coursIconItemIcon">✅</span>
     <span className="coursIconItemTitle">Vérifier une réponse IA</span>
-    <span className="coursIconItemText">Page publique du module validation.</span>
-    <span className="coursIconItemMeta">[MIC-EVA-001]</span>
+    <span className="coursIconItemText">Page publique du contenu stable MIC-EVA-001.</span>
+    <span className="coursIconItemMeta">Rencontre 3</span>
   </Link>
 </div>
+
+## Comment lire les trois pilotes
+
+| Élément | Rôle | Exemple |
+|---|---|---|
+| Rencontre | Position actuelle dans le parcours public | Rencontre 1 - Contexte utile |
+| Page publique | Version lisible par l’étudiant | `/cours/contexte-utile` |
+| Micro-module | Contenu pédagogique stable | `MIC-CTX-001` |
+| Domaine | Famille conceptuelle | `CTX` |
+| Compétence | Capacité observable liée au contenu | `CMP-CTX-001` |
+| Source projet | Fichier de conception et de maintenance | `project/current/cours-ia-avance/modules/...` |
+| Admin | Vue de suivi et de documentation | `/admin/modules-pilotes` |
+
+:::info
+La rencontre donne l’ordre de présentation. Le micro-module donne l’identité stable du contenu.
+:::
+
+## Correspondance des pilotes
+
+| Rencontre actuelle | Page publique | Micro-module stable | Domaine | Compétence centrale |
+|---|---|---|---|---|
+| Rencontre 1 | `/cours/contexte-utile` | `MIC-CTX-001` | `CTX` | `CMP-CTX-001` |
+| Rencontre 2 | `/cours/cartographier-codebase` | `MIC-MAP-001` | `MAP` | `CMP-MAP-001` |
+| Rencontre 3 | `/cours/verifier-reponse-ia` | `MIC-EVA-001` | `EVA` | `CMP-EVA-001` |
 
 ## Modules pilotes
 
 | ID | Module | Domaine | Statut | Compétences principales |
 |---|---|---|---|---|
-| `[MIC-CTX-001]` | Donner un contexte utile à l’IA | CTX | pilote publié | `[CMP-CTX-001]`, `[CMP-EVA-001]`, `[CMP-RET-001]` |
-| `[MIC-MAP-001]` | Cartographier un codebase | MAP | pilote publié | `[CMP-MAP-001]`, `[CMP-EVA-001]` |
-| `[MIC-EVA-001]` | Vérifier une réponse IA plausible | EVA | pilote publié | `[CMP-EVA-001]`, `[CMP-CTX-001]`, `[CMP-MAP-001]` |
+| `MIC-CTX-001` | Contexte utile | CTX | pilote publié | `CMP-CTX-001`, `CMP-EVA-001`, `CMP-RET-001` |
+| `MIC-MAP-001` | Cartographier un codebase | MAP | pilote publié | `CMP-MAP-001`, `CMP-EVA-001` |
+| `MIC-EVA-001` | Vérifier une réponse IA | EVA | pilote publié | `CMP-EVA-001`, `CMP-CTX-001`, `CMP-MAP-001` |
 
 ## Ce qu’on valide avec ces modules
 
-- Le format de micro-module de 20 à 30 minutes.
-- Le découpage en paliers I / II / III.
-- La présence d’une friction de départ.
-- La clarté du “What’s in it for me?”.
-- La place de GitHub Copilot comme outil principal.
-- Les équivalences Codex et Claude Code, seulement quand utiles.
-- La liaison explicite entre modules et compétences observables.
-- La possibilité de produire rapidement d’autres modules avec le même gabarit.
+- Le format de rencontre publique.
+- Le découplage entre contenu stable et ordre de présentation.
+- La présence d’un problème de départ reconnaissable.
+- L’usage de boîtes IA pour les prompts et réponses.
+- La lisibilité des références pédagogiques repliées.
+- Le lien explicite entre modules et compétences observables.
+- L’usage de GitHub Copilot comme exemple principal actuel, sans en faire la nature de la notion.
 
 ## Résumé des pilotes
 
-### [MIC-CTX-001] Donner un contexte utile à l’IA
+### MIC-CTX-001 — Contexte utile
 
 Objectif : apprendre à fournir à l’IA un contexte suffisant, ciblé et utile sans l’inonder d’informations inutiles.
 
-Friction de départ : “Corrige mon code, ça ne marche pas.”
+Compétence centrale : `CMP-CTX-001`.
 
-Compétence centrale : `[CMP-CTX-001]`.
-
-### [MIC-MAP-001] Cartographier un codebase
+### MIC-MAP-001 — Cartographier un codebase
 
 Objectif : comprendre où intervenir dans un projet existant avant de demander à l’IA de modifier du code.
 
-Friction de départ : “Ajoute cette fonctionnalité dans le projet.”
+Compétence centrale : `CMP-MAP-001`.
 
-Compétence centrale : `[CMP-MAP-001]`.
-
-### [MIC-EVA-001] Vérifier une réponse IA plausible
+### MIC-EVA-001 — Vérifier une réponse IA
 
 Objectif : valider une réponse IA qui semble convaincante avant de l’accepter, de la remettre ou de l’intégrer.
 
-Friction de départ : “La réponse a l’air bonne, donc je la prends.”
-
-Compétence centrale : `[CMP-EVA-001]`.
+Compétence centrale : `CMP-EVA-001`.
 
 ## Sources
 
