@@ -59,6 +59,7 @@ const sidebars = {
           items: [
             "admin/adr-0001-structure-du-repo",
             "admin/adr-0002-identifiants-stables",
+            "admin/adr-0003-decoupler-contenu-parcours-provider",
           ],
         },
       ],
