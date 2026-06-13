@@ -1,11 +1,11 @@
 ---
-title: Cartographier un codebase
+title: Cours 2 - Cartographier un codebase
 slug: /cours/cartographier-codebase
 ---
 
 import Link from '@docusaurus/Link';
 
-# Cartographier un codebase
+# Cours 2 - Cartographier un codebase
 
 <div className="coursModuleMeta">
   <span>20–30 min</span>
@@ -14,26 +14,33 @@ import Link from '@docusaurus/Link';
 </div>
 
 <p className="coursModuleLead">
-Avant de demander à l’IA de modifier un projet, il faut comprendre où intervenir. Dans ce module, on apprend à repérer les fichiers, responsabilités et risques importants sans lire tout le codebase.
+Avant de demander à l’IA d’intervenir dans un projet, il faut comprendre où regarder. Dans cette rencontre, on apprend à repérer les fichiers, responsabilités et risques importants sans lire tout le codebase.
 </p>
 
-## Le problème
+## 🗺️ Pourquoi cartographier?
 
 Voici une demande fréquente :
 
-```text
-Ajoute cette fonctionnalité dans le projet.
-```
+<div className="aiBox aiBoxPrompt aiBoxSmall">
+  <div className="aiBoxHeader">
+    <span className="aiBoxTitle">Demande envoyée à l’IA</span>
+    <span className="aiBoxMeta">Trop large</span>
+  </div>
+  <div className="aiBoxBody">
+    <pre><code>{`Ajoute cette fonctionnalité dans le projet.`}</code></pre>
+  </div>
+</div>
 
-Sans cartographie, l’IA risque de :
+Le problème : l’IA peut répondre vite, mais pas nécessairement au bon endroit.
 
-- modifier un fichier secondaire;
+Sans cartographie, elle risque de :
+
+- viser un fichier secondaire;
 - ignorer l’architecture existante;
 - dupliquer une logique déjà présente;
-- proposer une solution qui fonctionne localement, mais qui ne respecte pas le projet;
-- créer un changement difficile à réviser.
+- proposer une solution difficile à réviser.
 
-## Ce qu’il faut comprendre
+## 🔍 Ce qu’on cherche
 
 Cartographier un codebase, ce n’est pas tout lire.
 
@@ -42,77 +49,95 @@ C’est repérer :
 1. le point d’entrée probable;
 2. les fichiers liés;
 3. les responsabilités principales;
-4. les dépendances ou appels importants;
-5. les endroits à ne pas toucher.
+4. les dépendances importantes;
+5. les endroits à traiter avec prudence.
 
-La bonne question n’est pas :
+La bonne question n’est pas de comprendre tout le projet. La bonne question est de comprendre assez pour agir sans deviner.
 
-```text
-Est-ce que je comprends tout le projet?
-```
+## 🤖 Demander une carte de travail
 
-La bonne question est :
+On peut demander à l’IA de produire une première carte.
 
-```text
-Est-ce que je comprends assez pour faire cette modification sans deviner?
-```
+<div className="aiBox aiBoxPrompt">
+  <div className="aiBoxHeader">
+    <span className="aiBoxTitle">Prompt de cartographie</span>
+    <span className="aiBoxMeta">Exploration</span>
+  </div>
+  <div className="aiBoxBody">
+    <pre><code>{`Aide-moi à identifier les fichiers probablement concernés par cette fonctionnalité.
 
-## Exemple guidé
+Pour chaque fichier, indique :
+- son rôle probable;
+- pourquoi il pourrait être concerné;
+- ce qu’il faudrait vérifier.`}</code></pre>
+  </div>
+</div>
 
-Dans un petit projet existant, on peut commencer par demander à l’IA :
+## ✅ Lire la réponse sans tout croire
 
-```text
-Avant de modifier le code, aide-moi à identifier les fichiers probablement concernés par cette fonctionnalité.
-Explique brièvement le rôle de chaque fichier et ce qu’il faudrait vérifier avant de changer quoi que ce soit.
-```
+Une réponse utile doit rester une hypothèse de travail.
+
+<div className="aiBox aiBoxResponse aiBoxSmall">
+  <div className="aiBoxHeader">
+    <span className="aiBoxTitle">Réponse attendue</span>
+    <span className="aiBoxMeta">À vérifier</span>
+  </div>
+  <div className="aiBoxBody">
+    <p>L’IA devrait proposer quelques zones probables, expliquer pourquoi elles sont pertinentes, puis nommer ce qu’il faut vérifier.</p>
+  </div>
+</div>
 
 À observer :
 
 - les fichiers proposés;
 - les hypothèses de l’IA;
 - les zones d’incertitude;
-- les fichiers à ouvrir avant modification.
+- les fichiers à ouvrir ensuite.
 
 :::tip
-Une cartographie n’est pas une preuve. C’est une hypothèse de travail à vérifier avant de modifier le code.
+Une cartographie n’est pas une preuve. C’est une hypothèse de travail à vérifier.
 :::
 
-## À toi de jouer
+## 🧪 À essayer
 
 On veut faire ce changement :
 
-```text
-Ajouter un message d’erreur personnalisé quand le formulaire est invalide.
-```
+<div className="aiBox aiBoxPrompt aiBoxSmall">
+  <div className="aiBoxHeader">
+    <span className="aiBoxTitle">Changement demandé</span>
+    <span className="aiBoxMeta">Exercice</span>
+  </div>
+  <div className="aiBoxBody">
+    <pre><code>{`Ajouter un message d’erreur personnalisé quand le formulaire est invalide.`}</code></pre>
+  </div>
+</div>
 
-Avant toute modification, produis :
+Avant de passer à l’action, produis :
 
-- une liste de fichiers probablement concernés;
-- le rôle supposé de chaque fichier;
-- une question à poser à l’IA pour confirmer la zone de modification;
-- un risque si on modifie directement sans cartographier.
+- une liste de zones probablement concernées;
+- le rôle supposé de chaque zone;
+- une question de clarification;
+- un risque si on fonce directement.
 
-## À retenir
+## 🔩 Récapitulatif
 
 - Cartographier, ce n’est pas lire tout le projet.
 - L’objectif est de réduire les hypothèses.
 - L’IA peut aider à cartographier, mais il faut vérifier.
-- Une bonne cartographie rend les modifications plus petites et plus révisables.
+- Une bonne cartographie rend les changements plus petits et plus révisables.
 
-## Pour aller plus loin
+## 🚀 Pour aller plus loin
 
-- **Essentiel** : retrouver le fichier ou la zone probable à modifier.
-- **Consolidation** : lire les dépendances, symboles ou appels liés à la zone ciblée.
+- **Essentiel** : retrouver la zone probable.
+- **Consolidation** : lire les dépendances liées.
 - **Défi** : comparer une lecture manuelle avec un outil de cartographie.
-
-## Navigation
 
 <div className="coursActions">
   <Link className="button button--secondary" to="/cours/contexte-utile">
-    Retour : contexte utile
+    Retour au cours 1
   </Link>
   <Link className="button button--primary" to="/cours/verifier-reponse-ia">
-    Continuer : vérifier une réponse IA
+    Continuer avec le cours 3
   </Link>
 </div>
 
@@ -123,6 +148,5 @@ Avant toute modification, produis :
   - Compétences : `CMP-MAP-001`, `CMP-EVA-001`
   - Source : `project/current/cours-ia-avance/modules/MIC-MAP-001-cartographier-codebase.md`
   - Statut : module pilote publié
-  - Équivalences utiles : Codex, Claude Code, CodeGraph ou outil équivalent lorsque disponible
 
 </details>
