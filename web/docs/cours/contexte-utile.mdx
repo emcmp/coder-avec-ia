@@ -1,31 +1,37 @@
 ---
-title: Donner un contexte utile à l’IA
+title: Cours 1 - Contexte utile
 slug: /cours/contexte-utile
 ---
 
 import Link from '@docusaurus/Link';
 
-# Donner un contexte utile à l’IA
+# Cours 1 - Contexte utile
 
 <div className="coursModuleMeta">
   <span>20–30 min</span>
   <span>GitHub Copilot</span>
-  <span>Programmation</span>
+  <span>Prompt et contexte</span>
 </div>
 
 <p className="coursModuleLead">
-Quand on demande simplement “Corrige mon code”, l’IA doit deviner beaucoup trop de choses. Dans ce module, on apprend à transformer une demande floue en demande claire, contextualisée et vérifiable.
+Une IA peut écrire vite, mais elle ne lit pas dans les pensées. Dans cette rencontre, on apprend à transformer une demande vague en demande claire, contextualisée et vérifiable.
 </p>
 
-## Le problème
+## 🧩 Pourquoi le contexte change tout
 
-Voici une demande typique, mais fragile :
+Quand on utilise une IA pour programmer, le problème n’est pas toujours la qualité de l’outil. Souvent, le problème est que la demande ressemble à ceci :
 
-```text
-Corrige mon code, ça ne marche pas.
-```
+<div className="aiBox aiBoxPrompt aiBoxSmall">
+  <div className="aiBoxHeader">
+    <span className="aiBoxTitle">Demande envoyée à Copilot</span>
+    <span className="aiBoxMeta">Trop vague</span>
+  </div>
+  <div className="aiBoxBody">
+    <pre><code>{`Corrige mon code, ça ne marche pas.`}</code></pre>
+  </div>
+</div>
 
-Cette demande force l’IA à deviner :
+Cette phrase semble claire pour la personne qui connaît le projet. Pour l’IA, elle force beaucoup de devinettes :
 
 - quel comportement est attendu;
 - quel fichier regarder;
@@ -37,7 +43,61 @@ Cette demande force l’IA à deviner :
 Quand l’IA manque de contexte, elle ne s’arrête pas toujours. Elle peut produire une réponse plausible, mais fragile.
 :::
 
-## Ce qu’il faut comprendre
+## 💬 Exemple 1 : une demande trop floue
+
+Voici une autre demande très commune :
+
+<div className="aiBox aiBoxPrompt aiBoxSmall">
+  <div className="aiBoxHeader">
+    <span className="aiBoxTitle">Prompt initial</span>
+    <span className="aiBoxMeta">L’IA doit deviner</span>
+  </div>
+  <div className="aiBoxBody">
+    <pre><code>{`Ajoute la validation du formulaire.`}</code></pre>
+  </div>
+</div>
+
+Cette demande ne dit pas :
+
+- quel formulaire est visé;
+- quelle validation est attendue;
+- où se trouve le code;
+- quel message afficher;
+- comment vérifier le résultat.
+
+## 🎯 Exemple 2 : une demande contextualisée
+
+On peut garder la même intention, mais donner les bons repères.
+
+<div className="aiBox aiBoxPrompt">
+  <div className="aiBoxHeader">
+    <span className="aiBoxTitle">Prompt amélioré</span>
+    <span className="aiBoxMeta">Contexte + contraintes + réussite</span>
+  </div>
+  <div className="aiBoxBody">
+    <pre><code>{`Dans le formulaire de création d’emploi, ajoute une validation côté serveur pour le champ Salaire.
+
+Contexte :
+- le formulaire existe déjà;
+- le champ Nom est déjà obligatoire;
+- le champ Salaire doit être obligatoire et numérique;
+- on veut un message d’erreur clair en français;
+- ne change pas la structure générale du formulaire.
+
+Critère de réussite :
+- si Salaire est vide, afficher “Le salaire est obligatoire”;
+- si Salaire n’est pas numérique, afficher “Le salaire doit être un nombre”.`}</code></pre>
+  </div>
+</div>
+
+Ce prompt est plus utile parce qu’il donne à l’IA :
+
+- la tâche exacte;
+- le contexte minimal;
+- les contraintes;
+- les critères de réussite.
+
+## 🔍 Quoi inclure dans le contexte?
 
 Un bon contexte répond habituellement à cinq questions :
 
@@ -49,45 +109,35 @@ Un bon contexte répond habituellement à cinq questions :
 
 Le contexte doit être assez riche pour orienter l’IA, mais assez court pour rester contrôlable.
 
-## Exemple guidé
+## ⚠️ Trop de contexte, ce n’est pas mieux
 
-On part d’une demande floue :
+Donner tout le projet à l’IA n’est pas toujours une bonne stratégie.
 
-```text
-Ajoute la validation du formulaire.
-```
+Un contexte trop gros peut :
 
-On peut la transformer en demande contextualisée :
+- noyer l’information importante;
+- coûter plus cher en tokens;
+- ralentir la réponse;
+- rendre la validation plus difficile;
+- augmenter les risques de réponse hors sujet.
 
-```text
-Dans le formulaire de création d’emploi, ajoute une validation côté serveur pour le champ Salaire.
+:::tip
+Le bon contexte n’est pas le plus long. C’est celui qui aide l’IA à faire la bonne tâche avec le moins d’hypothèses possible.
+:::
 
-Contexte :
-- le formulaire existe déjà;
-- le champ Nom est déjà obligatoire;
-- le champ Salaire doit être obligatoire et numérique;
-- on veut un message d’erreur clair en français;
-- ne change pas la structure générale du formulaire.
-
-Critère de réussite :
-- si Salaire est vide, afficher “Le salaire est obligatoire”;
-- si Salaire n’est pas numérique, afficher “Le salaire doit être un nombre”.
-```
-
-À observer :
-
-- la réponse est plus précise;
-- les hypothèses inutiles diminuent;
-- le résultat devient plus facile à vérifier;
-- la discussion avec l’IA part dans une direction plus utile.
-
-## À toi de jouer
+## 🧪 À essayer
 
 Transforme ce prompt flou :
 
-```text
-Ajoute la validation du formulaire.
-```
+<div className="aiBox aiBoxPrompt aiBoxSmall">
+  <div className="aiBoxHeader">
+    <span className="aiBoxTitle">Prompt à améliorer</span>
+    <span className="aiBoxMeta">Exercice</span>
+  </div>
+  <div className="aiBoxBody">
+    <pre><code>{`Ajoute la validation du formulaire.`}</code></pre>
+  </div>
+</div>
 
 en demande contextualisée.
 
@@ -99,24 +149,24 @@ Ta version doit inclure :
 - le comportement attendu en cas d’erreur;
 - un critère de réussite.
 
-## À retenir
+## 🔩 Récapitulatif
 
 - Un prompt flou force l’IA à deviner.
 - Un bon contexte réduit les hypothèses inutiles.
 - Le contexte doit servir la tâche, pas raconter toute l’histoire du projet.
 - Les critères de réussite sont aussi importants que la demande.
 
-## Pour aller plus loin
+## 🚀 Pour aller plus loin
 
 - **Essentiel** : comparer un prompt flou et un prompt contextualisé.
 - **Consolidation** : choisir quelles informations inclure ou exclure.
 - **Défi** : gérer un contexte multi-fichiers ou une session longue.
 
-## Prochaine étape
-
-<Link className="button button--primary" to="/cours/cartographier-codebase">
-  Continuer avec la cartographie de codebase
-</Link>
+<div className="coursActions">
+  <Link className="button button--primary" to="/cours/cartographier-codebase">
+    Continuer avec le cours 2
+  </Link>
+</div>
 
 <details className="coursPedagoRefs">
   <summary>Références pédagogiques</summary>
