@@ -5,37 +5,27 @@ slug: /cours/contexte-utile
 
 import Link from '@docusaurus/Link';
 
-# [MIC-CTX-001] Donner un contexte utile à l’IA
+# Donner un contexte utile à l’IA
 
-> Durée cible : 20 à 30 min  
-> Outil principal : GitHub Copilot  
-> Statut : module pilote publié
+<div className="coursModuleMeta">
+  <span>20–30 min</span>
+  <span>GitHub Copilot</span>
+  <span>Programmation</span>
+</div>
 
-## Intention
+<p className="coursModuleLead">
+Quand on demande simplement “Corrige mon code”, l’IA doit deviner beaucoup trop de choses. Dans ce module, on apprend à transformer une demande floue en demande claire, contextualisée et vérifiable.
+</p>
 
-Apprendre à fournir à l’IA un contexte suffisant, ciblé et utile sans l’inonder d’informations inutiles.
+## Le problème
 
-## Compétences visées
-
-- `[CMP-CTX-001]` Fournir un contexte utile à un assistant IA.
-- `[CMP-EVA-001]` Valider une réponse ou une production IA.
-- `[CMP-RET-001]` Appuyer une réponse IA sur des sources pertinentes.
-
-## Pourquoi c’est utile?
-
-Un meilleur contexte produit des réponses plus précises, plus vérifiables et plus faciles à réutiliser.
-
-Le but n’est pas d’écrire un prompt plus long. Le but est de donner à l’IA les bons repères.
-
-## Friction de départ
-
-Mauvaise manière volontaire :
+Voici une demande typique, mais fragile :
 
 ```text
 Corrige mon code, ça ne marche pas.
 ```
 
-Ce prompt force l’IA à deviner :
+Cette demande force l’IA à deviner :
 
 - quel comportement est attendu;
 - quel fichier regarder;
@@ -47,7 +37,7 @@ Ce prompt force l’IA à deviner :
 Quand l’IA manque de contexte, elle ne s’arrête pas toujours. Elle peut produire une réponse plausible, mais fragile.
 :::
 
-## Théorie ciblée
+## Ce qu’il faut comprendre
 
 Un bon contexte répond habituellement à cinq questions :
 
@@ -59,17 +49,15 @@ Un bon contexte répond habituellement à cinq questions :
 
 Le contexte doit être assez riche pour orienter l’IA, mais assez court pour rester contrôlable.
 
-## Démonstration courte
+## Exemple guidé
 
-Comparer deux demandes dans un même petit projet.
-
-### Demande floue
+On part d’une demande floue :
 
 ```text
 Ajoute la validation du formulaire.
 ```
 
-### Demande contextualisée
+On peut la transformer en demande contextualisée :
 
 ```text
 Dans le formulaire de création d’emploi, ajoute une validation côté serveur pour le champ Salaire.
@@ -88,22 +76,22 @@ Critère de réussite :
 
 À observer :
 
-- la précision de la réponse;
-- les hypothèses faites par l’IA;
-- les fichiers proposés;
-- la facilité de validation.
+- la réponse est plus précise;
+- les hypothèses inutiles diminuent;
+- le résultat devient plus facile à vérifier;
+- la discussion avec l’IA part dans une direction plus utile.
 
-## Mini-exercice
+## À toi de jouer
 
-Transformer ce prompt flou :
+Transforme ce prompt flou :
 
 ```text
 Ajoute la validation du formulaire.
 ```
 
-en prompt contextualisé.
+en demande contextualisée.
 
-Ton prompt amélioré doit inclure :
+Ta version doit inclure :
 
 - la fonctionnalité attendue;
 - le fichier ou composant concerné;
@@ -111,37 +99,31 @@ Ton prompt amélioré doit inclure :
 - le comportement attendu en cas d’erreur;
 - un critère de réussite.
 
-## Paliers
+## À retenir
 
-### Palier I — Noyau essentiel
+- Un prompt flou force l’IA à deviner.
+- Un bon contexte réduit les hypothèses inutiles.
+- Le contexte doit servir la tâche, pas raconter toute l’histoire du projet.
+- Les critères de réussite sont aussi importants que la demande.
 
-Comparer un prompt flou et un prompt contextualisé sur une petite tâche.
+## Pour aller plus loin
 
-Résultat attendu : tu peux reformuler une demande pour rendre la réponse plus fiable.
-
-### Palier II — Consolidation
-
-Choisir quelles informations inclure ou exclure pour une tâche donnée.
-
-Résultat attendu : tu sais éviter le contexte surchargé.
-
-### Palier III — Approfondissement
-
-Gérer un contexte multi-fichiers ou une session longue.
-
-Résultat attendu : tu sais expliquer comment le contexte influence la qualité et les limites d’une réponse.
-
-## Retour rapide
-
-À retenir :
-
-- un prompt flou force l’IA à deviner;
-- un bon contexte réduit les hypothèses inutiles;
-- le contexte doit servir la tâche, pas raconter toute l’histoire du projet;
-- les critères de réussite sont aussi importants que la demande.
+- **Essentiel** : comparer un prompt flou et un prompt contextualisé.
+- **Consolidation** : choisir quelles informations inclure ou exclure.
+- **Défi** : gérer un contexte multi-fichiers ou une session longue.
 
 ## Prochaine étape
 
 <Link className="button button--primary" to="/cours/cartographier-codebase">
   Continuer avec la cartographie de codebase
 </Link>
+
+<details className="coursPedagoRefs">
+  <summary>Références pédagogiques</summary>
+
+  - Module : `MIC-CTX-001`
+  - Compétences : `CMP-CTX-001`, `CMP-EVA-001`, `CMP-RET-001`
+  - Source : `project/current/cours-ia-avance/modules/MIC-CTX-001-donner-contexte-utile.md`
+  - Statut : module pilote publié
+
+</details>
