@@ -1,7 +1,7 @@
 # Nomenclature et bibliothèque du projet
 
 > Identifiant : `[DOC-CHR-004]`  
-> Version : 0.6  
+> Version : 0.7  
 > Dernière modification : 2026-06-12  
 > Statut : convention de travail initiale
 
@@ -66,14 +66,14 @@ Compétence
 ```text
 Parcours
   → Module
-    → Séance
+    → Séance ou rencontre
       → Segment
         → Références vers des micro-modules, paliers ou blocs existants
 ```
 
-Une séance ne possède pas les contenus : elle les référence.
+Une séance ou une rencontre ne possède pas les contenus : elle les référence.
 
-Un même micro-module peut donc être déplacé d’une séance à une autre sans changer d’identifiant.
+Un même micro-module peut donc être déplacé d’une rencontre à une autre sans changer d’identifiant.
 
 ## Entités pédagogiques
 
@@ -94,7 +94,7 @@ Un même micro-module peut donc être déplacé d’une séance à une autre san
 |---|---|
 | Parcours | Organisation générale proposée pour suivre le contenu. |
 | Module | Regroupement de micro-modules dans une logique de progression. |
-| Séance | Assemblage temporel adapté à une durée réelle : 1 h, 2 h, 3 h, etc. |
+| Séance ou rencontre | Assemblage temporel adapté à une durée réelle : 1 h, 2 h, 3 h, etc. |
 | Segment | Partie courte d’une séance qui référence un micro-module, un palier ou un bloc. |
 
 ## Documents de projet
@@ -113,6 +113,34 @@ Un même micro-module peut donc être déplacé d’une séance à une autre san
 | Archive | Contenu conservé pour référence historique. |
 | Configuration | Instructions ou fichiers utiles aux agents et outils. |
 
+## Exemple concret — les trois rencontres pilotes
+
+Les trois premières pages publiques permettent de voir comment les couches se relient.
+
+| Couche | Rencontre 1 | Rencontre 2 | Rencontre 3 |
+|---|---|---|---|
+| Affichage dans le parcours | Rencontre 1 - Contexte utile | Rencontre 2 - Cartographier un codebase | Rencontre 3 - Vérifier une réponse IA |
+| Page publique | `/cours/contexte-utile` | `/cours/cartographier-codebase` | `/cours/verifier-reponse-ia` |
+| Contenu stable | `MIC-CTX-001` | `MIC-MAP-001` | `MIC-EVA-001` |
+| Titre stable | Contexte utile | Cartographier un codebase | Vérifier une réponse IA |
+| Domaine | `CTX` | `MAP` | `EVA` |
+| Compétence centrale | `CMP-CTX-001` | `CMP-MAP-001` | `CMP-EVA-001` |
+| Source de conception | `project/current/cours-ia-avance/modules/MIC-CTX-001-donner-contexte-utile.md` | `project/current/cours-ia-avance/modules/MIC-MAP-001-cartographier-codebase.md` | `project/current/cours-ia-avance/modules/MIC-EVA-001-verifier-reponse-plausible.md` |
+| Suivi Admin | `/admin/modules-pilotes` | `/admin/modules-pilotes` | `/admin/modules-pilotes` |
+
+Lecture recommandée :
+
+```text
+Rencontre = ordre de présentation dans un parcours donné
+MIC = contenu pédagogique stable
+CMP = compétence observable liée au contenu
+Page publique = version lisible par l’étudiant
+Source projet = fichier de conception et de maintenance
+Admin = vue de suivi et de documentation
+```
+
+Donc `Rencontre 1 - Contexte utile` n’est pas l’identité du contenu. C’est la position actuelle du contenu `MIC-CTX-001` dans le parcours public.
+
 ## Métadonnées minimales obligatoires
 
 Tout élément important de la bibliothèque doit exposer au minimum :
@@ -128,39 +156,6 @@ title
 Ces champs s’appliquent aux documents de projet, aux compétences, aux micro-modules, aux paliers, aux blocs pédagogiques et aux ressources.
 
 Le format de date recommandé est : `AAAA-MM-JJ`.
-
-## Version
-
-La version sert à savoir si un élément a évolué depuis sa dernière consultation.
-
-Format recommandé :
-
-```text
-0.1
-0.2
-1.0
-1.1
-```
-
-Règle simple :
-
-- `0.x` pour les brouillons ou conventions en construction;
-- `1.0` pour une première version stable;
-- incrément mineur lorsqu’on améliore le contenu sans changer son intention;
-- incrément majeur lorsqu’on change le sens, la structure ou l’usage de l’élément.
-
-## Statut
-
-Statuts recommandés :
-
-```text
-draft       = brouillon actif
-active      = utilisé comme référence de travail
-stable      = validé pour usage courant
-review      = en révision
-deprecated  = remplacé ou conservé pour historique
-archived    = archivé, non maintenu activement
-```
 
 ## Principe directeur
 
@@ -285,49 +280,12 @@ CFG = Configuration ou instruction d’agent
 IDX = Index ou page de navigation
 ```
 
-## Exemples de métadonnées
-
-Brainstorm :
-
-```text
-id: DOC-BRN-001
-type: brainstorm
-title: Brainstorm
-version: 0.1
-last_modified: 2026-06-12
-status: active
-```
-
-Compétence :
-
-```text
-id: CMP-CTX-001
-type: competence
-domain: CTX
-title: Fournir un contexte utile à un assistant IA
-version: 0.1
-last_modified: 2026-06-12
-status: draft
-related_modules: MIC-CTX-001, MIC-SPE-001, MIC-EVA-001
-```
-
-Micro-module :
-
-```text
-id: MIC-MAP-001
-type: micro-module
-domain: MAP
-title: Cartographie de codebase
-version: 0.1
-last_modified: 2026-06-11
-status: draft
-```
-
 ## Catalogues associés
 
 - [Catalogue des documents de projet](/admin/catalogue-documents-projet)
 - [Compétences visées](/admin/competences)
 - [Brainstorm](/admin/brainstorm)
+- [Modules pilotes](/admin/modules-pilotes)
 
 ## Règles de stabilité
 
@@ -336,7 +294,7 @@ status: draft
 3. Un identifiant ne contient jamais de position dans une table des matières.
 4. Un identifiant ne change pas quand un bloc ou un document est déplacé.
 5. Les produits, outils, plateformes et chemins sont indiqués dans les métadonnées.
-6. Les séances, modules et parcours référencent des blocs; ils ne les possèdent pas.
+6. Les séances, rencontres, modules et parcours référencent des blocs; ils ne les possèdent pas.
 7. Les compétences sont liées aux modules et aux activités, mais ne sont pas possédées par un module unique.
 8. Le brainstorm peut contenir des idées non classées, mais les contenus stabilisés doivent ensuite être déplacés vers les catalogues appropriés.
 9. Un identifiant supprimé ne doit pas être réutilisé pour autre chose.
