@@ -1,7 +1,7 @@
 # Gabarits pédagogiques
 
 > Identifiant : `[DOC-CHR-005]`  
-> Version : 0.3  
+> Version : 0.4  
 > Dernière modification : 2026-06-12  
 > Statut : convention de travail initiale
 
@@ -17,6 +17,27 @@ Deux formats doivent être distingués :
 |---|---|---|
 | Micro-module source/Admin | Concevoir, versionner et relier les contenus | Équipe de conception |
 | Rencontre publique | Faire apprendre et guider une activité | Étudiants et enseignants en classe |
+
+## Découplage contenu, parcours et provider
+
+Une page publique affiche une rencontre dans un parcours donné, mais le contenu conserve une identité stable.
+
+Règles :
+
+- le titre stable ne contient pas `Cours 1`, `Cours 2`, etc.;
+- la numérotation appartient à l’index, à la navigation ou au `sidebar_label`;
+- un provider n’est pas un tag principal lorsque la notion est transversale;
+- les métadonnées visibles décrivent d’abord la notion;
+- le provider utilisé pour les exemples est conservé dans les références pédagogiques ou une section d’équivalence.
+
+Exemples :
+
+```text
+title: Contexte utile
+sidebar_label: Rencontre 1 - Contexte utile
+métadonnées visibles: 20–30 min · Notion transversale · Prompt et contexte
+références pédagogiques: exemple principal actuel : GitHub Copilot
+```
 
 ## Règle de publication publique
 
@@ -36,8 +57,8 @@ Sur une page publique :
 Structure recommandée :
 
 ```text
-Cours N - Titre de la rencontre
-Métadonnées discrètes : durée, outil, contexte
+Titre stable
+Métadonnées discrètes : durée, portée, contexte
 Courte amorce
 Section notionnelle avec emoji
 Exemple de prompt ou de réponse IA
@@ -49,18 +70,6 @@ Références pédagogiques repliées
 ```
 
 Les titres doivent ressembler à une page de cours, pas à un plan de conception.
-
-Exemples de titres publics :
-
-```text
-🧩 Pourquoi le contexte change tout
-💬 Exemple 1 : une demande trop floue
-🎯 Exemple 2 : une demande contextualisée
-🔍 Quoi inclure dans le contexte?
-⚠️ Trop de contexte, ce n’est pas mieux
-🧪 À essayer
-🔩 Récapitulatif
-```
 
 ## Correspondance des sections
 
@@ -101,8 +110,6 @@ Usage recommandé :
 - `aiBoxChanges` pour un résumé de fichiers modifiés ou de diff;
 - `aiBoxSmall` pour une boîte courte.
 
-Objectif : rappeler visuellement l’expérience GitHub Copilot dans VS Code, sans copier l’interface exacte.
-
 ## Gabarit — Micro-module source/Admin
 
 Un micro-module source peut être plus explicite, car il sert à concevoir et maintenir le parcours.
@@ -132,73 +139,22 @@ Débloque
 Ressources liées
 ```
 
-## Gabarit — Palier
+## Autres gabarits
 
-Un palier précise le niveau d’un micro-module : I, II ou III.
+Le fichier peut aussi servir de référence pour :
 
-Structure recommandée :
-
-```text
-[PAL-DOMAINE-NNN] Titre
-Micro-module parent
-Niveau : I / II / III
-Rôle du palier
-Résultat attendu
-Activité proposée
-Critère de réussite
-Matériel nécessaire
-```
-
-## Gabarit — Démonstration
-
-Une démonstration montre une pratique en action. Elle doit rester courte et ciblée.
-
-Structure recommandée :
-
-```text
-[DEM-DOMAINE-NNN] Titre
-Objectif de la démonstration
-Situation de départ
-Étapes
-Ce qu’il faut observer
-Variante provider si utile
-```
-
-## Gabarit — Exercice
-
-Un exercice doit être faisable rapidement et produire une trace observable.
-
-Structure recommandée :
-
-```text
-[EX-DOMAINE-NNN] Titre
-Consigne
-Contexte fourni
-Résultat attendu
-Critères de réussite
-Retour en groupe
-```
-
-## Panneau provider
-
-Le panneau provider sert à répondre à une même question pratique dans plusieurs outils.
-
-```text
-GitHub Copilot : référence principale
-Codex : équivalence si utile
-Claude Code : équivalence si utile
-```
-
-:::warning
-Le panneau provider ne doit pas devenir un comparatif complet de produits. Il doit aider à transférer une notion.
-:::
+- paliers;
+- démonstrations;
+- exercices;
+- panneaux provider;
+- checklists.
 
 ## Règles de maintenance
 
 - Chaque contenu produit à partir d’un gabarit doit avoir un identifiant stable.
 - Chaque contenu doit avoir une version, une date de dernière modification et un statut.
 - Le palier I doit être utile même si les paliers II et III ne sont jamais faits.
-- Les exemples doivent partir de GitHub Copilot sauf indication contraire.
+- Les exemples peuvent utiliser GitHub Copilot comme outil principal, mais la notion doit rester provider-agnostique lorsqu’elle est transversale.
 - Les équivalences Codex et Claude Code doivent rester courtes et utiles.
 - Une page publique doit être lisible pour l’étudiant avant d’être utile au suivi administratif.
 - Les références pédagogiques doivent rester disponibles, mais discrètes.
