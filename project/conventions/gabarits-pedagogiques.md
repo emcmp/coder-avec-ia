@@ -1,13 +1,16 @@
 # Gabarits pédagogiques
 
 > Identifiant : `[DOC-CHR-005]`  
-> Version : 0.1  
+> Version : 0.2  
 > Dernière modification : 2026-06-12  
 > Statut : convention de travail initiale
 
 Ce document définit les gabarits réutilisables pour produire les contenus pédagogiques du parcours **Coder avec l’IA**.
 
-Il complète la charte pédagogique, la nomenclature et le catalogue des modules.
+Il distingue deux formes importantes :
+
+1. le **gabarit source/Admin**, qui expose les identifiants, versions, statuts, compétences et dépendances;
+2. le **gabarit public étudiant**, qui présente l’activité de manière plus naturelle et garde la mécanique pédagogique discrète.
 
 ## Principe général
 
@@ -22,9 +25,95 @@ Chaque contenu doit rester :
 - versionné;
 - déplaçable dans un autre parcours ou une autre séance.
 
-## Gabarit — Micro-module
+## Règle de publication publique
 
-Un micro-module est une unité pédagogique de 20 à 30 minutes autour d’une notion principale.
+Les pages publiques ne doivent pas ressembler à des fiches de planification.
+
+Sur une page publique :
+
+- le titre ne commence pas par l’identifiant `[MIC-...]`;
+- les métadonnées sont discrètes;
+- les compétences visées ne sont pas placées au début;
+- les statuts internes ne dominent pas la page;
+- les termes de conception pédagogique sont remplacés par des titres naturels;
+- les identifiants et compétences sont conservés dans un bloc replié à la fin.
+
+Correspondance recommandée :
+
+| Source/Admin | Public étudiant |
+|---|---|
+| Intention | Introduction ou amorce |
+| What’s in it for me? | intégré à l’introduction |
+| Friction de départ | Le problème |
+| Théorie ciblée | Ce qu’il faut comprendre |
+| Démonstration courte | Exemple guidé |
+| Mini-exercice | À toi de jouer |
+| Retour rapide | À retenir |
+| Paliers | Pour aller plus loin |
+| Compétences visées | Références pédagogiques, à la fin |
+
+## Gabarit — Page publique de module
+
+```mdx
+---
+title: Titre lisible du module
+slug: /cours/slug-du-module
+---
+
+import Link from '@docusaurus/Link';
+
+# Titre lisible du module
+
+<div className="coursModuleMeta">
+  <span>20–30 min</span>
+  <span>GitHub Copilot</span>
+  <span>Programmation</span>
+</div>
+
+<p className="coursModuleLead">
+Une courte amorce qui explique le problème réel et ce que la personne va apprendre à faire.
+</p>
+
+## Le problème
+
+Présenter une situation réaliste, une mauvaise demande ou une erreur fréquente.
+
+## Ce qu’il faut comprendre
+
+Expliquer seulement la notion nécessaire pour agir.
+
+## Exemple guidé
+
+Montrer une démarche courte, observable et réutilisable.
+
+## À toi de jouer
+
+Proposer une tâche courte avec un résultat attendu.
+
+## À retenir
+
+Nommer les 3 ou 4 idées importantes à garder.
+
+## Pour aller plus loin
+
+- **Essentiel** : noyau à faire en classe.
+- **Consolidation** : prolongement raisonnable.
+- **Défi** : approfondissement ou comparaison.
+
+<details className="coursPedagoRefs">
+  <summary>Références pédagogiques</summary>
+
+  - Module : `MIC-DOMAINE-NNN`
+  - Compétences : `CMP-...`
+  - Source : `project/...`
+  - Statut : module pilote publié
+
+</details>
+```
+
+## Gabarit — Micro-module source/Admin
+
+Un micro-module source est une unité pédagogique de 20 à 30 minutes autour d’une notion principale. Il peut être plus explicite que la page publique, car il sert à concevoir et maintenir le parcours.
 
 ```markdown
 # [MIC-DOMAINE-NNN] Titre du micro-module
@@ -40,6 +129,10 @@ Un micro-module est une unité pédagogique de 20 à 30 minutes autour d’une n
 ## Intention
 
 Dire en une ou deux phrases ce que ce micro-module permet d’apprendre.
+
+## Compétences liées
+
+- [CMP-...]
 
 ## What’s in it for me?
 
@@ -198,117 +291,21 @@ Décrire la production attendue : réponse, code, explication, diff, test, grill
 Prévoir une question courte pour comparer les approches.
 ```
 
-## Gabarit — Bloc théorique
+## Panneau provider
 
-Un bloc théorique explique une notion, mais doit rester attaché à une action.
+Le panneau provider sert à répondre à une même question pratique dans plusieurs outils.
 
-```markdown
-# [THE-DOMAINE-NNN] Titre du bloc théorique
-
-> Version : 0.1  
-> Dernière modification : AAAA-MM-JJ  
-> Statut : draft
-
-## Idée essentielle
-
-Expliquer la notion en quelques phrases.
-
-## Pourquoi c’est utile
-
-Relier la notion à une pratique concrète.
-
-## Exemple simple
-
-Donner un exemple court.
-
-## Erreur fréquente
-
-Nommer une confusion ou mauvaise pratique.
-
-## À retenir
-
-Résumer en 2 ou 3 points.
-```
-
-## Gabarit — Panneau provider
-
-Un panneau provider montre une équivalence entre outils sans transformer la page en comparatif complet.
-
-```markdown
-## Équivalence provider — Question pratique
-
+```text
 Question : Où voir le statut / l’usage / le contexte / la tâche?
 
-| Provider | Où regarder | Ce qu’on observe | Limite ou vigilance |
-|---|---|---|---|
-| GitHub Copilot | Référence principale | À remplir | À remplir |
-| Codex | Équivalence si utile | À remplir | À remplir |
-| Claude Code | Équivalence si utile | À remplir | À remplir |
+GitHub Copilot : référence principale
+Codex : équivalence si utile
+Claude Code : équivalence si utile
 ```
 
-Règle : Copilot d’abord. Les autres providers servent à transférer la notion, pas à refaire tout le cours.
-
-## Gabarit — Fiche outil
-
-Une fiche outil présente un outil sans devenir une publicité ou un comparatif exhaustif.
-
-```markdown
-# [REF-DOMAINE-NNN] Nom de l’outil
-
-> Version : 0.1  
-> Dernière modification : AAAA-MM-JJ  
-> Statut : draft  
-> Type : IDE / CLI / agent / service cloud / local / autre
-
-## À quoi ça sert dans le cours?
-
-Nommer l’usage pédagogique précis.
-
-## Quand l’utiliser?
-
-Décrire les situations où l’outil est pertinent.
-
-## Quand l’éviter?
-
-Décrire les limites ou risques.
-
-## Notions liées
-
-- [MIC-...]
-- [THE-...]
-- [EX-...]
-
-## Équivalents ou alternatives
-
-Lister seulement les alternatives utiles au transfert pédagogique.
-```
-
-## Gabarit — Checklist de validation
-
-Une checklist sert à vérifier un résultat ou une production IA.
-
-```markdown
-# [CHK-DOMAINE-NNN] Titre de la checklist
-
-> Version : 0.1  
-> Dernière modification : AAAA-MM-JJ  
-> Statut : draft
-
-## À vérifier
-
-- [ ] Le résultat répond à la demande.
-- [ ] Les contraintes importantes sont respectées.
-- [ ] Les fichiers ou sources utilisés sont pertinents.
-- [ ] Les erreurs possibles ont été vérifiées.
-- [ ] La personne peut expliquer la solution.
-
-## Décision
-
-- Accepter.
-- Corriger.
-- Rejeter.
-- Demander une autre passe.
-```
+:::warning
+Le panneau provider ne doit pas devenir un comparatif complet de produits. Il doit aider à transférer une notion.
+:::
 
 ## Règles de maintenance
 
@@ -317,4 +314,6 @@ Une checklist sert à vérifier un résultat ou une production IA.
 - Le palier I doit être utile même si les paliers II et III ne sont jamais faits.
 - Les exemples doivent partir de GitHub Copilot sauf indication contraire.
 - Les équivalences Codex et Claude Code doivent rester courtes et utiles.
+- Une page publique doit être lisible pour l’étudiant avant d’être utile au suivi administratif.
+- Les références pédagogiques doivent rester disponibles, mais discrètes.
 - Un gabarit peut évoluer, mais il ne doit pas devenir trop lourd à utiliser.
