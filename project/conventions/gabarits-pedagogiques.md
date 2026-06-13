@@ -1,33 +1,26 @@
 # Gabarits pédagogiques
 
 > Identifiant : `[DOC-CHR-005]`  
-> Version : 0.2  
+> Version : 0.3  
 > Dernière modification : 2026-06-12  
 > Statut : convention de travail initiale
 
 Ce document définit les gabarits réutilisables pour produire les contenus pédagogiques du parcours **Coder avec l’IA**.
 
-Il distingue deux formes importantes :
-
-1. le **gabarit source/Admin**, qui expose les identifiants, versions, statuts, compétences et dépendances;
-2. le **gabarit public étudiant**, qui présente l’activité de manière plus naturelle et garde la mécanique pédagogique discrète.
-
 ## Principe général
 
-Un gabarit n’est pas un formulaire administratif. C’est une structure légère pour éviter de réinventer la forme à chaque contenu.
+Un gabarit n’est pas un formulaire administratif. C’est une structure légère pour produire des contenus cohérents sans alourdir les pages publiques.
 
-Chaque contenu doit rester :
+Deux formats doivent être distingués :
 
-- concret;
-- court;
-- applicable rapidement;
-- identifiable;
-- versionné;
-- déplaçable dans un autre parcours ou une autre séance.
+| Format | Rôle | Public cible |
+|---|---|---|
+| Micro-module source/Admin | Concevoir, versionner et relier les contenus | Équipe de conception |
+| Rencontre publique | Faire apprendre et guider une activité | Étudiants et enseignants en classe |
 
 ## Règle de publication publique
 
-Les pages publiques ne doivent pas ressembler à des fiches de planification.
+Une page publique ne doit pas ressembler à une fiche de planification.
 
 Sur une page publique :
 
@@ -38,257 +31,152 @@ Sur une page publique :
 - les termes de conception pédagogique sont remplacés par des titres naturels;
 - les identifiants et compétences sont conservés dans un bloc replié à la fin.
 
-Correspondance recommandée :
+## Gabarit — Rencontre publique
 
-| Source/Admin | Public étudiant |
+Structure recommandée :
+
+```text
+Cours N - Titre de la rencontre
+Métadonnées discrètes : durée, outil, contexte
+Courte amorce
+Section notionnelle avec emoji
+Exemple de prompt ou de réponse IA
+Explication guidée
+À essayer
+Récapitulatif
+Pour aller plus loin
+Références pédagogiques repliées
+```
+
+Les titres doivent ressembler à une page de cours, pas à un plan de conception.
+
+Exemples de titres publics :
+
+```text
+🧩 Pourquoi le contexte change tout
+💬 Exemple 1 : une demande trop floue
+🎯 Exemple 2 : une demande contextualisée
+🔍 Quoi inclure dans le contexte?
+⚠️ Trop de contexte, ce n’est pas mieux
+🧪 À essayer
+🔩 Récapitulatif
+```
+
+## Correspondance des sections
+
+| Source/Admin | Rencontre publique |
 |---|---|
-| Intention | Introduction ou amorce |
-| What’s in it for me? | intégré à l’introduction |
-| Friction de départ | Le problème |
+| Intention | Amorce ou introduction |
+| What’s in it for me? | intégré à l’amorce |
+| Friction de départ | Problème ou exemple initial |
 | Théorie ciblée | Ce qu’il faut comprendre |
 | Démonstration courte | Exemple guidé |
-| Mini-exercice | À toi de jouer |
-| Retour rapide | À retenir |
+| Mini-exercice | À essayer |
+| Retour rapide | Récapitulatif |
 | Paliers | Pour aller plus loin |
 | Compétences visées | Références pédagogiques, à la fin |
 
-## Gabarit — Page publique de module
+## Boîtes IA style Copilot
 
-```mdx
----
-title: Titre lisible du module
-slug: /cours/slug-du-module
----
+Tous les prompts, réponses simulées, extraits de sortie IA et résumés de modifications doivent être présentés dans une boîte IA.
 
-import Link from '@docusaurus/Link';
+Classes disponibles :
 
-# Titre lisible du module
-
-<div className="coursModuleMeta">
-  <span>20–30 min</span>
-  <span>GitHub Copilot</span>
-  <span>Programmation</span>
-</div>
-
-<p className="coursModuleLead">
-Une courte amorce qui explique le problème réel et ce que la personne va apprendre à faire.
-</p>
-
-## Le problème
-
-Présenter une situation réaliste, une mauvaise demande ou une erreur fréquente.
-
-## Ce qu’il faut comprendre
-
-Expliquer seulement la notion nécessaire pour agir.
-
-## Exemple guidé
-
-Montrer une démarche courte, observable et réutilisable.
-
-## À toi de jouer
-
-Proposer une tâche courte avec un résultat attendu.
-
-## À retenir
-
-Nommer les 3 ou 4 idées importantes à garder.
-
-## Pour aller plus loin
-
-- **Essentiel** : noyau à faire en classe.
-- **Consolidation** : prolongement raisonnable.
-- **Défi** : approfondissement ou comparaison.
-
-<details className="coursPedagoRefs">
-  <summary>Références pédagogiques</summary>
-
-  - Module : `MIC-DOMAINE-NNN`
-  - Compétences : `CMP-...`
-  - Source : `project/...`
-  - Statut : module pilote publié
-
-</details>
+```text
+aiBox
+aiBoxPrompt
+aiBoxResponse
+aiBoxChanges
+aiBoxHeader
+aiBoxTitle
+aiBoxMeta
+aiBoxBody
+aiBoxSmall
 ```
+
+Usage recommandé :
+
+- `aiBoxPrompt` pour une demande envoyée à l’IA;
+- `aiBoxResponse` pour une réponse ou une hypothèse produite par l’IA;
+- `aiBoxChanges` pour un résumé de fichiers modifiés ou de diff;
+- `aiBoxSmall` pour une boîte courte.
+
+Objectif : rappeler visuellement l’expérience GitHub Copilot dans VS Code, sans copier l’interface exacte.
 
 ## Gabarit — Micro-module source/Admin
 
-Un micro-module source est une unité pédagogique de 20 à 30 minutes autour d’une notion principale. Il peut être plus explicite que la page publique, car il sert à concevoir et maintenir le parcours.
+Un micro-module source peut être plus explicite, car il sert à concevoir et maintenir le parcours.
 
-```markdown
-# [MIC-DOMAINE-NNN] Titre du micro-module
+Structure recommandée :
 
-> Version : 0.1  
-> Dernière modification : AAAA-MM-JJ  
-> Statut : draft  
-> Domaine : DOMAINE  
-> Durée cible : 20 à 30 min  
-> Outil principal : GitHub Copilot  
-> Équivalences utiles : Codex, Claude Code, autre, aucune
-
-## Intention
-
-Dire en une ou deux phrases ce que ce micro-module permet d’apprendre.
-
-## Compétences liées
-
-- [CMP-...]
-
-## What’s in it for me?
-
-Dire clairement ce que l’étudiant ou l’enseignant gagne à apprendre cette notion.
-
-## Friction de départ
-
-Présenter une mauvaise manière, une erreur réaliste ou un problème reconnaissable.
-
-## Théorie ciblée
-
-Expliquer seulement ce qu’il faut pour agir.
-
-## Démonstration courte
-
-Décrire ce qui sera montré, avec l’outil principal.
-
-## Mini-exercice
-
-Décrire ce que la personne doit faire immédiatement.
-
-## Retour rapide
-
-Nommer ce qu’on retient et comment réutiliser la notion.
-
-## Paliers
-
-- Palier I : noyau essentiel à faire en classe.
-- Palier II : consolidation ou extension.
-- Palier III : approfondissement ou défi.
-
-## Prérequis
-
-- [MIC-...]
-
-## Débloque
-
-- [MIC-...]
-
-## Ressources liées
-
-- [THE-...]
-- [DEM-...]
-- [EX-...]
-- [VIS-...]
+```text
+[MIC-DOMAINE-NNN] Titre
+Version
+Dernière modification
+Statut
+Domaine
+Durée cible
+Outil principal
+Équivalences utiles
+Intention
+Compétences liées
+What’s in it for me?
+Friction de départ
+Théorie ciblée
+Démonstration courte
+Mini-exercice
+Retour rapide
+Paliers I / II / III
+Prérequis
+Débloque
+Ressources liées
 ```
 
 ## Gabarit — Palier
 
 Un palier précise le niveau d’un micro-module : I, II ou III.
 
-```markdown
-# [PAL-DOMAINE-NNN] Titre du palier
+Structure recommandée :
 
-> Version : 0.1  
-> Dernière modification : AAAA-MM-JJ  
-> Statut : draft  
-> Micro-module parent : [MIC-DOMAINE-NNN]  
-> Niveau : I / II / III  
-> Durée cible : 10 à 30 min
-
-## Rôle du palier
-
-Dire si le palier est essentiel, une consolidation ou un approfondissement.
-
-## Résultat attendu
-
-Décrire ce que la personne doit être capable de faire à la fin.
-
-## Activité proposée
-
-Décrire l’activité principale.
-
-## Critère de réussite
-
-Décrire comment savoir si le palier est réussi.
-
-## Matériel nécessaire
-
-Lister les fichiers, outils, exemples ou ressources.
+```text
+[PAL-DOMAINE-NNN] Titre
+Micro-module parent
+Niveau : I / II / III
+Rôle du palier
+Résultat attendu
+Activité proposée
+Critère de réussite
+Matériel nécessaire
 ```
 
 ## Gabarit — Démonstration
 
 Une démonstration montre une pratique en action. Elle doit rester courte et ciblée.
 
-```markdown
-# [DEM-DOMAINE-NNN] Titre de la démonstration
+Structure recommandée :
 
-> Version : 0.1  
-> Dernière modification : AAAA-MM-JJ  
-> Statut : draft  
-> Durée cible : 5 à 8 min  
-> Outil principal : GitHub Copilot
-
-## Objectif de la démonstration
-
-Dire ce que la démonstration rend visible.
-
-## Situation de départ
-
-Décrire le problème ou la friction.
-
-## Étapes
-
-1. Action 1.
-2. Action 2.
-3. Action 3.
-
-## Ce qu’il faut observer
-
-Nommer les indices importants : réponse, contexte, fichiers touchés, limites, erreurs.
-
-## Variante provider
-
-| Provider | Équivalence utile |
-|---|---|
-| GitHub Copilot | Démonstration principale |
-| Codex | À remplir si utile |
-| Claude Code | À remplir si utile |
+```text
+[DEM-DOMAINE-NNN] Titre
+Objectif de la démonstration
+Situation de départ
+Étapes
+Ce qu’il faut observer
+Variante provider si utile
 ```
 
 ## Gabarit — Exercice
 
 Un exercice doit être faisable rapidement et produire une trace observable.
 
-```markdown
-# [EX-DOMAINE-NNN] Titre de l’exercice
+Structure recommandée :
 
-> Version : 0.1  
-> Dernière modification : AAAA-MM-JJ  
-> Statut : draft  
-> Durée cible : 8 à 12 min  
-> Niveau : I / II / III
-
-## Consigne
-
-Dire précisément ce que la personne doit faire.
-
-## Contexte fourni
-
-Lister les fichiers, extraits, contraintes ou données disponibles.
-
-## Résultat attendu
-
-Décrire la production attendue : réponse, code, explication, diff, test, grille, etc.
-
-## Critères de réussite
-
-- Critère 1.
-- Critère 2.
-- Critère 3.
-
-## Retour en groupe
-
-Prévoir une question courte pour comparer les approches.
+```text
+[EX-DOMAINE-NNN] Titre
+Consigne
+Contexte fourni
+Résultat attendu
+Critères de réussite
+Retour en groupe
 ```
 
 ## Panneau provider
@@ -296,8 +184,6 @@ Prévoir une question courte pour comparer les approches.
 Le panneau provider sert à répondre à une même question pratique dans plusieurs outils.
 
 ```text
-Question : Où voir le statut / l’usage / le contexte / la tâche?
-
 GitHub Copilot : référence principale
 Codex : équivalence si utile
 Claude Code : équivalence si utile
@@ -316,4 +202,4 @@ Le panneau provider ne doit pas devenir un comparatif complet de produits. Il do
 - Les équivalences Codex et Claude Code doivent rester courtes et utiles.
 - Une page publique doit être lisible pour l’étudiant avant d’être utile au suivi administratif.
 - Les références pédagogiques doivent rester disponibles, mais discrètes.
-- Un gabarit peut évoluer, mais il ne doit pas devenir trop lourd à utiliser.
+- Les prompts et réponses IA doivent utiliser les boîtes IA réutilisables.
