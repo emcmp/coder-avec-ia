@@ -7,53 +7,50 @@ slug: /admin/gabarits-pedagogiques
 
 > Source : `project/conventions/gabarits-pedagogiques.md`  
 > Identifiant : `[DOC-CHR-005]`  
-> Version : 0.2  
+> Version : 0.3  
 > Dernière modification : 2026-06-12  
 > Statut : convention de travail initiale
 
 Cette page présente les gabarits réutilisables pour produire les contenus pédagogiques du parcours **Coder avec l’IA**.
 
-## Règle importante
-
-Il faut distinguer deux formats :
+## Deux formats à distinguer
 
 | Format | Rôle |
 |---|---|
 | Micro-module source/Admin | Concevoir, versionner et relier les contenus |
-| Page publique de module | Guider une activité lisible pour l’étudiant |
+| Rencontre publique | Guider une activité lisible pour l’étudiant |
 
 :::warning
 Une page publique ne doit pas ressembler à une fiche de planification. Les identifiants, statuts et compétences restent disponibles, mais discrets.
 :::
 
-## Standard des pages publiques
+## Standard des rencontres publiques
 
 Structure recommandée :
 
-- titre lisible du module;
+- titre `Cours N - Titre de la rencontre`;
 - métadonnées discrètes;
-- introduction courte;
-- le problème;
-- ce qu’il faut comprendre;
-- exemple guidé;
-- à toi de jouer;
-- à retenir;
+- courte amorce;
+- sections notionnelles avec emoji;
+- exemple de prompt ou réponse IA;
+- explication guidée;
+- à essayer;
+- récapitulatif;
 - pour aller plus loin;
 - références pédagogiques repliées.
 
-## Correspondance des sections
+## Boîtes IA
 
-| Source/Admin | Public étudiant |
-|---|---|
-| Intention | Introduction ou amorce |
-| What’s in it for me? | intégré à l’introduction |
-| Friction de départ | Le problème |
-| Théorie ciblée | Ce qu’il faut comprendre |
-| Démonstration courte | Exemple guidé |
-| Mini-exercice | À toi de jouer |
-| Retour rapide | À retenir |
-| Paliers | Pour aller plus loin |
-| Compétences visées | Références pédagogiques, à la fin |
+Tous les prompts, réponses simulées, extraits de sortie IA et résumés de modifications doivent utiliser une boîte IA.
+
+Classes principales :
+
+```text
+aiBox
+aiBoxPrompt
+aiBoxResponse
+aiBoxChanges
+```
 
 ## Règles de maintenance
 
@@ -61,6 +58,7 @@ Structure recommandée :
 - Le palier I doit rester utile seul.
 - Une page publique doit être lisible pour l’étudiant avant d’être utile au suivi administratif.
 - Les références pédagogiques doivent rester disponibles, mais discrètes.
+- Les prompts et réponses IA doivent utiliser les boîtes IA réutilisables.
 
 ## Source complète
 
