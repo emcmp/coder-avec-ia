@@ -1,12 +1,13 @@
-# [MIC-CTX-001] Donner un contexte utile à l’IA
+# [MIC-CTX-001] Contexte utile
 
-> Version : 0.3  
-> Dernière modification : 2026-06-12  
-> Statut : pilote  
+> Version : 0.4  
+> Dernière modification : 2026-07-11  
+> Statut : pilote publié  
 > Domaine : CTX  
 > Durée cible : 20 à 30 min  
-> Outil principal : GitHub Copilot  
-> Équivalences utiles : Codex, Claude Code pour contexte long, reprise de session ou limites visibles
+> Portée : notion transversale  
+> Exemple principal actuel : GitHub Copilot  
+> Équivalences utiles : Codex et Claude Code pour le contexte long, la reprise de session ou les limites visibles
 
 ## Intention
 
@@ -131,7 +132,7 @@ Résultat attendu : la personne sait expliquer comment le contexte influence la 
 
 - [MIC-INS-001] Utiliser des instructions réutilisables
 - [MIC-MAP-001] Cartographier un codebase
-- [MIC-EVA-001] Vérifier une réponse IA plausible
+- [MIC-EVA-001] Vérifier une réponse IA
 - [MIC-RET-001] Retrouver l’information dans des documents
 
 ## Ressources liées
