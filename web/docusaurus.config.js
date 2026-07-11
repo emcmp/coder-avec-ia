@@ -44,16 +44,6 @@ const config = {
           sidebarPath: require.resolve("./sidebars.js"),
           routeBasePath: "/",
           editUrl: "https://github.com/emcmp/coder-avec-ia/tree/main/web",
-          exclude: [
-            "01-comprendre-trousse/**",
-            "02-niveaux-usage/**",
-            "03-guide-etudiant/**",
-            "04-guide-enseignant/**",
-            "05-activites/**",
-            "06-banque-prompts/**",
-            "07-modeles-fiches/**",
-            "08-a-propos/**",
-          ],
         },
         theme: {
           customCss: [require.resolve("./src/css/custom.css")],
