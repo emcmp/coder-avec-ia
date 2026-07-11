@@ -7,13 +7,23 @@ slug: /admin/modules-et-dependances
 
 > Source : `project/catalogue/modules-et-dependances.md`  
 > Identifiant : `[DOC-CAT-003]`  
-> Version : 0.3  
-> Dernière modification : 2026-06-12  
-> Statut : brouillon structurant
+> Version : 0.4  
+> Dernière modification : 2026-07-11  
+> Statut : carte de conception active
 
-Cette page présente la première carte des micro-modules du parcours **Coder avec l’IA**.
+Cette page présente la carte canonique des micro-modules du parcours **Coder avec l’IA**.
 
-Elle ne constitue pas encore une table des matières finale. Elle sert à voir les dépendances, les priorités, les modules publiés et les extensions possibles.
+Elle ne constitue pas encore une table des matières finale. Elle sert à suivre les identités stables, les dépendances, les statuts et les sources détaillées.
+
+## Comment lire la carte
+
+| Information | Source de vérité |
+|---|---|
+| ID, titre stable, domaine, statut et dépendances | catalogue des modules |
+| Contenu pédagogique détaillé | fichier du module dans `project/current/cours-ia-avance/modules/` |
+| Compétences | [Compétences visées](./competences) |
+| Page étudiant | section [Cours](../cours) |
+| Ordre des rencontres | index public et navigation |
 
 ## Vue des dépendances principales
 
@@ -29,58 +39,42 @@ MIC-PED-001 s’appuie sur les modules stabilisés
 MIC-LOC-001 est optionnel et vient après CLI, OBS et SEC
 ```
 
-## Modules essentiels pour une première version courte
+## Catalogue canonique
 
-| ID | Module | Domaine | Statut | Rôle |
-|---|---|---|---|---|
-| `[MIC-IA-001]` | Se repérer dans les familles d’outils IA | IA | brouillon | Choisir le bon type d’outil |
-| `[MIC-CTX-001]` | Donner un contexte utile à l’IA | CTX | publié | Améliorer la qualité des réponses |
-| `[MIC-VCS-001]` | Utiliser Copilot dans un dépôt GitHub | VCS | brouillon | Travailler dans un vrai projet |
-| `[MIC-SPE-001]` | Spécifier avant d’implémenter | SPE | brouillon | Réduire les dérives de l’IA |
-| `[MIC-MAP-001]` | Cartographier un codebase | MAP | publié | Trouver où intervenir |
-| `[MIC-EVA-001]` | Vérifier une réponse IA plausible | EVA | publié | Valider avant d’accepter |
-| `[MIC-SEC-001]` | Gérer permissions, confidentialité et limites | SEC | brouillon | Encadrer les risques |
+| ID | Titre stable | Domaine | Version | Statut |
+|---|---|---|---:|---|
+| `[MIC-IA-001]` | Se repérer dans les familles d’outils IA | IA | 0.1 | brouillon |
+| `[MIC-CTX-001]` | Contexte utile | CTX | 0.4 | pilote publié |
+| `[MIC-INS-001]` | Utiliser des instructions réutilisables | INS | 0.1 | brouillon |
+| `[MIC-VCS-001]` | Utiliser Copilot dans un dépôt GitHub | VCS | 0.1 | brouillon |
+| `[MIC-SPE-001]` | Spécifier avant d’implémenter | SPE | 0.1 | brouillon |
+| `[MIC-MAP-001]` | Cartographier un codebase | MAP | 0.4 | pilote publié |
+| `[MIC-CLI-001]` | Travailler avec un agent CLI | CLI | 0.1 | brouillon |
+| `[MIC-AGT-001]` | Piloter une tâche agentique | AGT | 0.1 | brouillon |
+| `[MIC-VCS-002]` | Travailler avec branches, issues et pull requests | VCS | 0.1 | brouillon |
+| `[MIC-EVA-001]` | Vérifier une réponse IA | EVA | 0.4 | pilote publié |
+| `[MIC-OBS-001]` | Lire traces, usage et contexte | OBS | 0.1 | brouillon |
+| `[MIC-SEC-001]` | Gérer permissions, confidentialité et limites | SEC | 0.1 | brouillon |
+| `[MIC-RET-001]` | Retrouver l’information dans des documents | RET | 0.1 | brouillon |
+| `[MIC-LOC-001]` | Comprendre les modèles locaux | LOC | 0.1 | optionnel |
+| `[MIC-PED-001]` | Intégrer l’IA dans le travail d’un prof | PED | 0.1 | brouillon |
 
-## Modules d’extension
+## Modules pilotes publiés
 
-| ID | Module | Domaine | Statut | Rôle |
-|---|---|---|---|---|
-| `[MIC-INS-001]` | Utiliser des instructions réutilisables | INS | brouillon | Stabiliser les consignes |
-| `[MIC-CLI-001]` | Travailler avec un agent CLI | CLI | brouillon | Comprendre le workflow local |
-| `[MIC-AGT-001]` | Piloter une tâche agentique | AGT | brouillon | Encadrer une tâche longue |
-| `[MIC-VCS-002]` | Travailler avec branches, issues et pull requests | VCS | brouillon | Garder un flux révisable |
-| `[MIC-OBS-001]` | Lire traces, usage et contexte | OBS | brouillon | Diagnostiquer une session |
-| `[MIC-RET-001]` | Retrouver l’information dans des documents | RET | brouillon | Appuyer les réponses sur les sources |
-| `[MIC-LOC-001]` | Comprendre les modèles locaux | LOC | optionnel | Évaluer les compromis local/cloud |
-| `[MIC-PED-001]` | Intégrer l’IA dans le travail d’un prof | PED | brouillon | Transférer vers la pédagogie |
+- [MIC-CTX-001 — Contexte utile](../cours/contexte-utile)
+- [MIC-MAP-001 — Cartographier un codebase](../cours/cartographier-codebase)
+- [MIC-EVA-001 — Vérifier une réponse IA](../cours/verifier-reponse-ia)
 
-## Modules publiés
+Le suivi détaillé des pilotes est conservé dans [Modules pilotes](./modules-pilotes).
 
-Les trois premiers modules sont publiés dans la section [Cours](../cours) :
+## Règle provider
 
-- [MIC-CTX-001](../cours/contexte-utile) — Donner un contexte utile à l’IA.
-- [MIC-MAP-001](../cours/cartographier-codebase) — Cartographier un codebase.
-- [MIC-EVA-001](../cours/verifier-reponse-ia) — Vérifier une réponse IA plausible.
+Les trois pilotes sont des notions transversales. GitHub Copilot est l’exemple principal actuel, mais il ne définit pas leur identité.
 
-## Modules pilotes
+Un provider devient visible dans le titre ou les métadonnées seulement lorsque le contenu dépend réellement de cet outil.
 
-Le suivi de conception des pilotes est conservé dans : [Modules pilotes](./modules-pilotes).
+## Noyau pressenti
 
-## Règle de lecture
+Le noyau court envisagé comprend actuellement : outils IA, contexte, dépôt GitHub, spécification, cartographie, validation et sécurité.
 
-Chaque module devrait pouvoir être traité en micro-module de 20 à 30 minutes, avec un palier I utile en classe et des paliers II / III comme extensions.
-
-La version complète des dépendances est dans le fichier source `project/catalogue/modules-et-dependances.md`.
-
-## Eric
-
-Voir fonctions avancées de ChatGPT, projet ajout documents.
-
-ChatGPT application et connecteur, notamment connecteur GitHub.
-
-Voir MyGPT et brancher sur WebService.
-
-Mémoire Obsidian, second brain.
-
-Google's Agents CLI: The CLI + Skills Combination to Ship AI Agents EASILY
-https://youtu.be/1wfY7GCVvh0?si=YghtKtoEelmiB7tv
+Cette sélection devra être confirmée dans la spécification et la table des matières du MVP avant la production massive du cours.
