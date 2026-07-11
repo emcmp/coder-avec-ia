@@ -1,11 +1,12 @@
 # [MIC-MAP-001] Cartographier un codebase
 
-> Version : 0.3  
-> Dernière modification : 2026-06-12  
-> Statut : pilote  
+> Version : 0.4  
+> Dernière modification : 2026-07-11  
+> Statut : pilote publié  
 > Domaine : MAP  
 > Durée cible : 20 à 30 min  
-> Outil principal : GitHub Copilot  
+> Portée : notion transversale  
+> Exemple principal actuel : GitHub Copilot  
 > Équivalences utiles : Codex, Claude Code, CodeGraph ou outil équivalent lorsque disponible
 
 ## Intention
@@ -136,14 +137,14 @@ Résultat attendu : la personne peut expliquer ce que l’outil aide à voir et 
 
 ## Prérequis
 
-- [MIC-CTX-001] Donner un contexte utile à l’IA
+- [MIC-CTX-001] Contexte utile
 - [MIC-VCS-001] Utiliser Copilot dans un dépôt GitHub
 
 ## Débloque
 
 - [MIC-CLI-001] Travailler avec un agent CLI
 - [MIC-AGT-001] Piloter une tâche agentique
-- [MIC-EVA-001] Vérifier une réponse IA plausible
+- [MIC-EVA-001] Vérifier une réponse IA
 
 ## Ressources liées
 
