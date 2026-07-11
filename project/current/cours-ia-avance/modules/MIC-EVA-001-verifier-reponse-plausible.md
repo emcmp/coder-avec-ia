@@ -1,11 +1,12 @@
-# [MIC-EVA-001] Vérifier une réponse IA plausible
+# [MIC-EVA-001] Vérifier une réponse IA
 
-> Version : 0.3  
-> Dernière modification : 2026-06-12  
-> Statut : pilote  
+> Version : 0.4  
+> Dernière modification : 2026-07-11  
+> Statut : pilote publié  
 > Domaine : EVA  
 > Durée cible : 20 à 30 min  
-> Outil principal : GitHub Copilot  
+> Portée : notion transversale  
+> Exemple principal actuel : GitHub Copilot  
 > Équivalences utiles : tous les providers qui produisent du code, une explication ou un plan à valider
 
 ## Intention
@@ -129,7 +130,7 @@ Résultat attendu : la personne peut justifier pourquoi une réponse est meilleu
 
 ## Prérequis
 
-- [MIC-CTX-001] Donner un contexte utile à l’IA
+- [MIC-CTX-001] Contexte utile
 - [MIC-SPE-001] Spécifier avant d’implémenter
 - [MIC-MAP-001] Cartographier un codebase, recommandé pour les réponses liées au code
 
