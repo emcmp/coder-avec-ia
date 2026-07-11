@@ -10,12 +10,12 @@ import Link from '@docusaurus/Link';
 > Source : `project/current/cours-ia-avance/modules/`  
 > Identifiant : `[DOC-PAR-003]`  
 > Version : 0.4  
-> Dernière modification : 2026-06-12  
+> Dernière modification : 2026-07-11  
 > Statut : index de travail
 
 Cette page présente les trois premiers micro-modules pilotes du parcours **Coder avec l’IA**.
 
-Ils servent à valider les gabarits pédagogiques avant de produire l’ensemble du cours. Les trois pilotes sont aussi publiés comme rencontres de cours.
+Ils servent de référence de qualité avant la production des autres contenus.
 
 ## Pages publiées
 
@@ -50,7 +50,6 @@ Ils servent à valider les gabarits pédagogiques avant de produire l’ensemble
 | Domaine | Famille conceptuelle | `CTX` |
 | Compétence | Capacité observable liée au contenu | `CMP-CTX-001` |
 | Source projet | Fichier de conception et de maintenance | `project/current/cours-ia-avance/modules/...` |
-| Admin | Vue de suivi et de documentation | `/admin/modules-pilotes` |
 
 :::info
 La rencontre donne l’ordre de présentation. Le micro-module donne l’identité stable du contenu.
@@ -58,19 +57,11 @@ La rencontre donne l’ordre de présentation. Le micro-module donne l’identit
 
 ## Correspondance des pilotes
 
-| Rencontre actuelle | Page publique | Micro-module stable | Domaine | Compétence centrale |
-|---|---|---|---|---|
-| Rencontre 1 | `/cours/contexte-utile` | `MIC-CTX-001` | `CTX` | `CMP-CTX-001` |
-| Rencontre 2 | `/cours/cartographier-codebase` | `MIC-MAP-001` | `MAP` | `CMP-MAP-001` |
-| Rencontre 3 | `/cours/verifier-reponse-ia` | `MIC-EVA-001` | `EVA` | `CMP-EVA-001` |
-
-## Modules pilotes
-
-| ID | Module | Domaine | Statut | Compétences principales |
-|---|---|---|---|---|
-| `MIC-CTX-001` | Contexte utile | CTX | pilote publié | `CMP-CTX-001`, `CMP-EVA-001`, `CMP-RET-001` |
-| `MIC-MAP-001` | Cartographier un codebase | MAP | pilote publié | `CMP-MAP-001`, `CMP-EVA-001` |
-| `MIC-EVA-001` | Vérifier une réponse IA | EVA | pilote publié | `CMP-EVA-001`, `CMP-CTX-001`, `CMP-MAP-001` |
+| Rencontre actuelle | Page publique | Micro-module stable | Version | Domaine | Compétence centrale |
+|---|---|---|---:|---|---|
+| Rencontre 1 | `/cours/contexte-utile` | `MIC-CTX-001` | 0.4 | `CTX` | `CMP-CTX-001` |
+| Rencontre 2 | `/cours/cartographier-codebase` | `MIC-MAP-001` | 0.4 | `MAP` | `CMP-MAP-001` |
+| Rencontre 3 | `/cours/verifier-reponse-ia` | `MIC-EVA-001` | 0.4 | `EVA` | `CMP-EVA-001` |
 
 ## Ce qu’on valide avec ces modules
 
@@ -81,26 +72,6 @@ La rencontre donne l’ordre de présentation. Le micro-module donne l’identit
 - La lisibilité des références pédagogiques repliées.
 - Le lien explicite entre modules et compétences observables.
 - L’usage de GitHub Copilot comme exemple principal actuel, sans en faire la nature de la notion.
-
-## Résumé des pilotes
-
-### MIC-CTX-001 — Contexte utile
-
-Objectif : apprendre à fournir à l’IA un contexte suffisant, ciblé et utile sans l’inonder d’informations inutiles.
-
-Compétence centrale : `CMP-CTX-001`.
-
-### MIC-MAP-001 — Cartographier un codebase
-
-Objectif : comprendre où intervenir dans un projet existant avant de demander à l’IA de modifier du code.
-
-Compétence centrale : `CMP-MAP-001`.
-
-### MIC-EVA-001 — Vérifier une réponse IA
-
-Objectif : valider une réponse IA qui semble convaincante avant de l’accepter, de la remettre ou de l’intégrer.
-
-Compétence centrale : `CMP-EVA-001`.
 
 ## Sources
 
