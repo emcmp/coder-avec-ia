@@ -1,8 +1,8 @@
 # Brainstorm
 
 > Identifiant : `[DOC-BRN-001]`  
-> Version : 0.1  
-> Dernière modification : 2026-06-12  
+> Version : 0.2  
+> Dernière modification : 2026-07-11  
 > Statut : espace d’idées actif
 
 Ce document sert de zone de dépôt libre pour les idées liées au parcours **Coder avec l’IA**.
@@ -114,6 +114,15 @@ Une idée peut être floue. Elle pourra être reformulée, classée, reliée à 
 - Toujours garder les sources et citations.
 - Distinguer veille pour construire le cours et contenu directement enseignable.
 - Regarder les tendances, popularité et signaux d’adoption.
+
+### Pistes personnelles à explorer
+
+- Fonctions avancées de ChatGPT : projets, ajout de documents et organisation du contexte.
+- Applications et connecteurs ChatGPT, notamment le connecteur GitHub.
+- MyGPT et possibilité de le brancher à un service web.
+- Obsidian comme mémoire externe ou « second brain ».
+- Agents CLI et combinaison CLI + skills pour construire ou livrer des agents.
+- Ressource à analyser : *Google's Agents CLI: The CLI + Skills Combination to Ship AI Agents EASILY* — https://youtu.be/1wfY7GCVvh0?si=YghtKtoEelmiB7tv
 
 ## Idées à déposer
 
