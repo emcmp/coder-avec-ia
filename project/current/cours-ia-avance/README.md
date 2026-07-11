@@ -1,28 +1,40 @@
 # Parcours Coder avec l’IA
 
 > Identifiant : `[DOC-PAR-001]`  
-> Version : 0.1  
-> Dernière modification : 2026-06-11  
-> Statut : espace de travail
+> Version : 0.2  
+> Dernière modification : 2026-07-11  
+> Statut : espace de travail actif
 
-Ce dossier conserve les traces de conception pour le parcours modulaire **Coder avec l’IA**.
+Ce dossier conserve les traces de conception du parcours modulaire **Coder avec l’IA**.
 
 ## Intention
 
-Construire un parcours destiné à des profs d’informatique et à des étudiants avancés en Techniques de l’informatique qui veulent utiliser l’IA de façon concrète, efficace et critique dans des workflows de développement.
+Construire un parcours destiné à des enseignants d’informatique et à des étudiants avancés en Techniques de l’informatique qui veulent utiliser l’IA de façon concrète, efficace et critique dans des workflows de développement.
 
-## État
+## État actuel
 
-- La table des matières est encore à réviser.
-- Aucun contenu de module n’est développé pour l’instant.
-- Ce dossier sert d’espace de travail avant publication éventuelle dans Docusaurus.
+- La structure de conception, les chartes et la nomenclature sont en place.
+- Quinze micro-modules sont répertoriés dans le catalogue.
+- Trois modules pilotes sont développés et publiés :
+  - `[MIC-CTX-001]` Contexte utile;
+  - `[MIC-MAP-001]` Cartographier un codebase;
+  - `[MIC-EVA-001]` Vérifier une réponse IA.
+- La table des matières complète et la portée exacte du MVP restent à stabiliser.
+- Les autres modules doivent être produits progressivement, par petits lots révisables.
 
-## Fichiers prévus
+## Fichiers actuels
 
-- `01-table-des-matieres.md` : structure du cours à stabiliser.
-- `02-format-pedagogique.md` : format des séances.
-- `03-modules.md` : découpage éventuel en modules.
-- `04-demonstrations.md` : idées de démonstrations.
-- `05-activites.md` : idées d’activités.
-- `06-outils-et-references.md` : outils et références à vérifier.
-- `07-prochaines-decisions.md` : décisions ouvertes.
+- `01-table-des-matieres.md` : projection de parcours à stabiliser.
+- `modules/README.md` : index des modules produits.
+- `modules/` : sources détaillées des micro-modules développés.
+
+## Documents connexes
+
+- `project/catalogue/modules-et-dependances.md` : identité, statut et dépendances des modules.
+- `project/catalogue/competences.md` : compétences liées aux modules.
+- `project/specs/spec-cours-ia-avance-profs-info.md` : spécification à compléter avant la production massive.
+- `project/backlog/backlog-cours-ia-avance.md` : travail restant.
+
+## Prochaine étape
+
+Stabiliser le contenu du MVP et la table des matières, puis produire les modules restants par lots cohérents en utilisant les trois pilotes comme référence de qualité.
