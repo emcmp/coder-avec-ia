@@ -1,7 +1,7 @@
 # Catalogue des documents de projet
 
 > Identifiant : `[DOC-CAT-002]`  
-> Version : 1.7  
+> Version : 1.8  
 > Dernière modification : 2026-07-11  
 > Statut : registre actif
 
@@ -24,14 +24,24 @@ Ce catalogue sert de registre de bibliothèque pour les documents importants du 
 ### Catalogues et parcours
 
 - `[DOC-CAT-001]` Catalogue des blocs pédagogiques — v0.6 — index de travail
-- `[DOC-CAT-002]` Catalogue des documents de projet — v1.7 — registre actif
+- `[DOC-CAT-002]` Catalogue des documents de projet — v1.8 — registre actif
 - `[DOC-CAT-003]` Catalogue des modules et dépendances — v0.2 — carte de conception active
 - `[DOC-CAT-004]` Catalogue des compétences — v0.1 — brouillon structurant
 - `[DOC-GLO-001]` Glossaire — v0.1 — actif
 - `[DOC-PAR-001]` Parcours Coder avec l’IA — v0.2 — espace de travail actif
-- `[DOC-PAR-002]` Table des matières du parcours — v0.1 — brouillon à réviser
+- `[DOC-PAR-002]` Table des matières du parcours — v0.2 — brouillon de cadrage
 - `[DOC-PAR-003]` Modules pilotes — v0.4 — index de travail
 - `[DOC-PAR-004]` Modules de cours publiés — v0.2 — publié
+
+### Production et configuration
+
+- `[DOC-SPC-001]` Spécification du parcours — v0.1 — brouillon minimal
+- `[DOC-BKL-001]` Backlog du parcours — v0.2 — backlog actif
+- `[DOC-PRM-001]` Prompt de rédaction Docusaurus — v0.1 — à compléter
+- `[DOC-CFG-001]` Instructions générales pour agents — v0.1 — actif
+- `[DOC-CFG-002]` Instructions Claude — v0.1 — actif
+- `[DOC-CFG-003]` Instructions Codex — v0.1 — actif
+- `[DOC-CFG-004]` Instructions Copilot VS Code — v0.1 — actif
 
 ### Décisions
 
