@@ -52,7 +52,28 @@ const config = {
     ],
   ],
 
-  plugins: [require.resolve("./plugins/docs-metadata")],
+  plugins: [
+    require.resolve("./plugins/docs-metadata"),
+    [
+      "@docusaurus/plugin-content-docs",
+      {
+        id: "microsoft",
+        path: "../project/inbox/01-microsoft",
+        routeBasePath: "cours/microsoft",
+        include: [
+          "Course GH-300T00-A GitHub Copilot/**/*.md",
+          "Course GH-600T00-A Developing in Agentic AI Systems/**/*.md",
+        ],
+        exclude: ["**/PROGRES.md"],
+        sidebarPath: undefined,
+        sidebarCollapsible: true,
+        sidebarCollapsed: true,
+        showLastUpdateTime: true,
+        editUrl:
+          "https://github.com/emcmp/coder-avec-ia/tree/main/project/inbox/01-microsoft",
+      },
+    ],
+  ],
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
@@ -80,6 +101,20 @@ const config = {
             docId: "cours/index",
             position: "left",
             label: "Cours",
+          },
+          {
+            label: "Microsoft Learn",
+            position: "left",
+            items: [
+              {
+                href: "/coder-avec-ia/cours/microsoft/gh-300t00-a-github-copilot",
+                label: "GH-300 — GitHub Copilot",
+              },
+              {
+                href: "/coder-avec-ia/cours/microsoft/gh-600t00-a-agentic-ai-systems",
+                label: "GH-600 — Agentic AI Systems",
+              },
+            ],
           },
           {
             label: "Rencontres",
