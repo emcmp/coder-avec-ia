@@ -1,0 +1,22 @@
+{
+  "completed_items": 15,
+  "current_item_id": null,
+  "next_action": "TOUS LES MODULES SONT COMPLÉTS !",
+  "items": [
+    { "id": "part-1-module-01", "status": "completed", "output": "Module-01-Responsible-AI-with-GitHub-Copilot.md" },
+    { "id": "part-1-module-02", "status": "completed", "output": "Module-02-Introduction-to-GitHub-Copilot.md" },
+    { "id": "part-1-module-03", "status": "completed", "output": "Module-03-Introduction-to-Prompt-Engineering-with-GitHub-Copilot.md" },
+    { "id": "part-1-module-04", "status": "completed", "output": "Module-04-Introduction-to-Copilot-Spaces.md" },
+    { "id": "part-1-module-05", "status": "completed", "output": "Module-05-Using-Advanced-GitHub-Copilot-Features.md" },
+    { "id": "part-1-module-06", "status": "completed", "output": "Module-06-GitHub-Copilot-Across-Environments.md" },
+    { "id": "part-1-module-07", "status": "completed", "output": "Module-07-Management-and-Customization-Considerations.md" },
+    { "id": "part-1-module-08", "status": "completed", "output": "Module-08-Developer-Use-Cases-for-AI-with-GitHub-Copilot.md" },
+    { "id": "part-1-module-09", "status": "completed", "output": "Module-09-Develop-Unit-Tests-using-GitHub-Copilot-Tools.md" },
+    { "id": "part-2-module-01", "status": "completed", "output": "Module-P2-01-Building-Applications-with-GitHub-Copilot-Agent-Mode.md" },
+    { "id": "part-2-module-02", "status": "completed", "output": "Module-P2-02-Accelerate-Development-with-GitHub-Copilot-Cloud-Agent.md" },
+    { "id": "part-2-module-03", "status": "completed", "output": "Module-P2-03-Introduction-to-MCP-Server.md" },
+    { "id": "part-2-module-04", "status": "completed", "output": "Module-P2-04-Leveling-Up-Code-Reviews-and-Pull-Requests-with-GitHub-Copilot.md" },
+    { "id": "part-2-module-05", "status": "completed", "output": "Module-P2-05-Using-GitHub-Copilot-with-JavaScript.md" },
+    { "id": "part-2-module-06", "status": "completed", "output": "Module-P2-06-Using-GitHub-Copilot-with-Python.md" }
+  ]
+}
