@@ -10,6 +10,7 @@ const sidebars = {
         "cours/contexte-utile",
         "cours/cartographier-codebase",
         "cours/verifier-reponse-ia",
+        "cours/microsoft/index",
       ],
     },
     {
