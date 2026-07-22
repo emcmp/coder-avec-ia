@@ -1,11 +1,10 @@
 // @ts-check
-// Note: type annotations allow type checking and IDEs autocompletion
 import { themes } from "prism-react-renderer";
 
 const siteConfig = require("./config");
-
 const lightCodeTheme = themes.vsLight;
 const darkCodeTheme = themes.vsDark;
+const absoluteMicrosoftLinks = require.resolve("./plugins/absolute-microsoft-links");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -15,7 +14,6 @@ const config = {
   baseUrl: "/coder-avec-ia/",
   onBrokenLinks: "throw",
   favicon: "img/favicon.ico",
-
   organizationName: "emcmp",
   projectName: "coder-avec-ia",
   deploymentBranch: "gh-pages",
@@ -69,6 +67,7 @@ const config = {
         sidebarCollapsible: true,
         sidebarCollapsed: true,
         showLastUpdateTime: true,
+        remarkPlugins: [absoluteMicrosoftLinks],
         editUrl:
           "https://github.com/emcmp/coder-avec-ia/tree/main/project/inbox/01-microsoft",
       },
@@ -141,21 +140,13 @@ const config = {
             label: "Conception",
             position: "left",
             items: [
-              {
-                type: "doc",
-                docId: "admin/brainstorm",
-                label: "Brainstorm",
-              },
+              { type: "doc", docId: "admin/brainstorm", label: "Brainstorm" },
               {
                 type: "doc",
                 docId: "admin/nomenclature-blocs-pedagogiques",
                 label: "Nomenclature",
               },
-              {
-                type: "doc",
-                docId: "admin/competences",
-                label: "Compétences",
-              },
+              { type: "doc", docId: "admin/competences", label: "Compétences" },
               {
                 type: "doc",
                 docId: "admin/catalogue-blocs-pedagogiques",
@@ -171,11 +162,7 @@ const config = {
                 docId: "admin/modules-et-dependances",
                 label: "Modules et dépendances",
               },
-              {
-                type: "doc",
-                docId: "admin/glossaire",
-                label: "Glossaire",
-              },
+              { type: "doc", docId: "admin/glossaire", label: "Glossaire" },
               {
                 type: "doc",
                 docId: "admin/cours-ia-avance",
